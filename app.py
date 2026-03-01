@@ -191,6 +191,20 @@ def contratos_filtrados(
     """, tuple(params))
 
 
+def datos_por_tipo_entidad() -> pd.DataFrame:
+    return _sql("""
+        SELECT
+            COALESCE(cnt.tipo_entidad, 'Desconocido')  AS tipo_entidad,
+            COUNT(DISTINCT cnt.cif)                    AS contratistas,
+            COUNT(c.contrato_id)                       AS contratos,
+            ROUND(SUM(c.importe), 2)                   AS importe
+        FROM contratistas cnt
+        JOIN contratos c ON c.cif = cnt.cif
+        GROUP BY cnt.tipo_entidad
+        ORDER BY importe DESC
+    """)
+
+
 def ranking_contratistas(tipo_entidad=None) -> pd.DataFrame:
     where = "1=1"
     params: tuple = ()
@@ -418,6 +432,39 @@ elif pagina == "📋 Contratos":
 # ══════════════════════════════════════════════════════════════════════════════
 elif pagina == "🏢 Contratistas":
     st.title("🏢 Ranking de contratistas")
+
+    # Gráfico de distribución por tipo de entidad
+    df_te = datos_por_tipo_entidad()
+    col_g1, col_g2 = st.columns(2)
+
+    with col_g1:
+        st.subheader("Inversión por tipo de entidad")
+        fig_te1 = px.bar(
+            df_te, x="importe", y="tipo_entidad", orientation="h",
+            color_discrete_sequence=[ACCENT],
+            text=df_te["importe"].apply(fmt_eur),
+        )
+        fig_te1.update_traces(textposition="outside", textfont_size=10)
+        fig_te1.update_layout(**_PLOT, xaxis_title="€", yaxis_title="")
+        fig_te1.update_yaxes(categoryorder="total ascending", showgrid=False)
+        fig_te1.update_xaxes(showgrid=True, gridcolor=GRID)
+        st.plotly_chart(fig_te1, use_container_width=True)
+
+    with col_g2:
+        st.subheader("Contratistas y contratos por tipo")
+        fig_te2 = px.bar(
+            df_te.melt(id_vars="tipo_entidad", value_vars=["contratistas", "contratos"],
+                       var_name="métrica", value_name="valor"),
+            x="valor", y="tipo_entidad", color="métrica", orientation="h",
+            barmode="group",
+            color_discrete_map={"contratistas": ACCENT, "contratos": "#818cf8"},
+        )
+        fig_te2.update_layout(**_PLOT, xaxis_title="Unidades", yaxis_title="")
+        fig_te2.update_yaxes(categoryorder="total ascending", showgrid=False)
+        fig_te2.update_xaxes(showgrid=True, gridcolor=GRID)
+        st.plotly_chart(fig_te2, use_container_width=True)
+
+    st.divider()
 
     tipos_entidad = [None, "Autónomo", "SL", "SA", "Adm. Pública", "Asociación",
                      "Cooperativa", "Empresa/Otros", "UTE", "Sociedad Civil"]
