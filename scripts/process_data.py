@@ -4,6 +4,14 @@ import re
 import xlrd
 import json
 import hashlib
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from db import (
+    get_connection, init_schema,
+    get_or_create_area, get_or_create_tipo, get_or_create_trimestre,
+    upsert_contratista, insert_contrato, mark_trimestre_procesado,
+)
 
 def clean_amount(val):
     if pd.isna(val): return 0.0
@@ -285,6 +293,80 @@ def process_files():
             json.dump(final_df.replace({pd.NA: None, pd.NaT: None}).to_dict('records'), f, indent=2, ensure_ascii=False, default=default_ser)
             
         print(f"Extraction complete. {len(final_df)} records processed.")
+
+        # ── Escritura a SQLite ─────────────────────────────────────────────
+        print("Escribiendo en SQLite...")
+        os.makedirs('data', exist_ok=True)
+        conn = get_connection()
+        init_schema(conn)
+
+        # Contratistas
+        for _, row in dim_contractors.iterrows():
+            upsert_contratista(
+                conn,
+                cif=row['cif'],
+                nombre=row.get('nombre', ''),
+                direccion=row.get('direccion', ''),
+                tipo_entidad=row.get('tipo_entidad', ''),
+                tipo_id=row.get('tipo_id', ''),
+                cif_valido=True,
+            )
+        conn.commit()
+
+        # Áreas y tipos: reconstruir mapas → ids SQLite
+        area_sqlite_map = {}
+        for _, row in dim_areas.iterrows():
+            area_sqlite_map[row['id']] = get_or_create_area(conn, row['nombre'])
+
+        tipo_sqlite_map = {}
+        for _, row in dim_types.iterrows():
+            tipo_sqlite_map[row['id']] = get_or_create_tipo(conn, row['nombre'])
+
+        # Trimestres: un registro por source_file
+        trimestre_sqlite_map = {}
+        for sf in fact_contracts['source_file'].dropna().unique():
+            m = __import__('re').search(r'(\d{4})_Q(\d)', sf)
+            if m:
+                y, q = int(m.group(1)), int(m.group(2))
+                trimestre_sqlite_map[sf] = get_or_create_trimestre(conn, y, q, sf)
+
+        # Contratos
+        for _, row in fact_contracts.iterrows():
+            sf = row.get('source_file', '')
+            cif = row.get('cif') or None
+
+            # Garantizar FK de contratista
+            if cif:
+                exists = conn.execute("SELECT 1 FROM contratistas WHERE cif = ?", (cif,)).fetchone()
+                if not exists:
+                    upsert_contratista(conn, cif, '', '', 'Desconocido', '', cif_valido=False)
+
+            insert_contrato(
+                conn,
+                contrato_id=row['contrato_id'],
+                cif=cif,
+                area_id=area_sqlite_map.get(row.get('area_id')),
+                tipo_contrato_id=tipo_sqlite_map.get(row.get('tipo_id')),
+                trimestre_id=trimestre_sqlite_map.get(sf),
+                importe=row.get('importe', 0.0),
+                fecha_adjudicacion=row.get('fecha_adjudicacion'),
+                objeto=row.get('objeto', ''),
+                expediente=row.get('expediente', ''),
+                year=row.get('year'),
+                quarter=row.get('quarter'),
+                source_file=sf,
+            )
+        conn.commit()
+
+        # Marcar trimestres como procesados
+        for sf, tid in trimestre_sqlite_map.items():
+            count = conn.execute(
+                "SELECT COUNT(*) FROM contratos WHERE source_file = ?", (sf,)
+            ).fetchone()[0]
+            mark_trimestre_procesado(conn, tid, count)
+
+        conn.close()
+        print("SQLite actualizado.")
 
 if __name__ == "__main__":
     process_files()
