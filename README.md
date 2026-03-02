@@ -1,91 +1,122 @@
-# Portal de Transparencia - Contratos Menores Rincón de la Victoria
+# Contratos Menores · Rincón de la Victoria
 
-Este proyecto es una herramienta de visualización y análisis de los contratos menores del Ayuntamiento del Rincón de la Victoria, diseñada para mejorar la transparencia y accesibilidad de la información pública.
+Portal de transparencia para visualizar y analizar los contratos menores del Ayuntamiento de Rincón de la Victoria. Inspirado en el trabajo de [Jaime Gómez-Obregón](https://twitter.com/jaime_gomez) sobre transparencia pública.
 
-![Screenshot de la Aplicación](file:///Users/sergiobellido/.gemini/antigravity/brain/1e0963bf-8fcd-4e19-ab26-ba9d0e5cb2db/contracts_table_view_1769377766067.png)
+Los datos se obtienen directamente del [portal de contratación municipal](https://www.rincondelavictoria.es/areas/contratacion/relaciones-de-contratos-menores), se procesan y normalizan, y se almacenan en una base de datos SQLite local.
 
-## 🚀 Características Principales
+## Arquitectura
 
-- **Dashboard Interactivo**: Visualización de métricas clave, inversión total y tipos de contratos.
-- **Normalización de Entidades**: Unificación de nombres de adjudicatarios basados en CIF para evitar duplicidades por errores tipográficos.
-- **Clasificación por CIF**: Identificación automática del tipo de entidad (SL, SA, Autónomo, Asociación, etc.) mediante el prefijo del CIF.
-- **Tabla de Contratos Avanzada**:
-    - Búsqueda global por adjudicatario, objeto, área o CIF.
-    - Ordenación interactiva por todas las columnas (Fecha, Importe, Área, etc.).
-    - Diseño responsive optimizado para lectura técnica.
-- **Visualización de Datos**: Gráficos dinámicos que muestran la evolución temporal y la distribución por áreas de gasto.
-
-## 🛠️ Stack Tecnológico
-
-- **Backend/ETL**: Python 3.12 con Pandas para el procesamiento de datos.
-- **Frontend**: HTML5, CSS3 (Vanilla con diseño moderno "glassmorphism") y JavaScript funcional.
-- **Visualización**: Chart.js y Lucide Icons.
-- **Datos**: Servidos mediante archivos JSON estáticos para máxima velocidad y simplicidad de despliegue.
-
-## 📂 Estructura del Proyecto
-
-```text
+```
 rincon-contratos-menores/
 ├── data/
-│   ├── raw/             # Archivos Excel originales descargados
-│   └── processed/       # Datos limpios en CSV y JSON
+│   ├── raw/                  # Excel originales descargados (gitignored)
+│   ├── processed/            # JSON intermedios del ETL (gitignored)
+│   └── contratos.db          # Base de datos SQLite (gitignored)
 ├── scripts/
-│   ├── download_data.py # Descarga automática del portal de transparencia
-│   ├── process_data.py  # Limpieza, normalización y clasificación
-│   ├── audit_data.py    # Auditoría de calidad y reporte de anomalías
-│   ├── analyze_data.py  # Generación de insights para el dashboard
-│   └── serve_web.py     # Servidor local para desarrollo
-└── web/                 # Aplicación frontend
-    ├── index.html
-    ├── style.css
-    ├── app.js
-    └── data/           # Copia de datos procesados para uso web
+│   ├── monitor.py            # Detecta, descarga y procesa nuevos trimestres
+│   ├── process_data.py       # ETL: limpieza, normalización, validación de CIFs
+│   ├── init_db.py            # Inicializa el schema SQLite
+│   ├── migrate_to_db.py      # Migración inicial desde JSON a SQLite
+│   ├── download_data.py      # Descarga manual de XLS (uso puntual)
+│   └── audit_data.py         # Auditoría de calidad de datos
+├── app.py                    # Aplicación Streamlit (portal web)
+├── db.py                     # Módulo de base de datos (schema + helpers)
+└── .streamlit/config.toml    # Tema visual
 ```
 
-## 📋 Instrucciones de Uso
+## Stack
 
-### 1. Requisitos Previos
-- Python 3.12+
-- Entorno virtual (recomendado)
+- **ETL**: Python 3.9 + pandas + xlrd/openpyxl
+- **Base de datos**: SQLite (via `db.py`)
+- **Web**: Streamlit + Plotly
+- **Scraping**: requests + BeautifulSoup4
 
-### 2. Preparación de Datos
-Para actualizar el portal con nuevos datos:
+## Instalación
 
 ```bash
-# 1. Descargar datos (opcional si ya existen en data/raw)
+git clone https://github.com/sbellidov/rincon-contratos-menores.git
+cd rincon-contratos-menores
+python -m venv .venv
+source .venv/bin/activate
+pip install pandas xlrd openpyxl requests beautifulsoup4 streamlit plotly
+```
+
+## Primer uso (carga inicial de datos)
+
+```bash
+# 1. Inicializar la base de datos
+python scripts/init_db.py
+
+# 2. Descargar todos los Excel disponibles en el portal
 python scripts/download_data.py
 
-# 2. Procesar y normalizar
+# 3. Procesar, normalizar y cargar en SQLite
 python scripts/process_data.py
 
-# 3. Analizar y generar JSON para la web
-python scripts/analyze_data.py
-
-# 4. Sincronizar con la carpeta web
-cp data/processed/*.json web/data/
-
-# 5. Ejecutar auditoría de calidad
-python scripts/audit_data.py
+# 4. Lanzar el portal web
+streamlit run app.py
 ```
 
-### 3. Ejecución Local
-Para visualizar el portal en tu navegador:
+## Actualización de datos
+
+### Manual
 
 ```bash
-python scripts/serve_web.py
+python scripts/monitor.py
 ```
-Luego abre `http://localhost:8000` en tu navegador.
 
-## 🛡️ Auditoría y Calidad de Datos
+El monitor:
+1. Consulta la DB para saber qué trimestres están procesados.
+2. Raspa el portal del ayuntamiento buscando ficheros XLS nuevos.
+3. Descarga los que faltan a `data/raw/`.
+4. Relanza el ETL completo (idempotente: no genera duplicados).
 
-El proyecto incluye un sistema de auditoría (`scripts/audit_data.py`) que genera un informe detallado en `data/processed/audit_report.csv`. Este proceso identifica:
+Opciones disponibles:
 
-- **CIF Faltante**: Registros donde no se pudo extraer ni propagar el CIF.
-- **Fecha Inválida/Faltante**: Contratos con fechas nulas o fuera del rango lógico (2020-2026).
-- **Importe Elevado/Anómalo**: Contratos que superan los 50.000€ (límite común para menores) o con importe cero.
-- **Objeto Faltante**: Registros sin descripción de la actividad.
+```bash
+python scripts/monitor.py --dry-run   # Muestra qué descargaría, sin actuar
+python scripts/monitor.py --force     # Re-descarga aunque ya esté en DB
+```
 
-Este informe permite a los administradores del portal corregir los datos en origen o ajustar las reglas de extracción.
+### Automática con cron
+
+Para mantener el portal actualizado sin intervención manual, añade una tarea cron que ejecute el monitor periódicamente. Los contratos se publican trimestralmente (normalmente 1-2 meses después del fin de cada trimestre), así que con comprobarlo una vez por semana es más que suficiente:
+
+```bash
+# Abrir el editor de cron
+crontab -e
+```
+
+```cron
+# Comprobar nuevos contratos todos los lunes a las 9:00
+0 9 * * 1 cd /ruta/al/proyecto && .venv/bin/python scripts/monitor.py >> logs/monitor.log 2>&1
+```
+
+Ajusta `/ruta/al/proyecto` a la ruta real del proyecto en tu máquina.
+
+Si quieres que el log no crezca indefinidamente, añade también una rotación semanal:
+
+```cron
+# Rotar log del monitor cada domingo a las 23:59
+59 23 * * 0 cp /ruta/al/proyecto/logs/monitor.log /ruta/al/proyecto/logs/monitor.log.bak && > /ruta/al/proyecto/logs/monitor.log
+```
+
+## Modelo de datos (SQLite)
+
+| Tabla | Descripción |
+|---|---|
+| `contratos` | Tabla de hechos: un registro por contrato |
+| `contratistas` | Dimensión: contratistas unificados por CIF |
+| `areas` | Dimensión: áreas/departamentos municipales |
+| `tipos_contrato` | Dimensión: Servicio / Suministro / Obras / Otros |
+| `trimestres` | Tracking de descargas y procesados |
+
+## Calidad de datos
+
+Los Excel del ayuntamiento contienen errores frecuentes: CIFs inválidos, fechas mal formateadas, nombres del mismo contratista escritos de formas distintas, áreas con nombres inconsistentes, etc.
+
+El ETL aplica correcciones automáticas (propagación de CIFs, modo estadístico para nombres canónicos), pero siempre quedará trabajo manual de depuración. La sección **Calidad de datos** de la app Streamlit muestra en todo momento los registros pendientes de revisión.
 
 ---
-*Desarrollado para fomentar la transparencia pública.*
+
+*Datos públicos obtenidos del portal de transparencia del Ayuntamiento de Rincón de la Victoria.*
