@@ -179,9 +179,7 @@ def contratos_filtrados(
             a.nombre                        AS area,
             tc.nombre                       AS tipo,
             c.importe,
-            c.expediente,
-            c.year                          AS año,
-            c.quarter                       AS trim
+            c.expediente
         FROM contratos c
         LEFT JOIN contratistas cnt ON cnt.cif = c.cif
         LEFT JOIN areas a          ON a.id = c.area_id
@@ -427,7 +425,6 @@ elif pagina == "📋 Contratos":
             "fecha": "Fecha", "contratista": "Contratista", "cif": "CIF",
             "tipo_entidad": "Entidad", "objeto": "Objeto", "area": "Área",
             "tipo": "Tipo", "importe": "Importe (€)", "expediente": "Expediente",
-            "año": "Año", "trim": "T",
         }),
         use_container_width=True,
         hide_index=True,
@@ -437,8 +434,7 @@ elif pagina == "📋 Contratos":
             "CIF": st.column_config.TextColumn(width="small"),
             "Entidad": st.column_config.TextColumn(width="small"),
             "Tipo": st.column_config.TextColumn(width="small"),
-            "Año": st.column_config.NumberColumn(width="small"),
-            "T": st.column_config.NumberColumn(width="small"),
+            "Expediente": st.column_config.TextColumn(width="small"),
         },
     )
 

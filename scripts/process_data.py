@@ -324,6 +324,17 @@ AREA_MAP = {
 }
 
 
+def normalize_expediente(exp):
+    """Normaliza el expediente a formato NÚMERO/AA (año de 2 cifras, sin espacios)."""
+    if not exp or pd.isna(exp):
+        return exp
+    exp = str(exp).strip()
+    m = re.match(r'^(\d+)/(20(\d{2}))$', exp)
+    if m:
+        return f"{m.group(1)}/{m.group(3)}"
+    return exp
+
+
 def normalize_area(area):
     """Normaliza el nombre de un área al canónico definido en AREA_MAP."""
     if pd.isna(area) or area is None:
@@ -410,6 +421,8 @@ def process_files():
                 
                 # Pre-clean names in the raw dataframe
                 df['adjudicatario'] = df['adjudicatario'].apply(sanitize_text)
+                if 'expediente' in df.columns:
+                    df['expediente'] = df['expediente'].apply(normalize_expediente)
                 
                 extracted = df['cif_domicilio'].apply(extract_cif_address)
                 df['cif'] = extracted.apply(lambda x: x[0])
