@@ -7,7 +7,10 @@ def analyze():
     df['fecha_adjudicacion'] = pd.to_datetime(df['fecha_adjudicacion'])
     
     # Use unificated name if possible
-    df['adjudicatario_final'] = df['adjudicatario_unificado'].fillna(df['adjudicatario'])
+    if 'adjudicatario_unificado' in df.columns:
+        df['adjudicatario_final'] = df['adjudicatario_unificado'].fillna(df['adjudicatario'])
+    else:
+        df['adjudicatario_final'] = df['adjudicatario']
     
     analysis = {
         'summary': {
@@ -20,6 +23,16 @@ def analyze():
         'by_area': df.groupby('area')['importe'].agg(['sum', 'count']).sort_values('sum', ascending=False).head(15).to_dict('index'),
         'top_adjudicatarios': df.groupby('adjudicatario_final')['importe'].agg(['sum', 'count']).sort_values('sum', ascending=False).head(15).to_dict('index'),
         'by_year': df.groupby('year')['importe'].agg(['sum', 'count']).to_dict('index'),
+        'by_quarter': (
+            df.groupby(['year', 'quarter'])['importe']
+            .agg(['sum', 'count'])
+            .reset_index()
+            .sort_values(['year', 'quarter'])
+            .assign(periodo=lambda d: d['year'].astype(int).astype(str) + ' T' + d['quarter'].astype(int).astype(str))
+            .rename(columns={'sum': 'importe', 'count': 'contratos'})
+            [['year', 'quarter', 'periodo', 'importe', 'contratos']]
+            .to_dict('records')
+        ),
         'by_type': df.groupby('tipo_contrato_limpio')['importe'].agg(['sum', 'count']).to_dict('index')
     }
 

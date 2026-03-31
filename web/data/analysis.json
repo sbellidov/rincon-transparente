@@ -1,161 +1,283 @@
 {
   "summary": {
-    "total_contracts": 3020,
-    "total_amount": 11024665.74,
-    "avg_amount": 3650.551569536424,
-    "min_date": "2024-01-05T00:00:00",
+    "total_contracts": 6116,
+    "total_amount": 21540275.32,
+    "avg_amount": 3521.9547612818837,
+    "min_date": "2023-01-04T00:00:00",
     "max_date": "2025-12-30T00:00:00"
   },
   "by_area": {
     "Deportes (APAL)": {
-      "sum": 1841297.76,
-      "count": 770
-    },
-    "Ferias y Fiestas": {
-      "sum": 1177316.37,
-      "count": 187
+      "sum": 3200242.43,
+      "count": 1389
     },
     "Obras y Servicios Generales": {
-      "sum": 1157972.11,
-      "count": 206
+      "sum": 1897078.2,
+      "count": 319
     },
-    "Cultura": {
-      "sum": 675602.64,
-      "count": 281
-    },
-    "Turismo": {
-      "sum": 610140.44,
-      "count": 205
-    },
-    "Políticas Sociales": {
-      "sum": 560789.45,
-      "count": 165
+    "Ferias y Fiestas": {
+      "sum": 1713690.0,
+      "count": 340
     },
     "Bienestar Social": {
-      "sum": 382001.35,
-      "count": 78
+      "sum": 1505252.74,
+      "count": 428
+    },
+    "Cultura": {
+      "sum": 1072009.57,
+      "count": 480
+    },
+    "Turismo": {
+      "sum": 1027339.96,
+      "count": 341
     },
     "Cueva del Tesoro": {
-      "sum": 376739.76,
-      "count": 94
+      "sum": 563007.11,
+      "count": 141
     },
     "Playas": {
-      "sum": 349749.65,
-      "count": 62
+      "sum": 553087.48,
+      "count": 111
     },
-    "Nuevas Tecnologías": {
-      "sum": 291525.97,
-      "count": 39
-    },
-    "Urbanismo": {
-      "sum": 251203.19,
-      "count": 25
-    },
-    "Sostenibilidad Medioambiental": {
-      "sum": 225349.5,
-      "count": 45
-    },
-    "Seguridad Ciudadana": {
-      "sum": 217298.53,
-      "count": 36
+    "Infraestructuras": {
+      "sum": 503084.87,
+      "count": 60
     },
     "Educación": {
-      "sum": 203215.27,
-      "count": 44
+      "sum": 470679.34,
+      "count": 97
     },
-    "Juventud": {
-      "sum": 197242.53,
-      "count": 91
+    "Presidencia": {
+      "sum": 453040.15,
+      "count": 102
+    },
+    "Urbanismo": {
+      "sum": 442811.47,
+      "count": 49
+    },
+    "Nuevas Tecnologías y Transparencia": {
+      "sum": 400802.12,
+      "count": 58
+    },
+    "Comercio": {
+      "sum": 369996.86,
+      "count": 129
+    },
+    "Sostenibilidad Medioambiental": {
+      "sum": 353328.81,
+      "count": 81
     }
   },
   "top_adjudicatarios": {
-    "Mª del Mar Martín Castillo": {
-      "sum": 707745.58,
-      "count": 13
-    },
-    "Sonotestaudio SL": {
-      "sum": 357166.55,
-      "count": 127
+    "María del Mar Martín Castillo": {
+      "sum": 688259.3999999999,
+      "count": 4
     },
     "Leyna 2018 SL": {
-      "sum": 321417.83999999997,
-      "count": 11
+      "sum": 269016.56,
+      "count": 12
     },
-    "Copesol, S.L.": {
-      "sum": 290620.59,
-      "count": 21
-    },
-    "Grupo Aml&Apimma Events SL": {
-      "sum": 204953.01,
-      "count": 35
-    },
-    "Excavaciones y Materiales de Construcción JOMA, S.L.": {
-      "sum": 186888.4,
-      "count": 18
+    "INGENIERIA Y OBRAS OBRACSA SL": {
+      "sum": 250149.53,
+      "count": 13
     },
     "Ingeniería y Obras Obracsa SL": {
-      "sum": 163670.72,
-      "count": 8
+      "sum": 204572.28,
+      "count": 12
     },
-    "Pinturas Manuel Arévalo SL": {
-      "sum": 159699.21,
-      "count": 11
+    "Sonotestaudio SL": {
+      "sum": 183256.73,
+      "count": 56
     },
-    "UTE Rincón de la Victoria": {
-      "sum": 148863.82,
-      "count": 6
+    "Antonio Cano González": {
+      "sum": 174389.93,
+      "count": 91
     },
-    "Turismo García, S.L.": {
-      "sum": 145473.57,
-      "count": 85
-    },
-    "Indumálaga SL": {
-      "sum": 128457.2,
-      "count": 44
+    "Copesol SL": {
+      "sum": 174156.29,
+      "count": 15
     },
     "Mayorprint Industrias Gráficas": {
-      "sum": 127263.92,
-      "count": 75
+      "sum": 172321.04,
+      "count": 81
     },
-    "Grupo de Medios Gastronómicos, S.L.": {
-      "sum": 119390.7,
+    "Copesol, S.L.": {
+      "sum": 169335.65,
+      "count": 10
+    },
+    "UTE Rincón de la Victoria": {
+      "sum": 156934.76,
+      "count": 6
+    },
+    "Indagrafic SL": {
+      "sum": 132534.45,
+      "count": 64
+    },
+    "Indumálaga SL": {
+      "sum": 125780.55,
+      "count": 41
+    },
+    "Ingeniería y obra Obracsa S.L.": {
+      "sum": 124244.8,
+      "count": 6
+    },
+    "CONSTRUCCIONES POPANCO SL": {
+      "sum": 120964.8,
       "count": 11
     },
-    "Indagrafic, S.L.": {
-      "sum": 107068.18,
-      "count": 69
-    },
-    "Gestión Proyectos y Obras del Sur, S.L.": {
-      "sum": 96673.61,
-      "count": 2
+    "ESTREMASOL SL": {
+      "sum": 118163.76000000001,
+      "count": 20
     }
   },
   "by_year": {
+    "2022": {
+      "sum": 4968138.36,
+      "count": 1504
+    },
+    "2023": {
+      "sum": 5547471.22,
+      "count": 1591
+    },
     "2024": {
       "sum": 6323153.0,
       "count": 1611
     },
     "2025": {
       "sum": 4701512.74,
-      "count": 1409
+      "count": 1410
     }
   },
+  "by_quarter": [
+    {
+      "year": 2022,
+      "quarter": 1,
+      "periodo": "2022 T1",
+      "importe": 956696.01,
+      "contratos": 365
+    },
+    {
+      "year": 2022,
+      "quarter": 2,
+      "periodo": "2022 T2",
+      "importe": 1434076.23,
+      "contratos": 426
+    },
+    {
+      "year": 2022,
+      "quarter": 3,
+      "periodo": "2022 T3",
+      "importe": 1397104.32,
+      "contratos": 361
+    },
+    {
+      "year": 2022,
+      "quarter": 4,
+      "periodo": "2022 T4",
+      "importe": 1180261.8,
+      "contratos": 352
+    },
+    {
+      "year": 2023,
+      "quarter": 1,
+      "periodo": "2023 T1",
+      "importe": 1653502.14,
+      "contratos": 526
+    },
+    {
+      "year": 2023,
+      "quarter": 2,
+      "periodo": "2023 T2",
+      "importe": 1101854.05,
+      "contratos": 356
+    },
+    {
+      "year": 2023,
+      "quarter": 3,
+      "periodo": "2023 T3",
+      "importe": 1159404.83,
+      "contratos": 330
+    },
+    {
+      "year": 2023,
+      "quarter": 4,
+      "periodo": "2023 T4",
+      "importe": 1632710.2,
+      "contratos": 379
+    },
+    {
+      "year": 2024,
+      "quarter": 1,
+      "periodo": "2024 T1",
+      "importe": 1321186.26,
+      "contratos": 385
+    },
+    {
+      "year": 2024,
+      "quarter": 2,
+      "periodo": "2024 T2",
+      "importe": 1275966.23,
+      "contratos": 433
+    },
+    {
+      "year": 2024,
+      "quarter": 3,
+      "periodo": "2024 T3",
+      "importe": 1242321.73,
+      "contratos": 320
+    },
+    {
+      "year": 2024,
+      "quarter": 4,
+      "periodo": "2024 T4",
+      "importe": 2483678.78,
+      "contratos": 473
+    },
+    {
+      "year": 2025,
+      "quarter": 1,
+      "periodo": "2025 T1",
+      "importe": 1132068.8699999999,
+      "contratos": 364
+    },
+    {
+      "year": 2025,
+      "quarter": 2,
+      "periodo": "2025 T2",
+      "importe": 947773.05,
+      "contratos": 351
+    },
+    {
+      "year": 2025,
+      "quarter": 3,
+      "periodo": "2025 T3",
+      "importe": 1026949.74,
+      "contratos": 270
+    },
+    {
+      "year": 2025,
+      "quarter": 4,
+      "periodo": "2025 T4",
+      "importe": 1594721.08,
+      "contratos": 425
+    }
+  ],
   "by_type": {
     "Obras": {
-      "sum": 1650010.13,
-      "count": 87
+      "sum": 3602424.7,
+      "count": 202
     },
     "Otros": {
-      "sum": 17734.64,
-      "count": 5
+      "sum": 100183.9,
+      "count": 63
     },
     "Servicio": {
-      "sum": 6577557.17,
-      "count": 1819
+      "sum": 12562357.91,
+      "count": 3581
     },
     "Suministro": {
-      "sum": 2779363.8,
-      "count": 1109
+      "sum": 5275308.81,
+      "count": 2270
     }
   }
 }
