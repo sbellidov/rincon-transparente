@@ -9,6 +9,8 @@ const ITEMS_PER_PAGE = 20;
 let sortKey = 'fecha_adjudicacion';
 let sortOrder = 'desc';
 
+let activeFilters = { anio: '', trimestre: '', area: '', tipo: '', texto: '' };
+
 async function init() {
     try {
         const [contractsRes, analysisRes, summaryRes] = await Promise.all([
@@ -29,9 +31,11 @@ async function init() {
         renderCharts();
         renderTable();
         renderContractors();
+        populateFilters();
         setupSearch();
         setupSorting();
         setupTabs();
+        updateResultsCount();
         lucide.createIcons();
     } catch (err) {
         console.error("Error loading data:", err);
@@ -357,20 +361,101 @@ window.goToPage = (page) => {
     document.getElementById('contracts').scrollIntoView({ behavior: 'smooth' });
 };
 
+function populateFilters() {
+    const anos = [...new Set(allContracts.map(c => c.year).filter(Boolean))].sort();
+    const areas = [...new Set(allContracts.map(c => c.area).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'es'));
+    const tipos = [...new Set(allContracts.map(c => c.tipo_contrato_limpio).filter(Boolean))].sort();
+
+    const anioSel = document.getElementById('filterAnio');
+    anos.forEach(a => {
+        const opt = document.createElement('option');
+        opt.value = a;
+        opt.textContent = a;
+        anioSel.appendChild(opt);
+    });
+
+    const areaSel = document.getElementById('filterArea');
+    areas.forEach(a => {
+        const opt = document.createElement('option');
+        opt.value = a;
+        opt.textContent = a;
+        areaSel.appendChild(opt);
+    });
+
+    const tipoSel = document.getElementById('filterTipo');
+    tipos.forEach(t => {
+        const opt = document.createElement('option');
+        opt.value = t;
+        opt.textContent = t;
+        tipoSel.appendChild(opt);
+    });
+}
+
+function applyFilters() {
+    const { anio, trimestre, area, tipo, texto } = activeFilters;
+    filteredContracts = allContracts.filter(c => {
+        if (anio && String(c.year) !== anio) return false;
+        if (trimestre && String(c.quarter) !== trimestre) return false;
+        if (area && c.area !== area) return false;
+        if (tipo && c.tipo_contrato_limpio !== tipo) return false;
+        if (texto) {
+            const q = texto.toLowerCase();
+            return (
+                (c.adjudicatario && c.adjudicatario.toLowerCase().includes(q)) ||
+                (c.adjudicatario_unificado && c.adjudicatario_unificado.toLowerCase().includes(q)) ||
+                (c.objeto && c.objeto.toLowerCase().includes(q)) ||
+                (c.area && c.area.toLowerCase().includes(q)) ||
+                (c.cif && String(c.cif).toLowerCase().includes(q))
+            );
+        }
+        return true;
+    });
+    sortData();
+    currentPage = 1;
+    renderTable();
+    updateResultsCount();
+}
+
+function updateResultsCount() {
+    const total = filteredContracts.reduce((sum, c) => sum + (c.importe || 0), 0);
+    const el = document.getElementById('resultsCount');
+    el.innerHTML = `<strong>${filteredContracts.length.toLocaleString('es-ES')}</strong> contratos · <strong>${formatCurrency(total)}</strong>`;
+}
+
 function setupSearch() {
-    const input = document.getElementById('searchInput');
-    input.addEventListener('input', (e) => {
-        const query = e.target.value.toLowerCase();
-        filteredContracts = allContracts.filter(c =>
-            (c.adjudicatario && c.adjudicatario.toLowerCase().includes(query)) ||
-            (c.adjudicatario_unificado && c.adjudicatario_unificado.toLowerCase().includes(query)) ||
-            (c.objeto && c.objeto.toLowerCase().includes(query)) ||
-            (c.area && c.area.toLowerCase().includes(query)) ||
-            (c.cif && String(c.cif).toLowerCase().includes(query))
-        );
-        sortData();
-        currentPage = 1;
-        renderTable();
+    document.getElementById('searchInput').addEventListener('input', e => {
+        activeFilters.texto = e.target.value;
+        applyFilters();
+    });
+
+    document.getElementById('filterAnio').addEventListener('change', e => {
+        activeFilters.anio = e.target.value;
+        applyFilters();
+    });
+
+    document.getElementById('filterTrimestre').addEventListener('change', e => {
+        activeFilters.trimestre = e.target.value;
+        applyFilters();
+    });
+
+    document.getElementById('filterArea').addEventListener('change', e => {
+        activeFilters.area = e.target.value;
+        applyFilters();
+    });
+
+    document.getElementById('filterTipo').addEventListener('change', e => {
+        activeFilters.tipo = e.target.value;
+        applyFilters();
+    });
+
+    document.getElementById('clearFilters').addEventListener('click', () => {
+        activeFilters = { anio: '', trimestre: '', area: '', tipo: '', texto: '' };
+        document.getElementById('searchInput').value = '';
+        document.getElementById('filterAnio').value = '';
+        document.getElementById('filterTrimestre').value = '';
+        document.getElementById('filterArea').value = '';
+        document.getElementById('filterTipo').value = '';
+        applyFilters();
     });
 
     const contractorSearch = document.getElementById('contractorSearch');

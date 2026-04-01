@@ -612,6 +612,89 @@ td {
     transform: rotate(180deg);
 }
 
+/* ── Filters bar ──────────────────────────────────────────────────── */
+.filters-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+.filters-bar .search-bar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.filter-select {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    color: var(--text-primary);
+    padding: 0.65rem 1.1rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.85rem center;
+    padding-right: 2.2rem;
+}
+
+.filter-select--wide {
+    max-width: 200px;
+}
+
+.filter-select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+.filter-select option {
+    background: #1e293b;
+    color: var(--text-primary);
+}
+
+.btn-clear {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: var(--text-secondary);
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s, border-color 0.3s;
+    flex-shrink: 0;
+}
+
+.btn-clear:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-clear i {
+    width: 16px;
+    height: 16px;
+}
+
+.results-count {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    min-height: 1.2em;
+}
+
+.results-count strong {
+    color: var(--text-primary);
+}
+
+/* ── Media queries ────────────────────────────────────────────────── */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -621,8 +704,16 @@ td {
         grid-template-columns: 1fr;
     }
 
-    .search-bar {
+    .filters-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filters-bar .search-bar,
+    .filter-select,
+    .filter-select--wide {
         width: 100%;
+        max-width: 100%;
     }
 
     .section-header {
@@ -634,7 +725,7 @@ td {
     .contractor-main-info {
         gap: 0.75rem;
     }
-    
+
     .contractor-meta {
         flex-direction: column;
         gap: 0.25rem;

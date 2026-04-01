@@ -76,11 +76,34 @@
             <div id="tableView" class="view-content active">
                 <div class="section-header">
                     <h2>Buscador de Contratos</h2>
+                </div>
+
+                <div class="filters-bar">
                     <div class="search-bar">
                         <i data-lucide="search"></i>
-                        <input type="text" id="searchInput" placeholder="Buscar por adjudicatario, objeto, área...">
+                        <input type="text" id="searchInput" placeholder="Contratista, objeto, CIF…">
                     </div>
+                    <select id="filterAnio" class="filter-select">
+                        <option value="">Todos los años</option>
+                    </select>
+                    <select id="filterTrimestre" class="filter-select">
+                        <option value="">Trimestre</option>
+                        <option value="1">T1</option>
+                        <option value="2">T2</option>
+                        <option value="3">T3</option>
+                        <option value="4">T4</option>
+                    </select>
+                    <select id="filterArea" class="filter-select filter-select--wide">
+                        <option value="">Todas las áreas</option>
+                    </select>
+                    <select id="filterTipo" class="filter-select">
+                        <option value="">Todos los tipos</option>
+                    </select>
+                    <button id="clearFilters" class="btn-clear" title="Limpiar filtros">
+                        <i data-lucide="x-circle"></i>
+                    </button>
                 </div>
+                <p id="resultsCount" class="results-count"></p>
 
                 <div class="card table-container">
                     <table id="contractsTable">
