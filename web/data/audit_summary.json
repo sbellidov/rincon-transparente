@@ -1,10 +1,50 @@
 {
-  "total_checked": 3020,
-  "total_anomalies": 76,
+  "total_checked": 6116,
+  "total_anomalies": 1748,
   "by_type": {
-    "CIF Inválido": 51,
-    "Fecha Inválida/Faltante": 23,
-    "Importe Elevado": 1,
-    "Importe Cero/Negativo": 1
-  }
+    "Fecha Inválida/Faltante": 1559,
+    "CIF Faltante": 80,
+    "CIF Inválido": 47,
+    "Importe Cero/Negativo": 35,
+    "Objeto Faltante": 26,
+    "Importe Elevado": 1
+  },
+  "by_year": [
+    {
+      "year": 2022,
+      "total": 1504,
+      "importe_total": 4968138.36,
+      "sin_cif": 61,
+      "sin_fecha": 1504,
+      "importe_cero": 8,
+      "importe_alto": 0
+    },
+    {
+      "year": 2023,
+      "total": 1591,
+      "importe_total": 5547471.22,
+      "sin_cif": 38,
+      "sin_fecha": 31,
+      "importe_cero": 25,
+      "importe_alto": 0
+    },
+    {
+      "year": 2024,
+      "total": 1611,
+      "importe_total": 6323153.0,
+      "sin_cif": 13,
+      "sin_fecha": 11,
+      "importe_cero": 1,
+      "importe_alto": 1
+    },
+    {
+      "year": 2025,
+      "total": 1410,
+      "importe_total": 4701512.74,
+      "sin_cif": 15,
+      "sin_fecha": 13,
+      "importe_cero": 1,
+      "importe_alto": 0
+    }
+  ]
 }

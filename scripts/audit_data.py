@@ -69,10 +69,34 @@ def audit_data():
     print(f"  - Report saved to: {output_path}")
 
     # Summary Statistics
+    df['_sin_cif']    = df['cif'].isna() | (df['cif'] == '') | (df['check_cif'] == False)
+    df['_sin_fecha']  = df['fecha_adjudicacion'].isna()
+    df['_imp_cero']   = df['importe'] <= 0
+    df['_imp_alto']   = df['importe'] > 50000
+
+    by_year = (
+        df.groupby('year')
+        .agg(
+            total=('importe', 'count'),
+            importe_total=('importe', 'sum'),
+            sin_cif=('_sin_cif', 'sum'),
+            sin_fecha=('_sin_fecha', 'sum'),
+            importe_cero=('_imp_cero', 'sum'),
+            importe_alto=('_imp_alto', 'sum'),
+        )
+        .reset_index()
+        .sort_values('year')
+        .assign(year=lambda d: d['year'].astype(int))
+        .assign(importe_total=lambda d: d['importe_total'].round(2))
+    )
+    for col in ['sin_cif', 'sin_fecha', 'importe_cero', 'importe_alto']:
+        by_year[col] = by_year[col].astype(int)
+
     summary = {
         'total_checked': len(df),
         'total_anomalies': len(audit_df),
-        'by_type': audit_df['tipo_anomalia'].value_counts().to_dict() if not audit_df.empty else {}
+        'by_type': audit_df['tipo_anomalia'].value_counts().to_dict() if not audit_df.empty else {},
+        'by_year': by_year.to_dict('records'),
     }
     
     with open(os.path.join(processed_dir, 'audit_summary.json'), 'w', encoding='utf-8') as f:
