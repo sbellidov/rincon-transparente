@@ -12,13 +12,17 @@ def analyze():
     else:
         df['adjudicatario_final'] = df['adjudicatario']
     
+    valid_dates = df['fecha_adjudicacion'].dropna()
+    max_date = valid_dates.max() if not valid_dates.empty else None
+
     analysis = {
         'summary': {
             'total_contracts': len(df),
             'total_amount': df['importe'].sum(),
             'avg_amount': df['importe'].mean(),
-            'min_date': df['fecha_adjudicacion'].min().isoformat() if not df['fecha_adjudicacion'].dropna().empty else None,
-            'max_date': df['fecha_adjudicacion'].max().isoformat() if not df['fecha_adjudicacion'].dropna().empty else None
+            'min_date': valid_dates.min().isoformat() if not valid_dates.empty else None,
+            'max_date': max_date.isoformat() if max_date is not None else None,
+            'last_updated': max_date.strftime('%d/%m/%Y') if max_date is not None else None,
         },
         'by_area': df.groupby('area')['importe'].agg(['sum', 'count']).sort_values('sum', ascending=False).head(15).to_dict('index'),
         'top_adjudicatarios': df.groupby('adjudicatario_final')['importe'].agg(['sum', 'count']).sort_values('sum', ascending=False).head(15).to_dict('index'),
