@@ -499,7 +499,13 @@ def process_files():
             if contractor_row.empty: continue
             contractor_info = contractor_row.iloc[0].to_dict()
             
-            contracts_list = group.sort_values('fecha_adjudicacion', ascending=False).replace({pd.NA: None, pd.NaT: None}).where(pd.notnull(group), None).to_dict('records')
+            contract_cols = ['fecha_adjudicacion', 'objeto', 'expediente', 'importe']
+            contracts_list = (
+                group[contract_cols]
+                .sort_values('fecha_adjudicacion', ascending=False)
+                .replace({pd.NA: None, pd.NaT: None})
+                .to_dict('records')
+            )
             summary.append({
                 **contractor_info,
                 'total_importe': float(group['importe'].sum()),
