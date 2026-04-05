@@ -1,3 +1,17 @@
+// ============================================================
+// app.js — Portal de transparencia · Rincón de la Victoria
+// SPA vanilla JS sin build step. Lee JSONs desde docs/data/.
+//
+// Estructura:
+//   1. Estado global
+//   2. Inicialización
+//   3. Renderizado (dashboard, gráficos, tabla, contratistas, calidad)
+//   4. Filtros y búsqueda
+//   5. Utilidades (formato, CSV)
+// ============================================================
+
+
+// ── 1. Estado global ─────────────────────────────────────────
 let allContracts = [];
 let analysisData = {};
 let auditData = {};
@@ -12,8 +26,12 @@ let sortOrder = 'desc';
 
 let activeFilters = { anio: '', trimestre: '', area: '', tipo: '', texto: '' };
 
+
+// ── 2. Inicialización ────────────────────────────────────────
+
 async function init() {
     try {
+        // ?v=timestamp evita que el navegador sirva JSONs cacheados tras una actualización
         const [contractsRes, analysisRes, summaryRes, auditRes] = await Promise.all([
             fetch('data/contracts.json?v=' + Date.now()),
             fetch('data/analysis.json?v=' + Date.now()),
@@ -84,6 +102,7 @@ function setupTabs() {
             document.getElementById(`${view}View`).classList.add('active');
 
             // Lazy: renderizar gráficos solo la primera vez que se abre la pestaña
+            // (Chart.js necesita que el canvas sea visible para calcular dimensiones)
             if (view === 'analysis' && !chartsRendered) {
                 renderCharts();
                 chartsRendered = true;
@@ -92,6 +111,9 @@ function setupTabs() {
         });
     });
 }
+
+
+// ── 3. Renderizado ───────────────────────────────────────────
 
 function renderContractors() {
     const container = document.getElementById('contractorsList');
@@ -145,13 +167,10 @@ function renderContractors() {
     lucide.createIcons();
 }
 
+// Expuesto en window para poder llamarlo desde el onclick inline del HTML
 window.toggleContractor = (cif) => {
     const card = document.getElementById(`contractor-${cif}`);
     const isExpanded = card.classList.contains('expanded');
-
-    // Close others
-    // document.querySelectorAll('.contractor-card').forEach(c => c.classList.remove('expanded'));
-
     if (!isExpanded) {
         card.classList.add('expanded');
     } else {
@@ -298,6 +317,7 @@ function renderCharts() {
                 datalabels: {
                     color: '#fff',
                     font: { size: 13, weight: 'bold', family: "'Inter', sans-serif" },
+                    // Ocultar etiqueta si el segmento es muy pequeño (< 3%) para evitar solapamiento
                     formatter: (value) => {
                         const pct = Math.round(value / typeTotal * 100);
                         return pct >= 3 ? pct + '%' : '';
@@ -327,7 +347,7 @@ function renderCharts() {
         },
         options: {
             responsive: true,
-            indexAxis: 'y',
+            indexAxis: 'y',  // barras horizontales para que quepan los nombres de área
             maintainAspectRatio: false,
             plugins: {
                 legend: { display: false },
@@ -375,6 +395,7 @@ function renderCharts() {
                         padding: 16,
                         usePointStyle: true,
                         pointStyleWidth: 12,
+                        // Leyenda personalizada: muestra el importe total junto al nombre del tipo
                         generateLabels: (chart) => {
                             const data = chart.data;
                             return data.labels.map((label, i) => ({
@@ -432,6 +453,7 @@ function renderTable() {
     renderPagination();
 }
 
+// Mapea el tipo de entidad a una clase CSS para el badge de color
 function getEntityClass(type) {
     if (!type) return 'otros';
     const t = type.toLowerCase();
@@ -442,13 +464,18 @@ function getEntityClass(type) {
     return 'otros';
 }
 
+
+// ── 4. Filtros y búsqueda ────────────────────────────────────
+
 function setupSorting() {
     document.querySelectorAll('th.sortable').forEach(th => {
         th.addEventListener('click', () => {
             const key = th.getAttribute('data-sort');
             if (sortKey === key) {
+                // Mismo campo: invertir orden
                 sortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
             } else {
+                // Campo nuevo: orden por defecto según tipo (numéricos/fecha → desc, texto → asc)
                 sortKey = key;
                 sortOrder = key === 'importe' || key === 'fecha_adjudicacion' ? 'desc' : 'asc';
             }
@@ -468,6 +495,7 @@ function sortData() {
             valB = (b.adjudicatario_unificado || b.adjudicatario || '').toLowerCase();
         }
 
+        // Nulos siempre al final
         if (valA == null) return 1;
         if (valB == null) return -1;
 
@@ -512,6 +540,7 @@ function renderPagination() {
     container.innerHTML = buttons;
 }
 
+// Expuesto en window para poder llamarlo desde el onclick inline del HTML
 window.goToPage = (page) => {
     currentPage = page;
     renderTable();
@@ -617,6 +646,7 @@ function setupSearch() {
 
     document.getElementById('downloadCsv').addEventListener('click', downloadCSV);
 
+    // Búsqueda en la pestaña Contratistas (filtra por nombre o CIF)
     const contractorSearch = document.getElementById('contractorSearch');
     contractorSearch.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase();
@@ -627,6 +657,9 @@ function setupSearch() {
         renderContractors();
     });
 }
+
+
+// ── 5. Utilidades ────────────────────────────────────────────
 
 function downloadCSV() {
     const headers = ['Fecha', 'Adjudicatario', 'CIF', 'Tipo entidad', 'Objeto', 'Área', 'Tipo contrato', 'Importe (€)', 'Expediente'];
@@ -643,6 +676,7 @@ function downloadCSV() {
     ].map(v => `"${v}"`).join(','));
 
     const csv = [headers.join(','), ...rows].join('\n');
+    // \uFEFF = BOM UTF-8: necesario para que Excel abra el CSV con tildes correctamente
     const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -662,6 +696,7 @@ function formatCurrency(val) {
 function formatDate(dateStr) {
     if (!dateStr || dateStr === 'None' || dateStr === 'NaT' || dateStr === 'null') return 'N/A';
     const date = new Date(dateStr);
+    // Descartar fechas anteriores al año 2000 (artefactos de parseo del ETL)
     if (isNaN(date.getTime()) || date.getFullYear() < 2000) return 'N/A';
     return date.toLocaleDateString('es-ES');
 }
