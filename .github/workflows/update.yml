@@ -2,7 +2,7 @@ name: Actualizar datos de contratos
 
 on:
   schedule:
-    - cron: '0 6 * * *'   # Todos los días a las 06:00 UTC
+    - cron: '0 3 * * 6'   # Todos los sábados a las 03:00 UTC (4h/5h España)
   workflow_dispatch:        # Permite lanzarlo manualmente desde GitHub
 
 permissions:
