@@ -4,7 +4,7 @@ Portal de transparencia de contratos menores del Ayuntamiento de Rincón de la V
 Stack: ETL Python 3.9 + frontend estático vanilla JS desplegado en GitHub Pages.
 
 **URL producción:** https://rincontransparente.com
-**Repo:** https://github.com/sbellidov/rincon-contratos-menores
+**Repo:** https://github.com/sbellidov/rincon-transparente
 
 ## Setup local
 
