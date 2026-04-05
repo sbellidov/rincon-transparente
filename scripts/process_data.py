@@ -1,3 +1,15 @@
+# ============================================================
+# process_data.py — Pipeline principal del ETL
+#
+# Lee los Excel trimestrales de data/raw/ y genera:
+#   - contracts.csv / contracts.json  → un registro por contrato
+#   - contractors_summary.json        → contratistas con contratos anidados
+#   - dim_contractors/areas/types.json → dimensiones del star schema
+#   - fact_contracts.json             → tabla de hechos
+#
+# Orden de ejecución: después de download_data.py
+# ============================================================
+
 import pandas as pd
 import os
 import re
@@ -6,18 +18,36 @@ import json
 import hashlib
 from datetime import datetime
 
+
+# ── Limpieza de importes ─────────────────────────────────────
+
 def clean_amount(val):
+    """Convierte un importe en texto (formato europeo) a float.
+    Maneja variantes como '1.234,56 €', '1234.56', celdas vacías, etc.
+    """
     if pd.isna(val): return 0.0
     if isinstance(val, (int, float)): return float(val)
     val = str(val).replace('€', '').strip()
     if not val: return 0.0
+    # Formato europeo: punto como separador de miles, coma como decimal
     val = val.replace('.', '').replace(',', '.')
     try:
         return float(val)
     except:
         return 0.0
 
+
+# ── Validación de identificadores fiscales españoles ────────────
+
 def validate_spanish_id(code):
+    """Valida un NIF (personas físicas / NIE extranjeros) o CIF (entidades).
+
+    NIF: 8 dígitos + letra de control calculada con módulo 23.
+    NIE: X/Y/Z + 7 dígitos + letra; se sustituye X→0, Y→1, Z→2 antes del cálculo.
+    CIF: letra inicial + 7 dígitos + dígito/letra de control según la letra.
+
+    Devuelve (es_válido, código_normalizado, tipo).
+    """
     if not code or not isinstance(code, str):
         return False, None, "Invalid"
     raw = code.upper().strip()
@@ -27,6 +57,7 @@ def validate_spanish_id(code):
     first = clean[0]
     middle = clean[1:8]
     last = clean[8]
+    # NIF / NIE
     if first.isdigit() or first in 'XYZ':
         mapping = "TRWAGMYFPDXBNJZSQVHLCKE"
         try:
@@ -39,10 +70,13 @@ def validate_spanish_id(code):
             return last == mapping[idx], clean, "NIF"
         except:
             return False, clean, "NIF (Error)"
+    # CIF
     if first in 'ABCDEFGHJNPQRSUVW':
         try:
             if not middle.isdigit(): return False, clean, "CIF"
+            # Suma de posiciones pares (1-based)
             a = sum(int(middle[i]) for i in [1, 3, 5])
+            # Suma de posiciones impares: cada dígito × 2, sumando sus cifras
             b = 0
             for i in [0, 2, 4, 6]:
                 prod = int(middle[i]) * 2
@@ -56,7 +90,14 @@ def validate_spanish_id(code):
         except: return False, clean, "CIF (Error)"
     return False, clean, "Unknown"
 
+
 def extract_cif_address(combined):
+    """Extrae el CIF y la dirección de una celda que los combina (formato 2023+).
+
+    Intenta primero un regex de 9 caracteres alfanuméricos; si falla,
+    parte por el primer separador guion/espacio.
+    Devuelve (cif_normalizado, dirección, es_válido, tipo_id).
+    """
     if pd.isna(combined): return None, None, False, None
     combined = str(combined).strip()
     potential_match = re.search(r'([A-Z0-9][\s-]*){9}', combined.upper())
@@ -80,7 +121,15 @@ def extract_cif_address(combined):
         return normalized, address, is_valid, id_type
     return None, combined, False, "None"
 
+
 def get_entity_type(cif):
+    """Infiere el tipo de entidad a partir del primer carácter del CIF.
+
+    Regla oficial del Registro Mercantil:
+      - Dígito / X, Y, Z → persona física (Autónomo o extranjero)
+      - A → Sociedad Anónima, B/N → Sociedad Limitada
+      - G → Asociación, P/Q/S → Administración Pública, etc.
+    """
     if not cif: return "Desconocido"
     cif = str(cif).upper()
     first_char = cif[0]
@@ -93,7 +142,11 @@ def get_entity_type(cif):
     }
     return mapping.get(first_char, "Empresa/Otros")
 
+
 def clean_tipo(tipo):
+    """Normaliza el tipo de contrato desde texto libre a una de las
+    categorías canónicas: Servicio / Suministro / Obras / Otros.
+    """
     if pd.isna(tipo): return "Otros"
     tipo = str(tipo).upper()
     if "SERVICIO" in tipo: return "Servicio"
@@ -101,7 +154,14 @@ def clean_tipo(tipo):
     if "OBRA" in tipo: return "Obras"
     return "Otros"
 
+
 def find_header_row(df_raw):
+    """Localiza la fila de cabecera en un Excel crudo escaneando las 10 primeras filas.
+
+    Los Excel municipales incluyen títulos y logos antes de la tabla real.
+    Se considera cabecera la primera fila que contenga 'OBJETO' y
+    ('ADJUDICATARIO' o 'ADJUDICACIÓN').
+    """
     for i in range(min(10, len(df_raw))):
         row_values = [str(x).upper() for x in df_raw.iloc[i].values]
         row_str = " ".join(row_values)
@@ -109,16 +169,21 @@ def find_header_row(df_raw):
             return i
     return None
 
+
 def parse_adj_dom_cif(combined):
-    """
-    Parses the 2022 format: 'NOMBRE. NIF/CIF CÓDIGO. DIRECCIÓN'
-    Handles typos and variants: NNIF, NIE, CIFF, CIF: CIF. CIF- and comma/space before label.
-    Returns (name, cif_code, address).
+    """Parsea el formato 2022: 'NOMBRE. NIF/CIF CÓDIGO. DIRECCIÓN'.
+
+    En 2022 el ayuntamiento publicó una sola columna con nombre, CIF y
+    dirección concatenados. A partir de 2023 pasaron a columnas separadas.
+
+    Maneja erratas frecuentes: NNIF, NIE, CIFF, 'CIF:', 'CIF-' y separadores
+    con coma o espacio antes de la etiqueta.
+    Devuelve (nombre, cif_normalizado, dirección).
     """
     if pd.isna(combined):
         return "", "", ""
     s = str(combined).strip()
-    # Primary: labeled NIF/NIE/CIF with various separators before and after
+    # Intento principal: etiqueta NIF/NIE/CIF seguida de separador y código
     m = re.search(
         r'[.,\s]\s*(?:N{1,2}IF|NIE|CIF{1,2})[:\s\.\-]+([\w.\-]{8,12})[\.,]?\s*(.*)',
         s, re.IGNORECASE
@@ -129,7 +194,7 @@ def parse_adj_dom_cif(combined):
         if len(cif_raw) == 9:
             address = m.group(2).strip().rstrip('.')
             return name, cif_raw, address
-    # Fallback: unlabeled CIF pattern after separator (e.g. 'NOMBRE. Q-2866001-G DIRECCIÓN')
+    # Fallback: patrón CIF sin etiqueta tras separador (ej. 'NOMBRE. Q-2866001-G DIRECCIÓN')
     m2 = re.search(r'[.,]\s+([A-Z][0-9]{7}[A-Z0-9]|[A-Z]-[0-9]{7}-[A-Z])\s+(.*)', s, re.IGNORECASE)
     if m2:
         name = s[:m2.start()].strip().rstrip('.,')
@@ -210,10 +275,8 @@ AREA_MAP = {
     "Villa Antíopa":                    "Villa Romana Antíopa",
     "Villa Antiiopa":                   "Villa Romana Antíopa",
     "Villa Antiíopa":                   "Villa Romana Antíopa",
-    "Villa Antiiopa":                   "Villa Romana Antíopa",
     "Villa Antíopa y Cueva del Tesoro": "Villa Romana Antíopa",
     "Villa Romana":                     "Villa Romana Antíopa",
-    "Villa Antiiopa":                   "Villa Romana Antíopa",
 
     # ── Urbanismo ─────────────────────────────────────────────────────────────
     "Urbanismo":               "Urbanismo",
@@ -318,7 +381,9 @@ AREA_MAP = {
 
 
 def normalize_expediente(exp):
-    """Normaliza el expediente a formato NÚMERO/AA (año de 2 cifras, sin espacios)."""
+    """Normaliza el expediente a formato NÚMERO/AA (año de 2 cifras, sin espacios).
+    Ejemplo: '123/2024' → '123/24'.
+    """
     if not exp or pd.isna(exp):
         return exp
     exp = str(exp).strip()
@@ -342,21 +407,37 @@ def normalize_area(area):
 
 
 def sanitize_text(text):
+    """Limpia un campo de texto: elimina saltos de línea, tabulaciones
+    y espacios múltiples, preservando tildes y caracteres españoles.
+    """
     if not text or pd.isna(text): return ""
-    # Remove anomalous characters, extra dots, commas and normalize spaces
     text = str(text).strip()
-    # Replace common issues (like the ones the user might be seeing)
     text = re.sub(r'[\r\n\t]', ' ', text)
     text = re.sub(r'\s+', ' ', text)
-    # Basic cleaning but preserving accents and Spanish chars
     return text.strip()
 
 
+# ── Pipeline principal ───────────────────────────────────────
+
 def process_files():
+    """Lee todos los Excel de data/raw/, normaliza y valida los datos,
+    y genera el star schema completo en data/processed/.
+
+    Pasos internos:
+      1. Detectar cabecera y leer cada hoja relevante del Excel
+      2. Detectar formato 2022 (columna combinada) y dividirla
+      3. Extraer y validar CIF, normalizar áreas, tipos y fechas
+      4. Propagar CIFs: si el mismo nombre aparece sin CIF en otro registro,
+         se completa con el CIF conocido (por moda del nombre)
+      5. Construir dimensiones (contratistas, áreas, tipos) y tabla de hechos
+      6. Generar contracts.json reducido solo con los campos del frontend
+    """
     raw_dir = 'data/raw'
     processed_dir = 'data/processed'
     all_data = []
 
+    # Mapeo de nombres de columna del Excel → nombres internos
+    # Necesario porque el ayuntamiento usa variantes y abreviaciones distintas por año
     column_mapping = {
         'CIF/DOMICILIO': 'cif_domicilio', 'ADJUDICATARIO': 'adjudicatario',
         'EXPTE.': 'expediente', 'Nº DE ORDEN': 'n_orden', 'Nº DE ÓRDEN': 'n_orden',
@@ -376,6 +457,7 @@ def process_files():
             book = xlrd.open_workbook(file_path, on_demand=True)
             for sheet_name in book.sheet_names():
                 uname = sheet_name.upper()
+                # Solo procesar hojas del Ayuntamiento o de Deportes (APAL); ignorar índices y portadas
                 if not ('AYTO' in uname or 'DEP' in uname or 'CONTRATO' in uname): continue
                 print(f"  Reading sheet: {sheet_name}")
                 df_raw = pd.read_excel(file_path, engine='xlrd', sheet_name=sheet_name, header=None)
@@ -383,10 +465,11 @@ def process_files():
                 if header_row is None: continue
                 df = pd.read_excel(file_path, engine='xlrd', sheet_name=sheet_name, header=header_row)
                 df = df.dropna(how='all', axis=0).dropna(how='all', axis=1)
+                # Guardar la fila raw completa para trazabilidad en el informe de auditoría
                 df['raw_row'] = df.apply(lambda row: " || ".join([str(val).strip() for val in row.values]), axis=1)
                 df['source_file'] = filename
                 df.columns = [str(c).replace('\n', ' ').strip() for c in df.columns]
-                # 2022 format: combined 'ADJUDICATARIO/DOMICILIO/CIF' → split into standard columns
+                # Formato 2022: columna única 'ADJUDICATARIO/DOMICILIO/CIF' → separar en columnas estándar
                 if 'ADJUDICATARIO/DOMICILIO/CIF' in df.columns:
                     parsed = df['ADJUDICATARIO/DOMICILIO/CIF'].apply(parse_adj_dom_cif)
                     df['ADJUDICATARIO'] = parsed.apply(lambda x: x[0])
@@ -402,7 +485,7 @@ def process_files():
                 valid_cols = [c for c in df.columns if c in list(column_mapping.values()) + ['raw_row', 'source_file']]
                 df = df[valid_cols]
                 if df.empty: continue
-                # Ensure required columns exist (older files may lack them)
+                # Asegurar columnas obligatorias que pueden faltar en ficheros más antiguos
                 if 'fecha_adjudicacion' not in df.columns:
                     df['fecha_adjudicacion'] = pd.NaT
                 if 'area' not in df.columns:
@@ -411,19 +494,18 @@ def process_files():
                 df['fecha_adjudicacion'] = pd.to_datetime(df['fecha_adjudicacion'], errors='coerce')
                 if not df.empty:
                     _max_year = datetime.now().year + 1
+                    # Nulificar fechas fuera del rango válido (artefactos de parseo del Excel)
                     df.loc[(df['fecha_adjudicacion'].dt.year < 2020) | (df['fecha_adjudicacion'].dt.year > _max_year), 'fecha_adjudicacion'] = pd.NaT
-                
-                # Pre-clean names in the raw dataframe
                 df['adjudicatario'] = df['adjudicatario'].apply(sanitize_text)
                 if 'expediente' in df.columns:
                     df['expediente'] = df['expediente'].apply(normalize_expediente)
-                
                 extracted = df['cif_domicilio'].apply(extract_cif_address)
                 df['cif'] = extracted.apply(lambda x: x[0])
                 df['domicilio_limpio'] = extracted.apply(lambda x: sanitize_text(x[1]))
                 df['check_cif'] = extracted.apply(lambda x: x[2])
                 df['tipo_id'] = extracted.apply(lambda x: x[3])
                 df['tipo_entidad'] = df['cif'].apply(get_entity_type)
+                # Las hojas DEP pertenecen siempre al área Deportes (APAL)
                 if 'DEP' in uname: df['area'] = 'Deportes (APAL)'
                 match = re.search(r'(\d{4})_Q(\d)', filename)
                 if match:
@@ -435,19 +517,17 @@ def process_files():
     if all_data:
         final_df = pd.concat(all_data, ignore_index=True)
         final_df = final_df.dropna(subset=['adjudicatario', 'objeto'], how='all')
-        
-        # Normalizar nombres de área
         final_df['area'] = final_df['area'].apply(normalize_area)
 
-        # Propagating CIFs and Unifying Names
+        # Propagación de CIFs: si el mismo nombre aparece sin CIF en algún registro,
+        # se completa con el CIF más frecuente conocido para ese nombre
         print("Unifying and Propagating...")
         name_to_cif = {}
-        # Use sanitized names for propagation logic
         valid_cifs = final_df[final_df['check_cif']].dropna(subset=['cif', 'adjudicatario'])
         for name, group in valid_cifs.groupby('adjudicatario'):
             if name:
                 name_to_cif[name.upper().strip()] = group['cif'].mode()[0]
-        
+
         def fill_cif(row):
             if not row['check_cif'] or pd.isna(row['cif']):
                 return name_to_cif.get(str(row['adjudicatario']).upper().strip(), row['cif'])
@@ -457,50 +537,49 @@ def process_files():
         final_df['tipo_entidad'] = final_df['cif'].apply(get_entity_type)
         final_df['tipo_contrato_limpio'] = final_df['tipo_contrato'].apply(clean_tipo)
 
-        # Dimension: Contractors - Build canonical name and address using MODE per CIF
+        # Dimensión contratistas: nombre y dirección canónicos = moda por CIF
         print("Generating Dimensions...")
         cif_canonical = {}
         cif_address = {}
-        # Group by CIF to find the most used name AND address
         entity_df = final_df.dropna(subset=['cif'])
         for cif, group in entity_df.groupby('cif'):
             if not group['adjudicatario'].dropna().empty:
                 cif_canonical[cif] = group['adjudicatario'].mode()[0]
             if not group['domicilio_limpio'].dropna().empty:
                 cif_address[cif] = group['domicilio_limpio'].mode()[0]
-        
+
         dim_contractors = final_df.dropna(subset=['cif']).drop_duplicates('cif').copy()
         dim_contractors['nombre'] = dim_contractors['cif'].apply(lambda x: cif_canonical.get(x, ""))
         dim_contractors['direccion'] = dim_contractors['cif'].apply(lambda x: cif_address.get(x, ""))
         dim_contractors = dim_contractors[['cif', 'nombre', 'direccion', 'tipo_entidad', 'tipo_id']]
-        
-        # Dimension: Areas
+
+        # Dimensión áreas
         areas = sorted(final_df['area'].dropna().unique())
         dim_areas = pd.DataFrame({'id': range(1, len(areas)+1), 'nombre': areas})
         area_to_id = dict(zip(dim_areas['nombre'], dim_areas['id']))
-        
-        # Dimension: Types
+
+        # Dimensión tipos de contrato
         types = sorted(final_df['tipo_contrato_limpio'].dropna().unique())
         dim_types = pd.DataFrame({'id': range(1, len(types)+1), 'nombre': types})
         type_to_id = dict(zip(dim_types['nombre'], dim_types['id']))
-        
-        # Data Modeling: Fact Table
+
+        # Tabla de hechos: ID sintético por MD5 de los campos clave del contrato
         print("Generating Fact Table...")
         final_df['area_id'] = final_df['area'].map(area_to_id)
         final_df['tipo_id'] = final_df['tipo_contrato_limpio'].map(type_to_id)
-        final_df['contrato_id'] = final_df.apply(lambda r: hashlib.md5(f"{r['expediente']}{r['objeto']}{r['importe']}{r['fecha_adjudicacion']}".encode()).hexdigest(), axis=1)
-        
+        final_df['contrato_id'] = final_df.apply(
+            lambda r: hashlib.md5(f"{r['expediente']}{r['objeto']}{r['importe']}{r['fecha_adjudicacion']}".encode()).hexdigest(),
+            axis=1
+        )
         fact_contracts = final_df[['contrato_id', 'cif', 'area_id', 'tipo_id', 'importe', 'fecha_adjudicacion', 'objeto', 'expediente', 'quarter', 'year', 'source_file']].copy()
-        
-        # Aggregated Summary for Web
+
+        # Resumen agregado por contratista para la pestaña Contratistas del frontend
         print("Generating Contractors Summary...")
         summary = []
         for cif, group in final_df.groupby('cif'):
-            # Fetch from dimension to ensure canonical name/address
             contractor_row = dim_contractors[dim_contractors['cif'] == cif]
             if contractor_row.empty: continue
             contractor_info = contractor_row.iloc[0].to_dict()
-            
             contract_cols = ['fecha_adjudicacion', 'objeto', 'expediente', 'importe']
             contracts_list = (
                 group[contract_cols]
@@ -516,14 +595,13 @@ def process_files():
             })
         summary = sorted(summary, key=lambda x: x['total_importe'], reverse=True)
 
-        # Save all
-        os.makedirs(processed_dir, exist_ok=True)
-        final_df.to_csv(os.path.join(processed_dir, 'contracts.csv'), index=False)
-        
-        # Helper to handle dates in JSON
+        # Serialización a JSON: pd.Timestamp no es serializable por defecto
         def default_ser(obj):
             if isinstance(obj, pd.Timestamp): return obj.isoformat()
             return str(obj)
+
+        os.makedirs(processed_dir, exist_ok=True)
+        final_df.to_csv(os.path.join(processed_dir, 'contracts.csv'), index=False)
 
         with open(os.path.join(processed_dir, 'dim_contractors.json'), 'w', encoding='utf-8') as f:
             json.dump(dim_contractors.to_dict('records'), f, indent=2, ensure_ascii=False)
@@ -535,8 +613,8 @@ def process_files():
             json.dump(fact_contracts.replace({pd.NA: None, pd.NaT: None}).to_dict('records'), f, indent=2, ensure_ascii=False, default=default_ser)
         with open(os.path.join(processed_dir, 'contractors_summary.json'), 'w', encoding='utf-8') as f:
             json.dump(summary, f, indent=2, ensure_ascii=False, default=default_ser)
-        
-        # contracts.json: solo los campos que usa el frontend
+
+        # contracts.json: versión reducida con solo los campos que usa el frontend
         frontend_cols = [
             'fecha_adjudicacion', 'adjudicatario', 'cif', 'tipo_entidad',
             'objeto', 'area', 'importe', 'year', 'quarter',
@@ -546,9 +624,8 @@ def process_files():
         contracts_frontend = final_df[existing_cols].replace({pd.NA: None, pd.NaT: None})
         with open(os.path.join(processed_dir, 'contracts.json'), 'w', encoding='utf-8') as f:
             json.dump(contracts_frontend.to_dict('records'), f, indent=2, ensure_ascii=False, default=default_ser)
-            
+
         print(f"Extraction complete. {len(final_df)} records processed.")
 
 if __name__ == "__main__":
     process_files()
-
