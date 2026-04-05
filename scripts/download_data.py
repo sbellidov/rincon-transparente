@@ -1,5 +1,6 @@
 import subprocess
 import os
+import shutil
 
 BASE = "https://www.rincondelavictoria.es/sites/default/files"
 
@@ -28,9 +29,10 @@ urls = {
 os.makedirs('data/raw', exist_ok=True)
 
 # Eliminar solo archivos que ya no están en el catálogo conocido
+# (y limpiar posibles .tmp de ejecuciones interrumpidas)
 known_files = {f"{name}.xls" for name in urls}
 for f in os.listdir('data/raw'):
-    if f not in known_files:
+    if f.endswith('.tmp') or f not in known_files:
         print(f"Eliminando archivo obsoleto: {f}")
         os.remove(os.path.join('data/raw', f))
 
@@ -38,12 +40,19 @@ ok = 0
 fail = 0
 for name, url in urls.items():
     file_path = f"data/raw/{name}.xls"
+    tmp_path = f"data/raw/{name}.xls.tmp"
     print(f"Descargando {name}...")
     try:
-        subprocess.run(["curl", "-L", "-f", "-o", file_path, url], check=True, timeout=60)
+        subprocess.run(["curl", "-L", "-f", "-o", tmp_path, url], check=True, timeout=60)
+        shutil.move(tmp_path, file_path)
         ok += 1
     except Exception as e:
-        print(f"  ERROR {name}: {e}")
+        if os.path.exists(tmp_path):
+            os.remove(tmp_path)
+        if os.path.exists(file_path):
+            print(f"  ERROR {name}: {e} — conservando archivo anterior")
+        else:
+            print(f"  ERROR {name}: {e}")
         fail += 1
 
 print(f"\nDescarga completa: {ok} OK, {fail} errores.")
