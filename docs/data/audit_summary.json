@@ -1,10 +1,10 @@
 {
-  "total_checked": 6116,
-  "total_anomalies": 1748,
+  "total_checked": 6442,
+  "total_anomalies": 1754,
   "by_type": {
-    "Fecha Inválida/Faltante": 1559,
+    "Fecha Inválida/Faltante": 1563,
     "CIF Faltante": 80,
-    "CIF Inválido": 47,
+    "CIF Inválido": 49,
     "Importe Cero/Negativo": 35,
     "Objeto Faltante": 26,
     "Importe Elevado": 1
@@ -44,6 +44,15 @@
       "sin_cif": 15,
       "sin_fecha": 13,
       "importe_cero": 1,
+      "importe_alto": 0
+    },
+    {
+      "year": 2026,
+      "total": 326,
+      "importe_total": 1094606.44,
+      "sin_cif": 2,
+      "sin_fecha": 4,
+      "importe_cero": 0,
       "importe_alto": 0
     }
   ]
