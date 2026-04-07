@@ -548,7 +548,7 @@ window.goToPage = (page) => {
 };
 
 function populateFilters() {
-    const anos = [...new Set(allContracts.map(c => c.year).filter(Boolean))].sort();
+    const anos = [...new Set(allContracts.map(c => c.year).filter(Boolean))].sort((a, b) => b - a);
     const areas = [...new Set(allContracts.map(c => c.area).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'es'));
     const tipos = [...new Set(allContracts.map(c => c.tipo_contrato_limpio).filter(Boolean))].sort();
 
