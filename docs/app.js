@@ -595,14 +595,12 @@ function applyFilters() {
         if (tipo && c.tipo_contrato_limpio !== tipo) return false;
         if (entidad && c.tipo_entidad !== entidad) return false;
         if (fechaDesde || fechaHasta) {
-            const fecha = new Date(c.fecha_adjudicacion);
-            if (isNaN(fecha)) return false;
-            if (fechaDesde && fecha < new Date(fechaDesde)) return false;
-            if (fechaHasta) {
-                const hasta = new Date(fechaHasta);
-                hasta.setHours(23, 59, 59);
-                if (fecha > hasta) return false;
-            }
+            // Comparación de strings YYYY-MM-DD para evitar desfase por zona horaria
+            // (fecha_adjudicacion viene como "2023-01-04T00:00:00", hora local)
+            const fechaStr = c.fecha_adjudicacion ? c.fecha_adjudicacion.substring(0, 10) : null;
+            if (!fechaStr || fechaStr === 'None' || fechaStr === 'NaT') return false;
+            if (fechaDesde && fechaStr < fechaDesde) return false;
+            if (fechaHasta && fechaStr > fechaHasta) return false;
         }
         if (importeMin !== '' && c.importe < parseFloat(importeMin)) return false;
         if (importeMax !== '' && c.importe > parseFloat(importeMax)) return false;
@@ -636,63 +634,85 @@ function setupSearch() {
         applyFilters();
     });
 
+    // Helper: marca el elemento con fondo amarillo si tiene valor activo
+    function setFilterActive(el, active) {
+        el.classList.toggle('filter-active', active);
+    }
+    // Para slicers: activo si cualquiera de sus inputs tiene valor
+    function updateSlicerActive(groupId) {
+        const group = document.getElementById(groupId);
+        const hasValue = [...group.querySelectorAll('.slicer-input')].some(i => i.value !== '');
+        group.classList.toggle('filter-active', hasValue);
+    }
+
     document.getElementById('filterAnio').addEventListener('change', e => {
         activeFilters.anio = e.target.value;
+        setFilterActive(e.target, e.target.value !== '');
         applyFilters();
     });
 
     document.getElementById('filterTrimestre').addEventListener('change', e => {
         activeFilters.trimestre = e.target.value;
+        setFilterActive(e.target, e.target.value !== '');
         applyFilters();
     });
 
     document.getElementById('filterArea').addEventListener('change', e => {
         activeFilters.area = e.target.value;
+        setFilterActive(e.target, e.target.value !== '');
         applyFilters();
     });
 
     document.getElementById('filterTipo').addEventListener('change', e => {
         activeFilters.tipo = e.target.value;
+        setFilterActive(e.target, e.target.value !== '');
         applyFilters();
     });
 
     document.getElementById('filterEntidad').addEventListener('change', e => {
         activeFilters.entidad = e.target.value;
+        setFilterActive(e.target, e.target.value !== '');
         applyFilters();
     });
 
     document.getElementById('filterFechaDesde').addEventListener('change', e => {
         activeFilters.fechaDesde = e.target.value;
+        updateSlicerActive('slicerFecha');
         applyFilters();
     });
 
     document.getElementById('filterFechaHasta').addEventListener('change', e => {
         activeFilters.fechaHasta = e.target.value;
+        updateSlicerActive('slicerFecha');
         applyFilters();
     });
 
     document.getElementById('filterImporteMin').addEventListener('input', e => {
         activeFilters.importeMin = e.target.value;
+        updateSlicerActive('slicerImporte');
         applyFilters();
     });
 
     document.getElementById('filterImporteMax').addEventListener('input', e => {
         activeFilters.importeMax = e.target.value;
+        updateSlicerActive('slicerImporte');
         applyFilters();
     });
 
     document.getElementById('clearFilters').addEventListener('click', () => {
         activeFilters = { anio: '', trimestre: '', area: '', tipo: '', entidad: '', fechaDesde: '', fechaHasta: '', importeMin: '', importeMax: '', texto: '' };
+        ['filterAnio','filterTrimestre','filterArea','filterTipo','filterEntidad'].forEach(id => {
+            const el = document.getElementById(id);
+            el.value = '';
+            el.classList.remove('filter-active');
+        });
+        ['filterFechaDesde','filterFechaHasta','filterImporteMin','filterImporteMax'].forEach(id => {
+            document.getElementById(id).value = '';
+        });
+        ['slicerFecha','slicerImporte'].forEach(id => {
+            document.getElementById(id).classList.remove('filter-active');
+        });
         document.getElementById('searchInput').value = '';
-        document.getElementById('filterAnio').value = '';
-        document.getElementById('filterTrimestre').value = '';
-        document.getElementById('filterArea').value = '';
-        document.getElementById('filterTipo').value = '';
-        document.getElementById('filterEntidad').value = '';
-        document.getElementById('filterFechaDesde').value = '';
-        document.getElementById('filterFechaHasta').value = '';
-        document.getElementById('filterImporteMin').value = '';
-        document.getElementById('filterImporteMax').value = '';
         applyFilters();
     });
 

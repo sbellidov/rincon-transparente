@@ -398,6 +398,13 @@ a:hover { text-decoration: underline; }
     box-shadow: 0 0 0 3px rgba(37,99,235,.1);
 }
 .filter-select option { background: var(--surface); color: var(--text); }
+
+/* Filtro activo: fondo amarillo suave */
+.filter-select.filter-active,
+.slicer-group.filter-active {
+    background-color: #fef9c3;
+    border-color: #d97706;
+}
 .filter-select--wide { min-width: 170px; }
 
 /* Slicer groups: dos inputs con separador "–" (fecha y importe) */
@@ -500,7 +507,7 @@ td { color: var(--text); }
 .sortable i { width: 12px; height: 12px; vertical-align: middle; margin-left: 3px; opacity: .4; }
 .sortable.active i { opacity: 1; }
 
-.cif-cell { display: flex; flex-direction: column; gap: 0.3rem; }
+.cif-cell { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
 .text-right { text-align: right !important; }
 .text-muted { color: var(--text-muted); }
 
