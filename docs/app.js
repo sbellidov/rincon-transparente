@@ -123,7 +123,10 @@ function renderContractors() {
                 <div class="contractor-main-info">
                     <div class="contractor-rank">#${idx + 1}</div>
                     <div class="contractor-details">
-                        <h3>${c.nombre || 'Desconocido'}</h3>
+                        <h3>
+                            ${c.nombre || 'Desconocido'}
+                            ${c.tipo_entidad && c.tipo_entidad !== 'Desconocido' ? `<span class="entity-type type-${getEntityClass(c.tipo_entidad)}" style="margin-left:.5rem;vertical-align:middle">${c.tipo_entidad}</span>` : ''}
+                        </h3>
                         <div class="contractor-meta">
                             <span><i data-lucide="hash" style="width:12px"></i> ${c.cif}</span>
                             <span><i data-lucide="map-pin" style="width:12px"></i> ${c.direccion || 'No disponible'}</span>
