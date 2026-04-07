@@ -684,7 +684,7 @@ td { color: var(--text); }
     border-top: 0 solid var(--border);
 }
 .contractor-card.expanded .contractor-expanded {
-    max-height: 2000px;
+    max-height: 8000px;
     border-top-width: 1px;
 }
 
