@@ -296,6 +296,10 @@ function renderCharts() {
         font:  { size: 11, family: "'Inter', sans-serif" },
     };
 
+    // Utilidades compartidas entre gráficos
+    const fmtK   = v => (v / 1000).toLocaleString('es-ES', { maximumFractionDigits: 0 }) + 'K€';
+    const fmtEur = v => formatCurrency(v);
+
     // ── Gasto anual ──────────────────────────────────────────────────────
     const yearCtx = document.getElementById('yearChart').getContext('2d');
     const yearLabels = Object.keys(analysisData.by_year).sort();
@@ -303,6 +307,7 @@ function renderCharts() {
 
     new Chart(yearCtx, {
         type: 'bar',
+        plugins: [ChartDataLabels],
         data: {
             labels: yearLabels,
             datasets: [{
@@ -317,9 +322,16 @@ function renderCharts() {
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            layout: { padding: { top: 24 } },
             plugins: {
                 legend: { display: false },
-                datalabels: { display: false },
+                tooltip: { callbacks: { label: ctx => ' ' + fmtEur(ctx.parsed.y) } },
+                datalabels: {
+                    anchor: 'end', align: 'end',
+                    color: chartDefaults.ticks,
+                    font: { size: 11, family: "'Inter', sans-serif" },
+                    formatter: fmtK,
+                },
             },
             scales: {
                 x: { grid: { display: false }, ticks: { color: chartDefaults.ticks, font: chartDefaults.font } },
@@ -364,6 +376,11 @@ function renderCharts() {
                         pointStyleWidth: 12,
                     }
                 },
+                tooltip: {
+                    callbacks: {
+                        label: ctx => ` ${ctx.label}: ${fmtEur(ctx.parsed)}`,
+                    }
+                },
                 datalabels: {
                     color: '#fff',
                     font: { size: 13, weight: 'bold', family: "'Inter', sans-serif" },
@@ -384,6 +401,7 @@ function renderCharts() {
 
     new Chart(areaCtx, {
         type: 'bar',
+        plugins: [ChartDataLabels],
         data: {
             labels: areaLabels,
             datasets: [{
@@ -399,9 +417,16 @@ function renderCharts() {
             responsive: true,
             indexAxis: 'y',  // barras horizontales para que quepan los nombres de área
             maintainAspectRatio: false,
+            layout: { padding: { right: 56 } },
             plugins: {
                 legend: { display: false },
-                datalabels: { display: false },
+                tooltip: { callbacks: { label: ctx => ' ' + fmtEur(ctx.parsed.x) } },
+                datalabels: {
+                    anchor: 'end', align: 'end', clamp: false,
+                    color: chartDefaults.ticks,
+                    font: { size: 10, family: "'Inter', sans-serif" },
+                    formatter: fmtK,
+                },
             },
             scales: {
                 x: {
