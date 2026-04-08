@@ -340,7 +340,7 @@ function renderCharts() {
                 y: {
                     grid: { color: chartDefaults.grid },
                     ticks: { color: chartDefaults.ticks, font: chartDefaults.font,
-                             callback: v => '€' + (v / 1000).toLocaleString('es-ES') + 'k' }
+                             callback: v => fmtK(v) }
                 }
             }
         }
@@ -380,7 +380,10 @@ function renderCharts() {
                 },
                 tooltip: {
                     callbacks: {
-                        label: ctx => ` ${ctx.label}: ${fmtEur(ctx.parsed)}`,
+                        label: ctx => {
+                            const pct = Math.round(ctx.raw / typeTotal * 100);
+                            return ` ${ctx.label}: ${fmtEur(ctx.raw)} (${pct}%)`;
+                        },
                     }
                 },
                 datalabels: {
@@ -434,7 +437,7 @@ function renderCharts() {
                 x: {
                     grid: { color: chartDefaults.grid },
                     ticks: { color: chartDefaults.ticks, font: chartDefaults.font,
-                             callback: v => '€' + (v / 1000).toLocaleString('es-ES') + 'k' }
+                             callback: v => fmtK(v) }
                 },
                 y: { grid: { display: false }, ticks: { color: chartDefaults.ticks, font: { size: 11, family: "'Inter', sans-serif" } } }
             }
@@ -482,6 +485,14 @@ function renderCharts() {
                                 pointStyle: 'circle',
                                 index: i,
                             }));
+                        },
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: ctx => {
+                            const pct = Math.round(ctx.raw / entityTotal * 100);
+                            return ` ${ctx.label}: ${fmtEur(ctx.raw)} (${pct}%)`;
                         },
                     }
                 },
