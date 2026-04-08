@@ -25,14 +25,14 @@ def audit_data():
             'contenido_original': row.get('raw_row', '')
         })
 
-    # 1. CIF Issues (Missing or Invalid)
+    # 1. NIF Issues (Missing or Malformed)
     no_cif = df[df['cif'].isna() | (df['cif'] == '')]
     for _, row in no_cif.iterrows():
-        add_anomaly(row, 'CIF Faltante', 'No se pudo encontrar ningún código de identificación')
+        add_anomaly(row, 'NIF Faltante', 'No se pudo encontrar ningún código de identificación')
 
     invalid_cif = df[(~df['cif'].isna()) & (df['cif'] != '') & (df['check_cif'] == False)]
     for _, row in invalid_cif.iterrows():
-        add_anomaly(row, 'CIF Inválido', f"El código '{row['cif']}' no pasa el algoritmo de validación")
+        add_anomaly(row, 'NIF Mal Formulado', f"El código '{row['cif']}' no pasa el algoritmo de validación")
 
     # 2. Outlier Dates
     missing_dates = df[df['fecha_adjudicacion'].isna()]
@@ -69,17 +69,19 @@ def audit_data():
     print(f"  - Report saved to: {output_path}")
 
     # Summary Statistics
-    df['_sin_cif']    = df['cif'].isna() | (df['cif'] == '') | (df['check_cif'] == False)
-    df['_sin_fecha']  = df['fecha_adjudicacion'].isna()
-    df['_imp_cero']   = df['importe'] <= 0
-    df['_imp_alto']   = df['importe'] > 50000
+    df['_sin_nif']          = df['cif'].isna() | (df['cif'] == '')
+    df['_nif_mal_formulado'] = (~df['cif'].isna()) & (df['cif'] != '') & (df['check_cif'] == False)
+    df['_sin_fecha']         = df['fecha_adjudicacion'].isna()
+    df['_imp_cero']          = df['importe'] <= 0
+    df['_imp_alto']          = df['importe'] > 50000
 
     by_year = (
         df.groupby('year')
         .agg(
             total=('importe', 'count'),
             importe_total=('importe', 'sum'),
-            sin_cif=('_sin_cif', 'sum'),
+            sin_nif=('_sin_nif', 'sum'),
+            nif_mal_formulado=('_nif_mal_formulado', 'sum'),
             sin_fecha=('_sin_fecha', 'sum'),
             importe_cero=('_imp_cero', 'sum'),
             importe_alto=('_imp_alto', 'sum'),
@@ -89,7 +91,7 @@ def audit_data():
         .assign(year=lambda d: d['year'].astype(int))
         .assign(importe_total=lambda d: d['importe_total'].round(2))
     )
-    for col in ['sin_cif', 'sin_fecha', 'importe_cero', 'importe_alto']:
+    for col in ['sin_nif', 'nif_mal_formulado', 'sin_fecha', 'importe_cero', 'importe_alto']:
         by_year[col] = by_year[col].astype(int)
 
     summary = {

@@ -232,7 +232,8 @@ function renderQuality() {
     const { total_checked, by_type = {}, by_year = [] } = auditData;
 
     const kpis = [
-        { label: 'NIF inválido o faltante', value: (by_type['CIF Inválido'] || 0) + (by_type['CIF Faltante'] || 0), icon: 'fingerprint' },
+        { label: 'NIF faltante', value: by_type['NIF Faltante'] || 0, icon: 'fingerprint' },
+        { label: 'NIF mal formulado', value: by_type['NIF Mal Formulado'] || 0, icon: 'alert-circle' },
         { label: 'Fecha inválida o faltante', value: by_type['Fecha Inválida/Faltante'] || 0, icon: 'calendar-x' },
         { label: 'Importe = 0 €', value: by_type['Importe Cero/Negativo'] || 0, icon: 'circle-off' },
         { label: 'Importe > 50.000 €', value: by_type['Importe Elevado'] || 0, icon: 'triangle-alert' },
@@ -254,7 +255,8 @@ function renderQuality() {
             <td><strong>${row.year}</strong></td>
             <td class="text-right">${row.total.toLocaleString('es-ES')}</td>
             <td class="text-right">${formatCurrency(row.importe_total)}</td>
-            <td class="text-right ${row.sin_cif > 0 ? 'quality-warn-cell' : ''}">${row.sin_cif}</td>
+            <td class="text-right ${row.sin_nif > 0 ? 'quality-warn-cell' : ''}">${row.sin_nif}</td>
+            <td class="text-right ${row.nif_mal_formulado > 0 ? 'quality-warn-cell' : ''}">${row.nif_mal_formulado}</td>
             <td class="text-right ${row.sin_fecha > 0 ? 'quality-warn-cell' : ''}">${row.sin_fecha}</td>
             <td class="text-right ${row.importe_cero > 0 ? 'quality-warn-cell' : ''}">${row.importe_cero}</td>
             <td class="text-right ${row.importe_alto > 0 ? 'quality-warn-cell' : ''}">${row.importe_alto}</td>
