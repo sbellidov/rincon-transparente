@@ -61,6 +61,7 @@ async function init() {
         setupSorting();
         setupTabs();
         setupFiltersToggle();
+        setupThemeToggle();
         displayLastUpdated();
         updateResultsCount();
         lucide.createIcons();
@@ -74,6 +75,18 @@ function displayLastUpdated() {
     if (el && analysisData.summary?.last_updated) {
         el.textContent = `Datos actualizados a ${analysisData.summary.last_updated}`;
     }
+}
+
+function setupThemeToggle() {
+    const btn = document.getElementById('themeToggle');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const isDark = current === 'dark';
+        const next = isDark ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+    });
 }
 
 function setupFiltersToggle() {

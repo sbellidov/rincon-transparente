@@ -20,6 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <script>(function(){var t=localStorage.getItem('theme');if(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)t='dark';if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
 <body>
 
@@ -34,6 +35,10 @@
                 Rincón <strong>Transparente</strong>
             </a>
             <a href="#about" class="nav-about">Sobre el proyecto</a>
+            <button id="themeToggle" class="btn-theme" title="Cambiar tema" aria-label="Cambiar tema">
+                <i data-lucide="moon" class="icon-moon"></i>
+                <i data-lucide="sun"  class="icon-sun"></i>
+            </button>
         </div>
     </header>
 

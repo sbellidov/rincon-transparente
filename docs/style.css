@@ -40,6 +40,42 @@ html { scroll-behavior: smooth; }
     --sh:    0 4px 12px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.04);
 }
 
+/* ── Modo oscuro ────────────────────────────────────────────────────── */
+[data-theme="dark"] {
+    --bg:            #0f172a;
+    --surface:       #1e293b;
+    --surface-raised:#1e293b;
+    --border:        #334155;
+    --border-strong: #475569;
+    --text:          #f1f5f9;
+    --text-muted:    #94a3b8;
+    --text-light:    #475569;
+    --accent:        #3b82f6;
+    --accent-bg:     rgba(59,130,246,0.15);
+    --accent-dark:   #2563eb;
+    --sh-xs: 0 1px 2px rgba(0,0,0,.4);
+    --sh-sm: 0 1px 3px rgba(0,0,0,.5), 0 1px 2px rgba(0,0,0,.4);
+    --sh:    0 4px 12px rgba(0,0,0,.6), 0 2px 4px rgba(0,0,0,.4);
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg:            #0f172a;
+        --surface:       #1e293b;
+        --surface-raised:#1e293b;
+        --border:        #334155;
+        --border-strong: #475569;
+        --text:          #f1f5f9;
+        --text-muted:    #94a3b8;
+        --text-light:    #475569;
+        --accent:        #3b82f6;
+        --accent-bg:     rgba(59,130,246,0.15);
+        --accent-dark:   #2563eb;
+        --sh-xs: 0 1px 2px rgba(0,0,0,.4);
+        --sh-sm: 0 1px 3px rgba(0,0,0,.5), 0 1px 2px rgba(0,0,0,.4);
+        --sh:    0 4px 12px rgba(0,0,0,.6), 0 2px 4px rgba(0,0,0,.4);
+    }
+}
+
 /* ── Base ───────────────────────────────────────────────────────────── */
 body {
     font-family: var(--font);
@@ -109,6 +145,31 @@ a:hover { text-decoration: underline; }
     color: var(--text);
     background: var(--bg);
     text-decoration: none;
+}
+
+.btn-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color .15s, border-color .15s, background .15s;
+    flex-shrink: 0;
+}
+.btn-theme:hover { color: var(--text); border-color: var(--border-strong); background: var(--bg); }
+.btn-theme i { width: 16px; height: 16px; }
+/* Muestra moon en claro, sun en oscuro */
+.icon-sun  { display: none; }
+[data-theme="dark"] .icon-moon { display: none; }
+[data-theme="dark"] .icon-sun  { display: block; }
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .icon-moon { display: none; }
+    :root:not([data-theme="light"]) .icon-sun  { display: block; }
 }
 
 /* ── Hero ───────────────────────────────────────────────────────────── */
@@ -404,6 +465,20 @@ a:hover { text-decoration: underline; }
 .slicer-group.filter-active {
     background-color: #fef9c3;
     border-color: #d97706;
+}
+[data-theme="dark"] .filter-select.filter-active,
+[data-theme="dark"] .slicer-group.filter-active {
+    background-color: rgba(217,119,6,0.15);
+    border-color: #d97706;
+    color: #fbbf24;
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .filter-select.filter-active,
+    :root:not([data-theme="light"]) .slicer-group.filter-active {
+        background-color: rgba(217,119,6,0.15);
+        border-color: #d97706;
+        color: #fbbf24;
+    }
 }
 .filter-select--wide { min-width: 170px; }
 
