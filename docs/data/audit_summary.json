@@ -1,10 +1,10 @@
 {
-  "total_checked": 6116,
-  "total_anomalies": 1748,
+  "total_checked": 6442,
+  "total_anomalies": 1754,
   "by_type": {
-    "Fecha Inválida/Faltante": 1559,
+    "Fecha Inválida/Faltante": 1563,
     "NIF Faltante": 80,
-    "NIF Mal Formulado": 47,
+    "NIF Mal Formulado": 49,
     "Importe Cero/Negativo": 35,
     "Objeto Faltante": 26,
     "Importe Elevado": 1
@@ -48,6 +48,16 @@
       "nif_mal_formulado": 14,
       "sin_fecha": 13,
       "importe_cero": 1,
+      "importe_alto": 0
+    },
+    {
+      "year": 2026,
+      "total": 326,
+      "importe_total": 1094606.44,
+      "sin_nif": 0,
+      "nif_mal_formulado": 2,
+      "sin_fecha": 4,
+      "importe_cero": 0,
       "importe_alto": 0
     }
   ]
