@@ -232,7 +232,7 @@ function renderQuality() {
     const { total_checked, by_type = {}, by_year = [] } = auditData;
 
     const kpis = [
-        { label: 'CIF inválido o faltante', value: (by_type['CIF Inválido'] || 0) + (by_type['CIF Faltante'] || 0), icon: 'fingerprint' },
+        { label: 'NIF inválido o faltante', value: (by_type['CIF Inválido'] || 0) + (by_type['CIF Faltante'] || 0), icon: 'fingerprint' },
         { label: 'Fecha inválida o faltante', value: by_type['Fecha Inválida/Faltante'] || 0, icon: 'calendar-x' },
         { label: 'Importe = 0 €', value: by_type['Importe Cero/Negativo'] || 0, icon: 'circle-off' },
         { label: 'Importe > 50.000 €', value: by_type['Importe Elevado'] || 0, icon: 'triangle-alert' },
@@ -509,8 +509,8 @@ function renderTable() {
             <td class="text-muted" style="width: 100px">${formatDate(c.fecha_adjudicacion)}</td>
             <td style="width: 25%"><strong>${c.adjudicatario_unificado || c.adjudicatario || '---'}</strong></td>
             <td class="hide-mobile" style="width: 90px">
-                <div class="cif-cell">
-                    <span class="cif-tag">${c.cif || '---'}</span>
+                <div class="nif-cell">
+                    <span class="nif-tag">${c.cif || '---'}</span>
                     ${c.tipo_entidad && c.tipo_entidad !== 'Desconocido' ? `<span class="entity-type type-${getEntityClass(c.tipo_entidad)}">${c.tipo_entidad}</span>` : ''}
                 </div>
             </td>
@@ -809,7 +809,7 @@ function setupSearch() {
 // ── 5. Utilidades ────────────────────────────────────────────
 
 function downloadCSV() {
-    const headers = ['Fecha', 'Adjudicatario', 'CIF', 'Tipo entidad', 'Objeto', 'Área', 'Tipo contrato', 'Importe (€)', 'Expediente'];
+    const headers = ['Fecha', 'Adjudicatario', 'NIF', 'Tipo entidad', 'Objeto', 'Área', 'Tipo contrato', 'Importe (€)', 'Expediente'];
     const rows = filteredContracts.map(c => [
         c.fecha_adjudicacion || '',
         c.adjudicatario_unificado || c.adjudicatario || '',

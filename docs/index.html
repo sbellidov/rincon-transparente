@@ -76,7 +76,7 @@
             <div class="filters-header">
                 <div class="search-wrap">
                     <i data-lucide="search" class="search-icon"></i>
-                    <input type="text" id="searchInput" placeholder="Buscar por contratista, objeto, CIF…" autocomplete="off">
+                    <input type="text" id="searchInput" placeholder="Buscar por contratista, objeto, NIF…" autocomplete="off">
                 </div>
                 <div class="filter-actions">
                     <button class="btn-filters-toggle" id="filtersToggle">
@@ -133,7 +133,7 @@
                             <tr>
                                 <th class="sortable" data-sort="fecha_adjudicacion">Fecha <i data-lucide="arrow-up-down"></i></th>
                                 <th class="sortable" data-sort="adjudicatario_unificado">Adjudicatario <i data-lucide="arrow-up-down"></i></th>
-                                <th class="col-cif hide-mobile">CIF</th>
+                                <th class="col-nif hide-mobile">NIF</th>
                                 <th>Objeto del contrato</th>
                                 <th class="sortable hide-mobile" data-sort="area">Área <i data-lucide="arrow-up-down"></i></th>
                                 <th class="sortable text-right" data-sort="importe">Importe <i data-lucide="arrow-up-down"></i></th>
@@ -150,7 +150,7 @@
         <div id="contractorsView" class="view-content">
             <div class="contractors-search">
                 <i data-lucide="search" class="search-icon"></i>
-                <input type="text" id="contractorSearch" placeholder="Filtrar por nombre o CIF…" autocomplete="off">
+                <input type="text" id="contractorSearch" placeholder="Filtrar por nombre o NIF…" autocomplete="off">
             </div>
             <div id="contractorsList" class="contractors-list"></div>
         </div>
@@ -189,7 +189,7 @@
                                 <th>Año</th>
                                 <th class="text-right">Contratos</th>
                                 <th class="text-right">Inversión</th>
-                                <th class="text-right">Sin CIF</th>
+                                <th class="text-right">Sin NIF</th>
                                 <th class="text-right">Sin fecha</th>
                                 <th class="text-right">Imp. = 0 €</th>
                                 <th class="text-right">Imp. &gt; 50k €</th>

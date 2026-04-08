@@ -507,12 +507,12 @@ td { color: var(--text); }
 .sortable i { width: 12px; height: 12px; vertical-align: middle; margin-left: 3px; opacity: .4; }
 .sortable.active i { opacity: 1; }
 
-.cif-cell { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+.nif-cell { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
 .text-right { text-align: right !important; }
 .text-muted { color: var(--text-muted); }
 
 /* cell elements */
-.cif-tag {
+.nif-tag {
     font-size: 0.72rem;
     font-family: ui-monospace, 'SF Mono', monospace;
     background: var(--bg);
