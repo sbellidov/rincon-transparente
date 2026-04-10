@@ -24,15 +24,31 @@ from datetime import datetime
 def clean_amount(val):
     """Convierte un importe en texto (formato europeo) a float.
     Maneja variantes como '1.234,56 €', '1234.56', celdas vacías, etc.
+
+    Devuelve None (→ NaN) si detecta múltiples puntos con dígitos finales ≠ 3,
+    lo que indica un separador decimal mal escrito (ej: "6.705.88" en vez de
+    "6.705,88"). Valores como "1.234.567" (separadores de miles correctos) se
+    procesan con normalidad.
     """
     if pd.isna(val): return 0.0
     if isinstance(val, (int, float)): return float(val)
-    val = str(val).replace('€', '').strip()
-    if not val: return 0.0
+    raw = str(val).replace('€', '').strip()
+    if not raw: return 0.0
+
+    # Detectar separador decimal erróneo: 2+ puntos sin coma y dígitos
+    # finales ≠ 3 (si fueran 3, serían separadores de miles válidos)
+    if raw.count('.') >= 2 and ',' not in raw:
+        last_segment = raw.rsplit('.', 1)[1]
+        m = re.match(r'^\d+', last_segment)
+        if m and len(m.group()) != 3:
+            print(f"  ⚠ Importe con formato inválido (múltiples puntos): "
+                  f"{repr(val)} → nullificado")
+            return None
+
     # Formato europeo: punto como separador de miles, coma como decimal
-    val = val.replace('.', '').replace(',', '.')
+    cleaned = raw.replace('.', '').replace(',', '.')
     try:
-        return float(val)
+        return float(cleaned)
     except:
         return 0.0
 

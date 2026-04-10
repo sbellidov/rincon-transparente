@@ -40,6 +40,12 @@ def audit_data():
         add_anomaly(row, 'Fecha Inválida/Faltante', 'La fecha es nula o estaba fuera del rango 2020-2026')
 
     # 3. Anomalous Amounts
+    invalid_format = df[df['importe'].isna()]
+    for _, row in invalid_format.iterrows():
+        add_anomaly(row, 'Importe con Formato Inválido',
+                    "El importe tenía múltiples puntos con dígitos decimales ≠ 3 "
+                    "(ej: '6.705.88' en vez de '6.705,88') y fue nullificado")
+
     high_amounts = df[df['importe'] > 50000]
     for _, row in high_amounts.iterrows():
         add_anomaly(row, 'Importe Elevado', f"Importe de {row['importe']}€ supera el umbral común de contratos menores")
