@@ -22,39 +22,54 @@ from datetime import datetime
 # ── Limpieza de importes ─────────────────────────────────────
 
 def clean_amount(val):
-    """Convierte un importe en texto (formato europeo) a float.
-    Maneja variantes como '1.234,56 €', '1234.56', celdas vacías, etc.
+    """Convierte un importe en texto a float, tolerante a errores de input humano.
 
-    Regla para múltiples puntos sin coma (errores de input humano):
-      - Último grupo 1-2 dígitos → el último punto es decimal mal escrito
-        (ej: "6.705.88" → 6705.88, corrección automática)
-      - Último grupo 3 dígitos   → todos son separadores de miles (correcto)
-        (ej: "1.234.567" → 1234567)
-      - Último grupo ≥ 4 dígitos → ambiguo, se nullifica y se avisa
+    Casos cubiertos:
+      - Formato europeo estándar: '1.234,56 €' → 1234.56
+      - Símbolo € pegado: '€1234', '1234€'
+      - D1  Coma como separador de miles: '6,705' → 6705 ; '1,234,567' → 1234567
+            (solo cuando TODOS los grupos tras las comas tienen exactamente 3 dígitos)
+      - D3  Notación científica en string: '1.5E+4' → 15000.0
+      - Multi-punto (fix previo):
+            · Último grupo 1-2 dígitos → decimal mal escrito: '6.705.88' → 6705.88
+            · Último grupo 3 dígitos   → separadores de miles: '1.234.567' → 1234567
+            · Último grupo ≥ 4 dígitos → ambiguo → None (con aviso)
     """
     if pd.isna(val): return 0.0
     if isinstance(val, (int, float)): return float(val)
     raw = str(val).replace('€', '').strip()
     if not raw: return 0.0
 
+    # D3: notación científica en string (antes de cualquier replace de puntos)
+    if re.match(r'^[\d.,]+[eE][+-]?\d+$', raw):
+        try:
+            return float(raw.replace(',', '.'))
+        except:
+            return 0.0
+
+    # D1: coma como separador de miles sin punto decimal
+    # Si hay comas y no hay punto, y TODOS los grupos tras cada coma tienen 3 dígitos
+    if ',' in raw and '.' not in raw:
+        parts = raw.split(',')
+        if len(parts) >= 2 and all(re.match(r'^\d{3}$', p.strip()) for p in parts[1:]):
+            raw = raw.replace(',', '')  # eliminar separadores de miles → entero
+
+    # Multi-punto sin coma: posible decimal mal escrito
     if raw.count('.') >= 2 and ',' not in raw:
         last_segment = raw.rsplit('.', 1)[1]
         m = re.match(r'^\d+', last_segment)
         if m:
             n = len(m.group())
             if n <= 2:
-                # Último punto es separador decimal mal escrito → corregir
                 integer_str = raw.rsplit('.', 1)[0].replace('.', '')
                 try:
                     return float(f"{integer_str}.{last_segment}")
                 except:
                     return 0.0
             elif n >= 4:
-                # Ambiguo → nullificar
                 print(f"  ⚠ Importe ambiguo (múltiples puntos, {n} dígitos finales): "
                       f"{repr(val)} → nullificado")
                 return None
-            # n == 3: separadores de miles válidos → flujo normal
 
     # Formato europeo: punto como separador de miles, coma como decimal
     cleaned = raw.replace('.', '').replace(',', '.')
@@ -126,7 +141,8 @@ def extract_cif_address(combined):
     Devuelve (cif_normalizado, dirección, es_válido, tipo_id).
     """
     if pd.isna(combined): return None, None, False, None
-    combined = str(combined).strip()
+    # D6: normalizar espacios múltiples antes de extraer CIF y dirección
+    combined = re.sub(r'\s+', ' ', str(combined).strip())
     potential_match = re.search(r'([A-Z0-9][\s-]*){9}', combined.upper())
     cif_raw = None
     address = combined
@@ -460,6 +476,22 @@ def sanitize_text(text):
     return text.strip()
 
 
+def preprocess_date(val):
+    """Normaliza una fecha antes de pasarla a pd.to_datetime.
+
+    Convierte años de 2 dígitos en 4 dígitos asumiendo el rango 20xx.
+    Soporta formatos comunes: DD/MM/YY, DD-MM-YY, MM/DD/YY.
+    """
+    if pd.isna(val): return val
+    s = str(val).strip()
+    # Formato DD/MM/YY o DD-MM-YY con año de 2 dígitos
+    m = re.match(r'^(\d{1,2})[/\-](\d{1,2})[/\-](\d{2})$', s)
+    if m:
+        d, mo, y = m.group(1), m.group(2), m.group(3)
+        return f"{d}/{mo}/20{y}"
+    return val
+
+
 # ── Pipeline principal ───────────────────────────────────────
 
 def process_files(raw_dir='data/raw', processed_dir='data/processed'):
@@ -532,12 +564,18 @@ def process_files(raw_dir='data/raw', processed_dir='data/processed'):
                 if 'area' not in df.columns:
                     df['area'] = None
                 df['importe'] = df['importe'].apply(clean_amount)
+                # D4: normalizar años de 2 dígitos antes del parseo
+                if 'fecha_adjudicacion' in df.columns:
+                    df['fecha_adjudicacion'] = df['fecha_adjudicacion'].apply(preprocess_date)
                 df['fecha_adjudicacion'] = pd.to_datetime(df['fecha_adjudicacion'], errors='coerce')
                 if not df.empty:
                     _max_year = datetime.now().year + 1
                     # Nulificar fechas fuera del rango válido (artefactos de parseo del Excel)
                     df.loc[(df['fecha_adjudicacion'].dt.year < 2020) | (df['fecha_adjudicacion'].dt.year > _max_year), 'fecha_adjudicacion'] = pd.NaT
                 df['adjudicatario'] = df['adjudicatario'].apply(sanitize_text)
+                # D5: sanear también el campo objeto
+                if 'objeto' in df.columns:
+                    df['objeto'] = df['objeto'].apply(sanitize_text)
                 if 'expediente' in df.columns:
                     df['expediente'] = df['expediente'].apply(normalize_expediente)
                 extracted = df['cif_domicilio'].apply(extract_cif_address)
@@ -567,7 +605,8 @@ def process_files(raw_dir='data/raw', processed_dir='data/processed'):
         valid_cifs = final_df[final_df['check_cif']].dropna(subset=['cif', 'adjudicatario'])
         for name, group in valid_cifs.groupby('adjudicatario'):
             if name:
-                name_to_cif[name.upper().strip()] = group['cif'].mode()[0]
+                # D8: usar el CIF del fichero más reciente (ej. 2024_Q4 > 2023_Q1)
+                name_to_cif[name.upper().strip()] = group.sort_values('source_file').iloc[-1]['cif']
 
         def fill_cif(row):
             if not row['check_cif'] or pd.isna(row['cif']):
@@ -584,10 +623,14 @@ def process_files(raw_dir='data/raw', processed_dir='data/processed'):
         cif_address = {}
         entity_df = final_df.dropna(subset=['cif'])
         for cif, group in entity_df.groupby('cif'):
-            if not group['adjudicatario'].dropna().empty:
-                cif_canonical[cif] = group['adjudicatario'].mode()[0]
-            if not group['domicilio_limpio'].dropna().empty:
-                cif_address[cif] = group['domicilio_limpio'].mode()[0]
+            # D8: nombre y dirección canónicos desde el fichero más reciente
+            sorted_group = group.sort_values('source_file')
+            valid_names = sorted_group.dropna(subset=['adjudicatario'])
+            if not valid_names.empty:
+                cif_canonical[cif] = valid_names.iloc[-1]['adjudicatario']
+            valid_addr = sorted_group.dropna(subset=['domicilio_limpio'])
+            if not valid_addr.empty:
+                cif_address[cif] = valid_addr.iloc[-1]['domicilio_limpio']
 
         dim_contractors = final_df.dropna(subset=['cif']).drop_duplicates('cif').copy()
         dim_contractors['nombre'] = dim_contractors['cif'].apply(lambda x: cif_canonical.get(x, ""))

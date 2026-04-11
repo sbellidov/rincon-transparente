@@ -15,6 +15,7 @@ from process_data import (
     clean_amount,
     parse_adj_dom_cif,
     find_header_row,
+    preprocess_date,
 )
 
 
@@ -239,6 +240,54 @@ class TestCleanAmount:
 
     def test_numero_simple(self):
         assert clean_amount('500') == pytest.approx(500.0)
+
+    # D2: formatos adicionales detectados en ficheros reales
+
+    def test_simbolo_euro_prefijo(self):
+        # '€1.234,56' — símbolo delante
+        assert clean_amount('€1.234,56') == pytest.approx(1234.56)
+
+    def test_simbolo_euro_sufijo(self):
+        assert clean_amount('1.234,56€') == pytest.approx(1234.56)
+
+    def test_coma_como_miles(self):
+        # '1,234,567' — coma como separador de miles (formato anglosajón en algunos Excel)
+        assert clean_amount('1,234,567') == pytest.approx(1234567.0)
+
+    def test_notacion_cientifica(self):
+        # Valor exportado como 1.5e3 por Excel
+        assert clean_amount('1,5e3') == pytest.approx(1500.0)
+
+    def test_dos_puntos_decimales(self):
+        # '6.705.88' → 6705.88 (dos puntos, último grupo = 2 dígitos → separador decimal)
+        assert clean_amount('6.705.88') == pytest.approx(6705.88)
+
+    def test_tres_puntos_ambiguo_nullificado(self):
+        # '1.234.5678' — último grupo ≥ 4 dígitos → ambiguo → None
+        assert clean_amount('1.234.5678') is None
+
+
+# ── preprocess_date ───────────────────────────────────────────────────────────
+
+class TestPreprocessDate:
+
+    def test_año_dos_digitos_slash(self):
+        assert preprocess_date('15/03/24') == '15/03/2024'
+
+    def test_año_dos_digitos_guion(self):
+        assert preprocess_date('5-1-23') == '5/1/2023'
+
+    def test_año_cuatro_digitos_sin_cambio(self):
+        # Valor ya con año de 4 dígitos: se devuelve tal cual
+        result = preprocess_date('15/03/2024')
+        assert result == '15/03/2024'
+
+    def test_nulo(self):
+        assert pd.isna(preprocess_date(None))
+
+    def test_nan(self):
+        import math
+        assert pd.isna(preprocess_date(float('nan')))
 
 
 # ── parse_adj_dom_cif ────────────────────────────────────────────────────────

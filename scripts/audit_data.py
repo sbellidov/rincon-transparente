@@ -59,6 +59,14 @@ def audit_data():
     for _, row in missing_object.iterrows():
         add_anomaly(row, 'Objeto Faltante', "No hay descripción del objeto del contrato")
 
+    # 5. Duplicate Expediente (D7)
+    if 'expediente' in df.columns:
+        exp_not_null = df[df['expediente'].notna() & (df['expediente'] != '')]
+        dup_mask = exp_not_null.duplicated(subset=['source_file', 'expediente'], keep=False)
+        for _, row in exp_not_null[dup_mask].iterrows():
+            add_anomaly(row, 'Expediente Duplicado',
+                        f"El expediente '{row['expediente']}' aparece más de una vez en {row['source_file']}")
+
     # Generate Report
     audit_df = pd.DataFrame(anomalies)
     output_path = os.path.join(processed_dir, 'audit_report.csv')
@@ -80,6 +88,12 @@ def audit_data():
     df['_sin_fecha']         = df['fecha_adjudicacion'].isna()
     df['_imp_cero']          = df['importe'] <= 0
     df['_imp_alto']          = df['importe'] > 50000
+    # D7: marcar filas con expediente duplicado dentro del mismo fichero
+    if 'expediente' in df.columns:
+        exp_not_null = df['expediente'].notna() & (df['expediente'] != '')
+        df['_exp_dup'] = exp_not_null & df.duplicated(subset=['source_file', 'expediente'], keep=False)
+    else:
+        df['_exp_dup'] = False
 
     by_year = (
         df.groupby('year')
@@ -91,13 +105,14 @@ def audit_data():
             sin_fecha=('_sin_fecha', 'sum'),
             importe_cero=('_imp_cero', 'sum'),
             importe_alto=('_imp_alto', 'sum'),
+            exp_duplicado=('_exp_dup', 'sum'),
         )
         .reset_index()
         .sort_values('year')
         .assign(year=lambda d: d['year'].astype(int))
         .assign(importe_total=lambda d: d['importe_total'].round(2))
     )
-    for col in ['sin_nif', 'nif_mal_formulado', 'sin_fecha', 'importe_cero', 'importe_alto']:
+    for col in ['sin_nif', 'nif_mal_formulado', 'sin_fecha', 'importe_cero', 'importe_alto', 'exp_duplicado']:
         by_year[col] = by_year[col].astype(int)
 
     summary = {
