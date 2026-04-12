@@ -40,33 +40,55 @@ def save_json(path: Path, data):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
+HEADERS = {
+    'X-API-KEY':      '',   # se sobreescribe en la llamada
+    'User-Agent':     'rincon-transparente-etl/1.0 (https://rincontransparente.com)',
+    'Accept':         'application/json',
+    'Accept-Language':'es-ES,es;q=0.9',
+    'Connection':     'keep-alive',
+}
+
+MAX_RETRIES   = 3
+RETRY_BACKOFF = 2.0  # segundos base para backoff exponencial
+
+
 def fetch_company(cif: str, api_key: str) -> Optional[dict]:
-    """Consulta la API y devuelve los campos útiles, o None si no hay datos."""
-    try:
-        resp = requests.get(
-            API_URL,
-            params={'cif': cif},
-            headers={'X-API-KEY': api_key},
-            timeout=15,
-        )
-        if resp.status_code == 404:
-            return None
-        resp.raise_for_status()
-        data = resp.json().get('data') or {}
-        if not data:
-            return None
-        return {
-            'fetched_at':      str(date.today()),
-            'status':          data.get('status'),
-            'founded':         data.get('founded'),
-            'cnae':            data.get('cnae'),
-            'cnae_label':      data.get('cnae_label'),
-            'cnae_2025_label': data.get('cnae_2025_label'),
-            'province':        data.get('province'),
-        }
-    except requests.RequestException as exc:
-        print(f'  ⚠  Error consultando {cif}: {exc}')
-        return None
+    """Consulta la API con reintentos y devuelve los campos útiles, o None si no hay datos."""
+    headers = {**HEADERS, 'X-API-KEY': api_key}
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            resp = requests.get(
+                API_URL,
+                params={'cif': cif},
+                headers=headers,
+                timeout=20,
+            )
+            if resp.status_code == 404:
+                return None
+            if resp.status_code == 401:
+                print(f'  ⚠  API key inválida (401) — verifica APIEMPRESAS_KEY')
+                return None
+            resp.raise_for_status()
+            data = resp.json().get('data') or {}
+            if not data:
+                return None
+            return {
+                'fetched_at':      str(date.today()),
+                'status':          data.get('status'),
+                'founded':         data.get('founded'),
+                'cnae':            data.get('cnae'),
+                'cnae_label':      data.get('cnae_label'),
+                'cnae_2025_label': data.get('cnae_2025_label'),
+                'province':        data.get('province'),
+            }
+        except requests.RequestException as exc:
+            if attempt < MAX_RETRIES:
+                wait = RETRY_BACKOFF * attempt
+                print(f'  ⚠  Intento {attempt}/{MAX_RETRIES} fallido para {cif}: {exc} — reintentando en {wait}s')
+                time.sleep(wait)
+            else:
+                print(f'  ⚠  Error definitivo consultando {cif}: {exc}')
+    return None
 
 
 def enrich():
