@@ -66,6 +66,7 @@ def save_json(path: Path, data):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
+ENRICHED_CACHE = Path('data/enriched/companies_cache.json')
 SITEMAP_PATH   = Path('docs/sitemap.xml')
 SOCIAL_PATH    = Path('docs/social-preview.png')
 FONTS_DIR      = Path('scripts/assets/fonts')
@@ -236,13 +237,25 @@ def publish():
         save_json(PUBLIC_DIR / 'contracts.json', masked)
         print(f'  enmascarado  contracts.json')
 
-    # --- contractors_summary.json: enmascarar cif y direccion de autónomos ---
+    # --- contractors_summary.json: enmascarar + fusionar datos enriquecidos ---
     src = PROCESSED_DIR / 'contractors_summary.json'
     if src.exists():
-        data = load_json(src)
-        masked = [mask_record(c) for c in data]
+        data   = load_json(src)
+        cache  = load_json(ENRICHED_CACHE) if ENRICHED_CACHE.exists() else {}
+        masked = []
+        for c in data:
+            row = mask_record(c)
+            enriched = cache.get(row.get('cif') or '')
+            if enriched:
+                # Año de constitución (solo el año, e.g. "1998")
+                founded = enriched.get('founded') or ''
+                row['sector']            = enriched.get('cnae_2025_label') or enriched.get('cnae_label')
+                row['sector_cnae']       = enriched.get('cnae')
+                row['fecha_constitucion'] = founded[:4] if founded else None
+                row['estado_registral']  = enriched.get('status')
+            masked.append(row)
         save_json(PUBLIC_DIR / 'contractors_summary.json', masked)
-        print(f'  enmascarado  contractors_summary.json')
+        print(f'  enmascarado+enriquecido  contractors_summary.json')
 
     # --- dim_contractors.json: enmascarar cif y direccion de autónomos ---
     src = PROCESSED_DIR / 'dim_contractors.json'
