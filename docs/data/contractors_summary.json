@@ -14499,7 +14499,11 @@
         "area": "Infraestructuras",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Fontanería, instalación de sistemas de calefacción y aire acondicionado",
+    "sector_cnae": "4322",
+    "fecha_constitucion": "1997",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93439131",
@@ -14654,7 +14658,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "RESTAURANTES",
+    "sector_cnae": "5611",
+    "fecha_constitucion": "2015",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "13****10W",
@@ -14948,7 +14956,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico",
+    "sector_cnae": "7112",
+    "fecha_constitucion": null,
+    "estado_registral": "INACTIVA"
   },
   {
     "cif": "B29505823",
@@ -14999,7 +15011,11 @@
         "area": null,
         "tipo_contrato_limpio": "Obras"
       }
-    ]
+    ],
+    "sector": "Construcción de edificios residenciales",
+    "sector_cnae": "4121",
+    "fecha_constitucion": "1991",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "44****27C",
@@ -15344,7 +15360,11 @@
         "area": null,
         "tipo_contrato_limpio": "Obras"
       }
-    ]
+    ],
+    "sector": "Construcción de carreteras y autopistas",
+    "sector_cnae": "4211",
+    "fecha_constitucion": "2009",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93173268",
@@ -15467,7 +15487,11 @@
         "area": "Deportes (APAL)",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Ensayos y análisis técnicos",
+    "sector_cnae": "7120",
+    "fecha_constitucion": "2012",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "74****57Z",
@@ -16647,7 +16671,11 @@
         "area": null,
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Actividades de consultoría informática y gestión de instalaciones informáticas",
+    "sector_cnae": "6202",
+    "fecha_constitucion": "1997",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B92573385",
@@ -16802,7 +16830,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Otras actividades de apoyo a la creación artística y a las artes escénicas",
+    "sector_cnae": "9002",
+    "fecha_constitucion": "2004",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B29393352",
@@ -17117,7 +17149,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Construcción de edificios residenciales",
+    "sector_cnae": "4121",
+    "fecha_constitucion": null,
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B38277000",
@@ -17232,7 +17268,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Asistencia en establecimientos residenciales para personas que padecen una enfermedad mental o una drogodependencia o que han recibido un diagnóstico al respecto",
+    "sector_cnae": "8720",
+    "fecha_constitucion": "1991",
+    "estado_registral": "DISUELTA"
   },
   {
     "cif": "G93465458",
@@ -17577,7 +17617,11 @@
         "area": null,
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Transporte de mercancías por carretera",
+    "sector_cnae": "4941",
+    "fecha_constitucion": "1994",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B92827476",
@@ -17612,7 +17656,11 @@
         "area": null,
         "tipo_contrato_limpio": "Obras"
       }
-    ]
+    ],
+    "sector": "Construcción de edificios residenciales",
+    "sector_cnae": "4121",
+    "fecha_constitucion": "2007",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "A29575933",
@@ -17663,7 +17711,11 @@
         "area": "Deportes (APAL)",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de los clubes deportivos",
+    "sector_cnae": "9312",
+    "fecha_constitucion": "1992",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B09887928",
@@ -17898,7 +17950,11 @@
         "area": "Bienestar Social",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "ACTIVIDADES DE ARTES ESCÉNICAS",
+    "sector_cnae": "9020",
+    "fecha_constitucion": "2022",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "30****55B",
@@ -18200,7 +18256,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "PROMOCIÓN INMOBILIARIA",
+    "sector_cnae": "6812",
+    "fecha_constitucion": null,
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B92526995",
@@ -18443,7 +18503,11 @@
         "area": null,
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Instalaciones eléctricas",
+    "sector_cnae": "4321",
+    "fecha_constitucion": null,
+    "estado_registral": null
   },
   {
     "cif": "B92202852",
@@ -18886,7 +18950,11 @@
         "area": null,
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Comercio al por mayor de productos de perfumería y cosmética",
+    "sector_cnae": "4645",
+    "fecha_constitucion": "2001",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B91907840",
@@ -18953,7 +19021,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de las agencias de publicidad",
+    "sector_cnae": "7311",
+    "fecha_constitucion": "2010",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "G29492584",
@@ -19004,7 +19076,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Otras actividades de servicios sociales sin alojamiento n.c.o.p.",
+    "sector_cnae": "8899",
+    "fecha_constitucion": null,
+    "estado_registral": null
   },
   {
     "cif": "44****72S",

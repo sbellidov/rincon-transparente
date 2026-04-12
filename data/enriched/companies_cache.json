@@ -18,5 +18,177 @@
   "B92175710": null,
   "A29269487": null,
   "B92598309": null,
-  "B15477425": null
+  "B15477425": null,
+  "B29877412": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": "1997-12-17",
+    "cnae": "4322",
+    "cnae_label": "FONTANERÍA, INSTALACIÓN DE SISTEMAS DE CALEFACCIÓN Y AIRE ACONDICIONADO",
+    "cnae_2025_label": "Fontanería, instalación de sistemas de calefacción y aire acondicionado",
+    "province": "Málaga"
+  },
+  "B93439131": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": "2015-11-11",
+    "cnae": "5611",
+    "cnae_label": "RESTAURANTES",
+    "cnae_2025_label": null,
+    "province": "MALAGA"
+  },
+  "B93061430": {
+    "fetched_at": "2026-04-12",
+    "status": "INACTIVA",
+    "founded": null,
+    "cnae": "7112",
+    "cnae_label": "SERVICIOS TÉCNICOS DE INGENIERÍA Y OTRAS ACTIVIDADES RELACIONADAS CON EL ASESORAMIENTO TÉCNICO",
+    "cnae_2025_label": "Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico",
+    "province": "MALAGA"
+  },
+  "B29505823": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": "1991-04-29",
+    "cnae": "4121",
+    "cnae_label": "Construcción de edificios residenciales",
+    "cnae_2025_label": "Construcción de edificios residenciales",
+    "province": "MALAGA"
+  },
+  "B85826899": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": "2009-11-13",
+    "cnae": "4211",
+    "cnae_label": "Construcción de carreteras y autopistas",
+    "cnae_2025_label": "Construcción de carreteras y autopistas",
+    "province": "Madrid"
+  },
+  "B93173268": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": "2012-02-03",
+    "cnae": "7120",
+    "cnae_label": "Ensayos y análisis técnicos",
+    "cnae_2025_label": "Ensayos y análisis técnicos",
+    "province": "Málaga"
+  },
+  "B29830577": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": "1997-03-07",
+    "cnae": "6202",
+    "cnae_label": "Actividades de consultoría informática",
+    "cnae_2025_label": "Actividades de consultoría informática y gestión de instalaciones informáticas",
+    "province": "Málaga"
+  },
+  "B92573385": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": "2004-09-09",
+    "cnae": "9002",
+    "cnae_label": "Actividades auxiliares a las artes escénicas",
+    "cnae_2025_label": "Otras actividades de apoyo a la creación artística y a las artes escénicas",
+    "province": "Málaga"
+  },
+  "B29393352": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": null,
+    "cnae": "4121",
+    "cnae_label": "Construcción de edificios residenciales",
+    "cnae_2025_label": "Construcción de edificios residenciales",
+    "province": "Málaga"
+  },
+  "B38277000": {
+    "fetched_at": "2026-04-12",
+    "status": "DISUELTA",
+    "founded": "1991-10-14",
+    "cnae": "8720",
+    "cnae_label": "Asistencia en establecimientos residenciales para personas con discapacidad intelectual, enfermedad mental y drogodependencia",
+    "cnae_2025_label": "Asistencia en establecimientos residenciales para personas que padecen una enfermedad mental o una drogodependencia o que han recibido un diagnóstico al respecto",
+    "province": "Málaga"
+  },
+  "G93465458": null,
+  "B29653029": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": "1994-01-21",
+    "cnae": "4941",
+    "cnae_label": "TRANSPORTE DE MERCANCÍAS POR CARRETERA",
+    "cnae_2025_label": "Transporte de mercancías por carretera",
+    "province": "Málaga"
+  },
+  "B92827476": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": "2007-02-23",
+    "cnae": "4121",
+    "cnae_label": "Construcción de edificios residenciales",
+    "cnae_2025_label": "Construcción de edificios residenciales",
+    "province": "Málaga"
+  },
+  "A29575933": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": "1992-07-01",
+    "cnae": "9312",
+    "cnae_label": "Actividades de los clubes deportivos",
+    "cnae_2025_label": "Actividades de los clubes deportivos",
+    "province": "Málaga"
+  },
+  "B09887928": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": "2022-03-11",
+    "cnae": "9020",
+    "cnae_label": "ACTIVIDADES DE ARTES ESCÉNICAS",
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "B92329853": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": null,
+    "cnae": "6812",
+    "cnae_label": "PROMOCIÓN INMOBILIARIA",
+    "cnae_2025_label": null,
+    "province": "Málaga"
+  },
+  "B92526995": {
+    "fetched_at": "2026-04-12",
+    "status": null,
+    "founded": null,
+    "cnae": "4321",
+    "cnae_label": "INSTALACIONES ELÉCTRICAS",
+    "cnae_2025_label": "Instalaciones eléctricas",
+    "province": "MÁLAGA"
+  },
+  "B92202852": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": "2001-01-05",
+    "cnae": "4645",
+    "cnae_label": "Comercio al por mayor de productos perfumería y cosmética",
+    "cnae_2025_label": "Comercio al por mayor de productos de perfumería y cosmética",
+    "province": "Málaga"
+  },
+  "B91907840": {
+    "fetched_at": "2026-04-12",
+    "status": "ACTIVA",
+    "founded": "2010-11-15",
+    "cnae": "7311",
+    "cnae_label": "Agencias de publicidad",
+    "cnae_2025_label": "Actividades de las agencias de publicidad",
+    "province": "Sevilla"
+  },
+  "G29492584": {
+    "fetched_at": "2026-04-12",
+    "status": null,
+    "founded": null,
+    "cnae": "8899",
+    "cnae_label": "OTRAS ACTIVIDADES DE SERVICIOS SOCIALES SIN ALOJAMIENTO N.C.O.P.",
+    "cnae_2025_label": "Otras actividades de servicios sociales sin alojamiento n.c.o.p.",
+    "province": "Málaga"
+  }
 }
