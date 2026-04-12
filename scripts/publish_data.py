@@ -66,7 +66,11 @@ def save_json(path: Path, data):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
-SITEMAP_PATH = Path('docs/sitemap.xml')
+SITEMAP_PATH   = Path('docs/sitemap.xml')
+SOCIAL_PATH    = Path('docs/social-preview.png')
+FONTS_DIR      = Path('scripts/assets/fonts')
+FONT_BOLD      = FONTS_DIR / 'Inter-Bold.ttf'
+FONT_REGULAR   = FONTS_DIR / 'Inter-Regular.ttf'
 SITEMAP_TEMPLATE = """\
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -78,6 +82,113 @@ SITEMAP_TEMPLATE = """\
   </url>
 </urlset>
 """
+
+
+def _generate_social_preview(analysis_path: Path) -> None:
+    """Genera docs/social-preview.png (1200×630) con KPIs reales y fuente Inter."""
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+    except ImportError:
+        print('  social-preview.png  omitido (Pillow no disponible)')
+        return
+
+    # ── Datos ───────────────────────────────────────────────────────────
+    total_contracts = 0
+    total_amount    = 0.0
+    year_min        = ''
+    year_max        = ''
+    last_updated    = ''
+
+    if analysis_path.exists():
+        try:
+            data         = load_json(analysis_path)
+            summary      = data.get('summary', {})
+            total_contracts = summary.get('total_contracts', 0)
+            total_amount    = summary.get('total_amount', 0.0)
+            last_updated    = summary.get('last_updated', '')
+            by_year = data.get('by_year', {})
+            years   = sorted(int(k) for k in by_year.keys() if k.isdigit())
+            if years:
+                year_min = str(years[0])
+                year_max = str(years[-1])
+        except (KeyError, ValueError):
+            pass
+
+    def fmt_amount(val):
+        if val >= 1_000_000:
+            return f'{val / 1_000_000:.1f} M€'
+        return f'{val / 1_000:.0f} K€'
+
+    kpis = [
+        (f'{total_contracts:,}'.replace(',', '.'), 'contratos'),
+        (fmt_amount(total_amount),                  'invertidos'),
+        (f'{year_min}–{year_max}' if year_min else '—', 'cobertura'),
+    ]
+
+    # ── Lienzo ──────────────────────────────────────────────────────────
+    W, H   = 1200, 630
+    BG     = '#0f172a'
+    BLUE   = '#2563eb'
+    WHITE  = '#f1f5f9'
+    MUTED  = '#94a3b8'
+    SUBTLE = '#334155'
+
+    img  = Image.new('RGB', (W, H), BG)
+    draw = ImageDraw.Draw(img)
+
+    # Barra lateral azul
+    draw.rectangle([0, 0, 8, H], fill=BLUE)
+
+    # Franja inferior decorativa
+    draw.rectangle([0, H - 64, W, H], fill='#0a101e')
+
+    # ── Fuentes ─────────────────────────────────────────────────────────
+    def font(path, size):
+        try:
+            return ImageFont.truetype(str(path), size)
+        except Exception:
+            return ImageFont.load_default()
+
+    f_title    = font(FONT_BOLD,    72)
+    f_subtitle = font(FONT_REGULAR, 32)
+    f_kpi_val  = font(FONT_BOLD,    54)
+    f_kpi_lbl  = font(FONT_REGULAR, 26)
+    f_url      = font(FONT_REGULAR, 28)
+    f_updated  = font(FONT_REGULAR, 24)
+
+    # ── Lupa (icono) ────────────────────────────────────────────────────
+    cx, cy, r, lw = 88, 118, 38, 7
+    draw.ellipse([cx-r, cy-r, cx+r, cy+r], outline=BLUE, width=lw)
+    draw.line([cx + int(r*.7), cy + int(r*.7),
+               cx + int(r*1.5), cy + int(r*1.5)], fill=BLUE, width=lw)
+
+    # ── Textos principales ───────────────────────────────────────────────
+    draw.text((148, 72),  'Rincón Transparente', font=f_title, fill=WHITE)
+    draw.text((148, 160), 'Contratos menores · Ayuntamiento de Rincón de la Victoria',
+              font=f_subtitle, fill=MUTED)
+
+    # Separador
+    draw.rectangle([148, 218, 700, 221], fill=SUBTLE)
+
+    # ── KPIs ─────────────────────────────────────────────────────────────
+    kpi_y_val = 258
+    kpi_y_lbl = 322
+    col_x     = [148, 460, 760]
+
+    for i, (val, lbl) in enumerate(kpis):
+        x = col_x[i]
+        draw.text((x, kpi_y_val), val, font=f_kpi_val, fill=BLUE)
+        draw.text((x, kpi_y_lbl), lbl, font=f_kpi_lbl, fill=MUTED)
+
+    # ── URL y última actualización ───────────────────────────────────────
+    draw.text((148, H - 48), 'rincontransparente.com', font=f_url, fill=MUTED, anchor='lm')
+    if last_updated:
+        draw.text((W - 48, H - 48), f'Datos a {last_updated}',
+                  font=f_updated, fill=SUBTLE, anchor='rm')
+
+    img.save(str(SOCIAL_PATH), 'PNG', optimize=True)
+    import os
+    print(f'  social-preview.png  ({os.path.getsize(SOCIAL_PATH):,} bytes)')
 
 
 def _update_sitemap(analysis_path: Path) -> None:
@@ -162,6 +273,9 @@ def publish():
             masked.append(r)
         save_json(PUBLIC_DIR / 'fact_contracts.json', masked)
         print(f'  enmascarado  fact_contracts.json')
+
+    # --- social-preview.png: imagen OG con KPIs reales ---
+    _generate_social_preview(PROCESSED_DIR / 'analysis.json')
 
     # --- sitemap.xml: actualizar lastmod con la fecha del último dato ---
     _update_sitemap(PROCESSED_DIR / 'analysis.json')
