@@ -721,12 +721,14 @@ function applyFilters() {
         if (tipo && c.tipo_contrato_limpio !== tipo) return false;
         if (entidad && c.tipo_entidad !== entidad) return false;
         if (fechaDesde || fechaHasta) {
-            // Comparación de strings YYYY-MM-DD para evitar desfase por zona horaria
-            // (fecha_adjudicacion viene como "2023-01-04T00:00:00", hora local)
+            // Comparación de strings YYYY-MM-DD (fecha_adjudicacion viene como "2023-01-04T00:00:00").
+            // Los contratos sin fecha pasan el filtro: no se puede saber si están fuera de rango.
+            // (Los 1502 contratos de 2022 no tienen fecha_adjudicacion en el dataset municipal.)
             const fechaStr = c.fecha_adjudicacion ? c.fecha_adjudicacion.substring(0, 10) : null;
-            if (!fechaStr || fechaStr === 'None' || fechaStr === 'NaT') return false;
-            if (fechaDesde && fechaStr < fechaDesde) return false;
-            if (fechaHasta && fechaStr > fechaHasta) return false;
+            if (fechaStr && fechaStr !== 'None' && fechaStr !== 'NaT') {
+                if (fechaDesde && fechaStr < fechaDesde) return false;
+                if (fechaHasta && fechaStr > fechaHasta) return false;
+            }
         }
         if (importeMin !== '' && c.importe < parseFloat(importeMin)) return false;
         if (importeMax !== '' && c.importe > parseFloat(importeMax)) return false;
