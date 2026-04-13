@@ -1064,3 +1064,28 @@ td { color: var(--text); }
     .tab-btn { padding: 0.6rem 0.75rem; }
     .kpi-row { gap: 0.6rem; }
 }
+
+/* ── Extra-small screens <375px (M1–M5) ─────────────────────────── */
+@media (max-width: 374px) {
+    /* M4: KPI cards — reducir fuente para que los importes no desborden */
+    .kpi-row { grid-template-columns: repeat(2, 1fr); gap: 0.4rem; }
+    .stat-card .value { font-size: 0.95rem; }
+    .stat-card { padding: 0.75rem; }
+
+    /* M5: Tabs — permitir scroll horizontal para que no colapsen */
+    .tabs-bar { overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .tabs-bar::-webkit-scrollbar { display: none; }
+    .tab-btn { padding: 0.5rem 0.5rem; flex-shrink: 0; }
+
+    /* M1: Filtros — asegurar que inputs de rango no desbordan */
+    .slicer-group { flex-wrap: wrap; }
+    .date-wrap,
+    .filters-panel .slicer-input[type="date"] { min-width: 0; width: 100%; }
+
+    /* M3: Mini-tabla de contratos en detalle de contratista */
+    .contractor-expanded { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+/* M2: scroll iOS Safari en tabla principal (global, no solo <375px) */
+.table-scroll { -webkit-overflow-scrolling: touch; }
+table { min-width: 480px; }
