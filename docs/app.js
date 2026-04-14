@@ -27,6 +27,16 @@ let sortOrder = 'desc';
 // Estado de ordenación de mini-tablas por contratista: { cif: { key, order } }
 const contractorSortState = {};
 
+// Referencias a gráficos doughnut para actualizar colores al cambiar de tema
+let typeChartInstance = null;
+let entityChartInstance = null;
+
+function legendColor() {
+    return document.documentElement.getAttribute('data-theme') === 'dark'
+        ? '#e2e8f0'
+        : '#374151';
+}
+
 let activeFilters = { anio: '', trimestre: '', area: '', tipo: '', entidad: '', fechaDesde: '', fechaHasta: '', importeMin: '', importeMax: '', texto: '' };
 
 
@@ -62,6 +72,7 @@ async function init() {
         setupTabs();
         setupFiltersToggle();
         setupThemeToggle();
+        setupAboutToggle();
         displayLastUpdated();
         updateResultsCount();
         lucide.createIcons();
@@ -86,6 +97,30 @@ function setupThemeToggle() {
         const next = isDark ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', next);
         localStorage.setItem('theme', next);
+        // Actualizar color de leyenda en gráficos doughnut
+        const color = legendColor();
+        [typeChartInstance, entityChartInstance].forEach(ch => {
+            if (!ch) return;
+            ch.options.plugins.legend.labels.color = color;
+            ch.update();
+        });
+    });
+}
+
+function setupAboutToggle() {
+    const section = document.getElementById('about');
+    if (!section) return;
+    const toggle = () => section.classList.toggle('about-collapsed');
+    // Clic en el h2 de la sección
+    const h2 = section.querySelector('h2');
+    if (h2) h2.addEventListener('click', toggle);
+    // Clic en cualquier enlace que apunte a #about (header + footer)
+    document.querySelectorAll('a[href="#about"]').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            toggle();
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
     });
 }
 
@@ -212,7 +247,7 @@ function renderContractors() {
                             <span><i data-lucide="hash" style="width:12px"></i> ${c.cif}</span>
                             <span><i data-lucide="map-pin" style="width:12px"></i> ${c.direccion || 'No disponible'}</span>
                             ${c.sector ? `<span class="badge-sector"><i data-lucide="tag" style="width:11px"></i> ${c.sector}</span>` : ''}
-                            ${c.fecha_constitucion ? `<span class="badge-meta">Est. ${c.fecha_constitucion}</span>` : ''}
+                            ${c.fecha_constitucion ? `<span class="badge-meta">${c.fecha_constitucion}</span>` : ''}
                             ${c.estado_registral === 'BAJA' ? `<span class="badge-baja">BAJA</span>` : ''}
                         </div>
                     </div>
@@ -252,7 +287,8 @@ function renderQuality() {
         { label: 'NIF mal formulado', value: by_type['NIF Mal Formulado'] || 0, icon: 'alert-circle' },
         { label: 'Fecha inválida o faltante', value: by_type['Fecha Inválida/Faltante'] || 0, icon: 'calendar-x' },
         { label: 'Importe = 0 €', value: by_type['Importe Cero/Negativo'] || 0, icon: 'circle-off' },
-        { label: 'Importe > 50.000 €', value: by_type['Importe Elevado'] || 0, icon: 'triangle-alert' },
+        { label: 'Obra Importe >50K€', value: by_type['Obra Importe >50K€'] || 0, icon: 'triangle-alert' },
+        { label: 'Importe >15K€', value: by_type['Importe >15K€'] || 0, icon: 'alert-triangle' },
     ];
 
     document.getElementById('qualityCards').innerHTML = kpis.map(k => `
@@ -275,7 +311,8 @@ function renderQuality() {
             <td class="text-right ${row.nif_mal_formulado > 0 ? 'quality-warn-cell' : ''}">${row.nif_mal_formulado}</td>
             <td class="text-right ${row.sin_fecha > 0 ? 'quality-warn-cell' : ''}">${row.sin_fecha}</td>
             <td class="text-right ${row.importe_cero > 0 ? 'quality-warn-cell' : ''}">${row.importe_cero}</td>
-            <td class="text-right ${row.importe_alto > 0 ? 'quality-warn-cell' : ''}">${row.importe_alto}</td>
+            <td class="text-right ${(row.importe_alto_obra ?? 0) > 0 ? 'quality-warn-cell' : ''}">${row.importe_alto_obra ?? 0}</td>
+            <td class="text-right ${(row.importe_alto_otros ?? 0) > 0 ? 'quality-warn-cell' : ''}">${row.importe_alto_otros ?? 0}</td>
             <td class="text-right ${(row.exp_duplicado ?? 0) > 0 ? 'quality-warn-cell' : ''}">${row.exp_duplicado ?? 0}</td>
             <td class="text-right ${(row.sin_adjudicatario ?? 0) > 0 ? 'quality-warn-cell' : ''}">${row.sin_adjudicatario ?? 0}</td>
         </tr>
@@ -372,7 +409,7 @@ function renderCharts() {
     const typeValues = typeLabels.map(l => analysisData.by_type[l].sum);
     const typeTotal = typeValues.reduce((a, b) => a + b, 0);
 
-    new Chart(typeCtx, {
+    typeChartInstance = new Chart(typeCtx, {
         type: 'doughnut',
         plugins: [ChartDataLabels],
         data: {
@@ -380,8 +417,7 @@ function renderCharts() {
             datasets: [{
                 data: typeValues,
                 backgroundColor: COLORS_MAIN,
-                borderColor: '#fff',
-                borderWidth: 3,
+                borderWidth: 0,
             }]
         },
         options: {
@@ -391,11 +427,14 @@ function renderCharts() {
                 legend: {
                     position: 'right',
                     labels: {
-                        color: '#374151',
+                        color: legendColor(),
                         font: { size: 13, family: "'Inter', sans-serif" },
                         padding: 20,
                         usePointStyle: true,
-                        pointStyleWidth: 12,
+                        pointStyle: 'circle',
+                        pointStyleWidth: 16,
+                        boxWidth: 16,
+                        boxHeight: 16,
                     }
                 },
                 tooltip: {
@@ -471,7 +510,7 @@ function renderCharts() {
     const entityValues = entityLabels.map(l => entityRaw[l].sum);
     const entityTotal = entityValues.reduce((a, b) => a + b, 0);
 
-    new Chart(entityCtx, {
+    entityChartInstance = new Chart(entityCtx, {
         type: 'doughnut',
         plugins: [ChartDataLabels],
         data: {
@@ -479,8 +518,7 @@ function renderCharts() {
             datasets: [{
                 data: entityValues,
                 backgroundColor: COLORS_ENTITY,
-                borderColor: '#fff',
-                borderWidth: 3,
+                borderWidth: 0,
             }]
         },
         options: {
@@ -490,18 +528,22 @@ function renderCharts() {
                 legend: {
                     position: 'right',
                     labels: {
-                        color: '#374151',
+                        color: legendColor(),
                         font: { size: 13, family: "'Inter', sans-serif" },
                         padding: 16,
                         usePointStyle: true,
-                        pointStyleWidth: 12,
+                        pointStyle: 'circle',
+                        pointStyleWidth: 16,
+                        boxWidth: 16,
+                        boxHeight: 16,
                         // Leyenda personalizada: muestra el importe total junto al nombre del tipo
                         generateLabels: (chart) => {
                             const data = chart.data;
                             return data.labels.map((label, i) => ({
                                 text: `${label}  ${fmtSmart(data.datasets[0].data[i])}`,
                                 fillStyle: data.datasets[0].backgroundColor[i],
-                                strokeStyle: data.datasets[0].backgroundColor[i],
+                                strokeStyle: 'transparent',
+                                lineWidth: 0,
                                 pointStyle: 'circle',
                                 index: i,
                             }));

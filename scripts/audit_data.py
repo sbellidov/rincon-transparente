@@ -46,9 +46,25 @@ def audit_data():
                     "El importe tenía múltiples puntos con grupo final ≥ 4 dígitos "
                     "(ambiguo) y fue nullificado")
 
-    high_amounts = df[df['importe'].notna() & (df['importe'] > 50000)]
-    for _, row in high_amounts.iterrows():
-        add_anomaly(row, 'Importe Elevado', f"Importe de {row['importe']}€ supera el umbral común de contratos menores")
+    # Obras > 50.000 € (umbral LCSP art. 118; importes con IVA incluido)
+    obras_altas = df[
+        df['importe'].notna() &
+        (df['tipo_contrato_limpio'] == 'Obras') &
+        (df['importe'] > 50000)
+    ]
+    for _, row in obras_altas.iterrows():
+        add_anomaly(row, 'Obra Importe >50K€',
+                    f"Contrato de obra de {row['importe']}€ supera el umbral de 50.000€ de contratos menores")
+
+    # Servicios/suministros/otros > 15.000 € (umbral LCSP art. 118; importes con IVA incluido)
+    otros_altos = df[
+        df['importe'].notna() &
+        (df['tipo_contrato_limpio'] != 'Obras') &
+        (df['importe'] > 15000)
+    ]
+    for _, row in otros_altos.iterrows():
+        add_anomaly(row, 'Importe >15K€',
+                    f"Contrato de {row['importe']}€ supera el umbral de 15.000€ de contratos menores")
 
     zero_amounts = df[df['importe'].notna() & (df['importe'] <= 0)]
     for _, row in zero_amounts.iterrows():
@@ -92,7 +108,8 @@ def audit_data():
     df['_nif_mal_formulado'] = (~df['cif'].isna()) & (df['cif'] != '') & (df['check_cif'] == False)
     df['_sin_fecha']         = df['fecha_adjudicacion'].isna()
     df['_imp_cero']          = df['importe'].notna() & (df['importe'] <= 0)
-    df['_imp_alto']          = df['importe'].notna() & (df['importe'] > 50000)
+    df['_imp_alto_obra']     = df['importe'].notna() & (df['tipo_contrato_limpio'] == 'Obras') & (df['importe'] > 50000)
+    df['_imp_alto_otros']    = df['importe'].notna() & (df['tipo_contrato_limpio'] != 'Obras') & (df['importe'] > 15000)
     df['_sin_adj']           = df['adjudicatario'].isna() | (df['adjudicatario'] == '')
     # D7: marcar filas con expediente duplicado dentro del mismo fichero
     if 'expediente' in df.columns:
@@ -110,7 +127,8 @@ def audit_data():
             nif_mal_formulado=('_nif_mal_formulado', 'sum'),
             sin_fecha=('_sin_fecha', 'sum'),
             importe_cero=('_imp_cero', 'sum'),
-            importe_alto=('_imp_alto', 'sum'),
+            importe_alto_obra=('_imp_alto_obra', 'sum'),
+            importe_alto_otros=('_imp_alto_otros', 'sum'),
             exp_duplicado=('_exp_dup', 'sum'),
             sin_adjudicatario=('_sin_adj', 'sum'),
         )
@@ -119,7 +137,7 @@ def audit_data():
         .assign(year=lambda d: d['year'].astype(int))
         .assign(importe_total=lambda d: d['importe_total'].round(2))
     )
-    for col in ['sin_nif', 'nif_mal_formulado', 'sin_fecha', 'importe_cero', 'importe_alto', 'exp_duplicado', 'sin_adjudicatario']:
+    for col in ['sin_nif', 'nif_mal_formulado', 'sin_fecha', 'importe_cero', 'importe_alto_obra', 'importe_alto_otros', 'exp_duplicado', 'sin_adjudicatario']:
         by_year[col] = by_year[col].astype(int)
 
     summary = {

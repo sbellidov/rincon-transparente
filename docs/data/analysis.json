@@ -1,108 +1,108 @@
 {
   "summary": {
-    "total_contracts": 6416,
-    "total_amount": 21970999.64,
-    "avg_amount": 3424.407674563591,
+    "total_contracts": 6090,
+    "total_amount": 20876393.200000003,
+    "avg_amount": 3427.9791789819383,
     "min_date": "2023-01-04T00:00:00",
-    "max_date": "2026-05-01T00:00:00",
-    "last_updated": "01/05/2026"
+    "max_date": "2025-12-30T00:00:00",
+    "last_updated": "30/12/2025"
   },
   "by_area": {
     "Deportes (APAL)": {
-      "sum": 3424968.34,
-      "count": 1500
+      "sum": 3200242.43,
+      "count": 1386
     },
     "Obras y Servicios Generales": {
-      "sum": 1951939.76,
-      "count": 333
+      "sum": 1897078.2,
+      "count": 319
     },
     "Bienestar Social": {
-      "sum": 1594018.82,
-      "count": 444
-    },
-    "Turismo": {
-      "sum": 1215290.95,
-      "count": 387
+      "sum": 1505252.74,
+      "count": 428
     },
     "Cultura": {
-      "sum": 1153059.86,
-      "count": 501
+      "sum": 1072009.57,
+      "count": 480
     },
     "Ferias y Fiestas": {
-      "sum": 1117702.7,
-      "count": 361
+      "sum": 1049807.88,
+      "count": 340
+    },
+    "Turismo": {
+      "sum": 1027339.96,
+      "count": 341
     },
     "Cueva del Tesoro": {
-      "sum": 627784.4,
-      "count": 150
+      "sum": 563007.11,
+      "count": 141
     },
     "Playas": {
-      "sum": 563719.75,
-      "count": 115
-    },
-    "Presidencia": {
-      "sum": 504725.98,
-      "count": 110
+      "sum": 553087.48,
+      "count": 111
     },
     "Infraestructuras": {
       "sum": 503084.87,
       "count": 60
     },
     "Educación": {
-      "sum": 488182.27,
-      "count": 104
+      "sum": 470679.34,
+      "count": 97
+    },
+    "Presidencia": {
+      "sum": 453040.15,
+      "count": 102
     },
     "Urbanismo": {
-      "sum": 449466.47,
-      "count": 51
+      "sum": 442811.47,
+      "count": 49
     },
     "Nuevas Tecnologías y Transparencia": {
-      "sum": 403726.09,
-      "count": 59
-    },
-    "Sostenibilidad Medioambiental": {
-      "sum": 389801.07,
-      "count": 85
-    },
-    "Régimen Interior": {
-      "sum": 379835.07,
-      "count": 91
+      "sum": 400802.12,
+      "count": 58
     },
     "Comercio": {
-      "sum": 370325.98,
-      "count": 130
+      "sum": 369996.86,
+      "count": 129
+    },
+    "Sostenibilidad Medioambiental": {
+      "sum": 353328.81,
+      "count": 81
     },
     "Juventud": {
-      "sum": 360889.06,
-      "count": 145
+      "sum": 332370.28,
+      "count": 136
     },
-    "Villa Romana Antíopa": {
-      "sum": 294483.45,
-      "count": 90
+    "Régimen Interior": {
+      "sum": 331812.8,
+      "count": 85
     },
     "Seguridad Ciudadana": {
       "sum": 278863.17,
       "count": 54
     },
+    "Villa Romana Antíopa": {
+      "sum": 249324.73,
+      "count": 76
+    },
     "Comunicación": {
-      "sum": 232602.55,
-      "count": 38
+      "sum": 227157.55,
+      "count": 36
     },
     "Parques y Jardines": {
       "sum": 224683.91999999998,
       "count": 10
     },
-    "Cementerios y Servicios Fúnebres": {
-      "sum": 153535.07,
-      "count": 16
-    },
     "Formación y Empleo": {
-      "sum": 152347.83,
-      "count": 130
+      "sum": 144808.93,
+      "count": 123
+    },
+    "Cementerios y Servicios Fúnebres": {
+      "sum": 136837.07,
+      "count": 15
     },
     "Sanidad y Consumo": {
-      "sum": 119880.18,
-      "count": 31
+      "sum": 119849.93,
+      "count": 30
     },
     "Movilidad y Transportes": {
       "sum": 98536.63,
@@ -113,36 +113,24 @@
       "count": 37
     },
     "Vía Pública": {
-      "sum": 94550.45,
-      "count": 11
+      "sum": 90936.64,
+      "count": 10
     },
     "Recursos Humanos": {
       "sum": 90709.09,
       "count": 18
     },
     "Protección Civil": {
-      "sum": 89195.23,
-      "count": 36
+      "sum": 83487.24,
+      "count": 32
     },
     "Protocolo": {
-      "sum": 39023.28,
-      "count": 28
+      "sum": 37739.47,
+      "count": 26
     },
     "Economía y Hacienda": {
-      "sum": 24590.74,
-      "count": 19
-    },
-    "Promoción a la Tercera Edad": {
-      "sum": 23918.35,
-      "count": 8
-    },
-    "Recursos Humano": {
-      "sum": 10672.24,
-      "count": 1
-    },
-    "Movilidad y transporte": {
-      "sum": 1650.0,
-      "count": 1
+      "sum": 24470.74,
+      "count": 18
     }
   },
   "top_adjudicatarios": {
@@ -159,36 +147,32 @@
       "count": 12
     },
     "Sonotestaudio SL": {
-      "sum": 200035.13,
-      "count": 58
-    },
-    "Mayorprint Industrias Gráficas": {
-      "sum": 189276.77,
-      "count": 88
+      "sum": 183256.73,
+      "count": 56
     },
     "Antonio Cano González": {
-      "sum": 184674.93,
-      "count": 92
-    },
-    "Copesol, S.L.": {
-      "sum": 174799.41,
-      "count": 11
+      "sum": 174389.93,
+      "count": 91
     },
     "Copesol SL": {
       "sum": 174156.29,
       "count": 15
+    },
+    "Mayorprint Industrias Gráficas": {
+      "sum": 172321.04,
+      "count": 81
+    },
+    "Copesol, S.L.": {
+      "sum": 169335.65,
+      "count": 10
     },
     "UTE Rincón de la Victoria": {
       "sum": 156934.76,
       "count": 6
     },
     "Indagrafic SL": {
-      "sum": 139081.76,
-      "count": 71
-    },
-    "Sonotestaudio, S.L.": {
-      "sum": 126207.83,
-      "count": 59
+      "sum": 132534.45,
+      "count": 64
     },
     "Indumálaga SL": {
       "sum": 125780.55,
@@ -205,6 +189,10 @@
     "ESTREMASOL SL": {
       "sum": 118163.76000000001,
       "count": 20
+    },
+    "Pinturas Manuel Arévalo SL": {
+      "sum": 117677.04,
+      "count": 6
     }
   },
   "by_year": {
@@ -223,10 +211,6 @@
     "2025": {
       "sum": 4701512.74,
       "count": 1409
-    },
-    "2026": {
-      "sum": 1094606.44,
-      "count": 326
     }
   },
   "by_quarter": [
@@ -341,57 +325,50 @@
       "periodo": "2025 T4",
       "importe": 1594721.08,
       "contratos": 425
-    },
-    {
-      "year": 2026,
-      "quarter": 1,
-      "periodo": "2026 T1",
-      "importe": 1094606.44,
-      "contratos": 326
     }
   ],
   "by_type": {
     "Obras": {
-      "sum": 3621890.88,
-      "count": 203
+      "sum": 3602424.7,
+      "count": 202
     },
     "Otros": {
-      "sum": 102119.9,
-      "count": 38
+      "sum": 100183.9,
+      "count": 37
     },
     "Servicio": {
-      "sum": 12696890.68,
-      "count": 3794
+      "sum": 11898475.79,
+      "count": 3581
     },
     "Suministro": {
-      "sum": 5550098.18,
-      "count": 2381
+      "sum": 5275308.81,
+      "count": 2270
     }
   },
   "by_entity_type": {
     "SL": {
-      "sum": 13665142.87,
-      "count": 3611
+      "sum": 13025336.73,
+      "count": 3418
     },
     "Autónomo": {
-      "sum": 4614766.08,
-      "count": 1722
+      "sum": 4354970.74,
+      "count": 1646
     },
     "SA": {
-      "sum": 1660682.91,
-      "count": 481
+      "sum": 1552252.2,
+      "count": 454
     },
     "Asociación": {
-      "sum": 896405.03,
-      "count": 317
+      "sum": 839527.34,
+      "count": 296
     },
     "UTE": {
       "sum": 329405.37,
       "count": 11
     },
     "Cooperativa": {
-      "sum": 266522.48,
-      "count": 100
+      "sum": 262622.48,
+      "count": 98
     },
     "Desconocido": {
       "sum": 145923.54,
@@ -402,16 +379,16 @@
       "count": 36
     },
     "Adm. Pública": {
-      "sum": 128108.54,
-      "count": 52
+      "sum": 113952.22,
+      "count": 47
     },
     "Otras sociedades": {
-      "sum": 71933.28,
-      "count": 15
+      "sum": 70965.28,
+      "count": 14
     },
     "Entidad extranjera": {
-      "sum": 38035.1,
-      "count": 5
+      "sum": 27362.86,
+      "count": 4
     },
     "Comunidad de Bienes": {
       "sum": 15377.0,

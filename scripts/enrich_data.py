@@ -72,8 +72,13 @@ def fetch_company(cif: str, api_key: str) -> Optional[dict]:
             data = resp.json().get('data') or {}
             if not data:
                 return None
+            nombre_api = (
+                data.get('name') or data.get('nombre') or
+                data.get('razon_social') or data.get('denominacion') or ''
+            ).strip() or None
             return {
                 'fetched_at':      str(date.today()),
+                'nombre_api':      nombre_api,
                 'status':          data.get('status'),
                 'founded':         data.get('founded'),
                 'cnae':            data.get('cnae'),

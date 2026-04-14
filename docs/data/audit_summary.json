@@ -1,11 +1,12 @@
 {
-  "total_checked": 6416,
-  "total_anomalies": 3663,
+  "total_checked": 6090,
+  "total_anomalies": 3798,
   "by_type": {
-    "Expediente Duplicado": 2015,
-    "Fecha Inválida/Faltante": 1537,
+    "Expediente Duplicado": 1916,
+    "Fecha Inválida/Faltante": 1533,
+    "Importe >15K€": 240,
     "NIF Faltante": 57,
-    "NIF Mal Formulado": 45,
+    "NIF Mal Formulado": 43,
     "Importe Cero/Negativo": 9
   },
   "by_year": [
@@ -17,7 +18,8 @@
       "nif_mal_formulado": 6,
       "sin_fecha": 1502,
       "importe_cero": 6,
-      "importe_alto": 0,
+      "importe_alto_obra": 0,
+      "importe_alto_otros": 66,
       "exp_duplicado": 418,
       "sin_adjudicatario": 0
     },
@@ -29,7 +31,8 @@
       "nif_mal_formulado": 13,
       "sin_fecha": 8,
       "importe_cero": 2,
-      "importe_alto": 0,
+      "importe_alto_obra": 0,
+      "importe_alto_otros": 68,
       "exp_duplicado": 476,
       "sin_adjudicatario": 0
     },
@@ -41,7 +44,8 @@
       "nif_mal_formulado": 12,
       "sin_fecha": 11,
       "importe_cero": 1,
-      "importe_alto": 0,
+      "importe_alto_obra": 0,
+      "importe_alto_otros": 52,
       "exp_duplicado": 538,
       "sin_adjudicatario": 0
     },
@@ -53,20 +57,9 @@
       "nif_mal_formulado": 12,
       "sin_fecha": 12,
       "importe_cero": 0,
-      "importe_alto": 0,
+      "importe_alto_obra": 0,
+      "importe_alto_otros": 54,
       "exp_duplicado": 484,
-      "sin_adjudicatario": 0
-    },
-    {
-      "year": 2026,
-      "total": 326,
-      "importe_total": 1094606.44,
-      "sin_nif": 0,
-      "nif_mal_formulado": 2,
-      "sin_fecha": 4,
-      "importe_cero": 0,
-      "importe_alto": 0,
-      "exp_duplicado": 99,
       "sin_adjudicatario": 0
     }
   ]

@@ -57,82 +57,70 @@
   },
   {
     "id": 15,
-    "nombre": "Movilidad y transporte"
-  },
-  {
-    "id": 16,
     "nombre": "Nuevas Tecnologías y Transparencia"
   },
   {
-    "id": 17,
+    "id": 16,
     "nombre": "Obras y Servicios Generales"
   },
   {
-    "id": 18,
+    "id": 17,
     "nombre": "Parques y Jardines"
   },
   {
-    "id": 19,
+    "id": 18,
     "nombre": "Playas"
   },
   {
-    "id": 20,
+    "id": 19,
     "nombre": "Presidencia"
   },
   {
-    "id": 21,
-    "nombre": "Promoción a la Tercera Edad"
-  },
-  {
-    "id": 22,
+    "id": 20,
     "nombre": "Promoción de la Tercera Edad"
   },
   {
-    "id": 23,
+    "id": 21,
     "nombre": "Protección Civil"
   },
   {
-    "id": 24,
+    "id": 22,
     "nombre": "Protocolo"
   },
   {
-    "id": 25,
-    "nombre": "Recursos Humano"
-  },
-  {
-    "id": 26,
+    "id": 23,
     "nombre": "Recursos Humanos"
   },
   {
-    "id": 27,
+    "id": 24,
     "nombre": "Régimen Interior"
   },
   {
-    "id": 28,
+    "id": 25,
     "nombre": "Sanidad y Consumo"
   },
   {
-    "id": 29,
+    "id": 26,
     "nombre": "Seguridad Ciudadana"
   },
   {
-    "id": 30,
+    "id": 27,
     "nombre": "Sostenibilidad Medioambiental"
   },
   {
-    "id": 31,
+    "id": 28,
     "nombre": "Turismo"
   },
   {
-    "id": 32,
+    "id": 29,
     "nombre": "Urbanismo"
   },
   {
-    "id": 33,
+    "id": 30,
     "nombre": "Villa Romana Antíopa"
   },
   {
-    "id": 34,
+    "id": 31,
     "nombre": "Vía Pública"
   }
 ]
