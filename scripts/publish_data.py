@@ -249,10 +249,14 @@ def publish():
             if enriched:
                 # Año de constitución (solo el año, e.g. "1998")
                 founded = enriched.get('founded') or ''
-                row['sector']            = enriched.get('cnae_2025_label') or enriched.get('cnae_label')
+                _label = enriched.get('cnae_2025_label') or enriched.get('cnae_label') or ''
+                row['sector']            = (_label[0].upper() + _label[1:].lower()) if _label else None
                 row['sector_cnae']       = enriched.get('cnae')
                 row['fecha_constitucion'] = founded[:4] if founded else None
                 row['estado_registral']  = enriched.get('status')
+                nombre_api = enriched.get('nombre_api')
+                if nombre_api:
+                    row['nombre'] = nombre_api
             masked.append(row)
         save_json(PUBLIC_DIR / 'contractors_summary.json', masked)
         print(f'  enmascarado+enriquecido  contractors_summary.json')
