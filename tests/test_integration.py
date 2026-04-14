@@ -8,7 +8,7 @@ contractors_summary.json contienen los registros esperados.
 
 import pytest
 import json
-import xlwt
+import openpyxl
 
 
 # ── Fixture: Excel sintético ─────────────────────────────────────────────────
@@ -24,11 +24,11 @@ FIXTURE_CONTRACTS = [
 
 
 def _create_fixture_excel(path):
-    """Crea un .xls (BIFF8) con formato 2023+: hoja AYTO con filas de título
-    antes de la cabecera y columnas estándar. Usa xlwt para generar el formato
-    binario real que espera xlrd en el pipeline."""
-    wb = xlwt.Workbook(encoding='utf-8')
-    ws = wb.add_sheet('AYTO 1-24')
+    """Crea un .xlsx con formato 2023+: hoja AYTO con filas de título
+    antes de la cabecera y columnas estándar. Usa openpyxl."""
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = 'AYTO 1-24'
 
     rows = [
         # Filas de título (como en los Excel reales del ayuntamiento)
@@ -43,9 +43,8 @@ def _create_fixture_excel(path):
     for fecha, adj, cif, objeto, area, tipo, importe, exp in FIXTURE_CONTRACTS:
         rows.append([fecha, adj, cif, 'Calle Falsa 123', objeto, area, tipo, importe, exp])
 
-    for r_idx, row in enumerate(rows):
-        for c_idx, val in enumerate(row):
-            ws.write(r_idx, c_idx, val)
+    for row in rows:
+        ws.append(row)
 
     wb.save(path)
 
@@ -60,7 +59,7 @@ def pipeline_env(tmp_path):
     raw_dir.mkdir(parents=True)
     processed_dir.mkdir(parents=True)
 
-    excel_path = raw_dir / '2024_Q1.xls'
+    excel_path = raw_dir / '2024_Q1.xlsx'
     _create_fixture_excel(str(excel_path))
 
     return tmp_path

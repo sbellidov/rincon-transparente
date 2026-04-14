@@ -13,7 +13,6 @@
 import pandas as pd
 import os
 import re
-import xlrd
 import json
 import hashlib
 from datetime import datetime
@@ -537,16 +536,22 @@ def process_files(raw_dir='data/raw', processed_dir='data/processed'):
         file_path = os.path.join(raw_dir, filename)
         print(f"Processing {filename}...")
         try:
-            book = xlrd.open_workbook(file_path, on_demand=True)
-            for sheet_name in book.sheet_names():
+            engine = 'xlrd' if file_path.endswith('.xls') else 'openpyxl'
+            if engine == 'xlrd':
+                import xlrd as _xlrd
+                sheet_names = _xlrd.open_workbook(file_path, on_demand=True).sheet_names()
+            else:
+                import openpyxl as _openpyxl
+                sheet_names = _openpyxl.load_workbook(file_path, read_only=True).sheetnames
+            for sheet_name in sheet_names:
                 uname = sheet_name.upper()
                 # Solo procesar hojas del Ayuntamiento o de Deportes (APAL); ignorar índices y portadas
                 if not ('AYTO' in uname or 'DEP' in uname or 'CONTRATO' in uname): continue
                 print(f"  Reading sheet: {sheet_name}")
-                df_raw = pd.read_excel(file_path, engine='xlrd', sheet_name=sheet_name, header=None)
+                df_raw = pd.read_excel(file_path, engine=engine, sheet_name=sheet_name, header=None)
                 header_row = find_header_row(df_raw)
                 if header_row is None: continue
-                df = pd.read_excel(file_path, engine='xlrd', sheet_name=sheet_name, header=header_row)
+                df = pd.read_excel(file_path, engine=engine, sheet_name=sheet_name, header=header_row)
                 df = df.dropna(how='all', axis=0).dropna(how='all', axis=1)
                 # Guardar la fila raw completa para trazabilidad en el informe de auditoría
                 df['raw_row'] = df.apply(lambda row: " || ".join([str(val).strip() for val in row.values]), axis=1)
