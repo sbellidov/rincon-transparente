@@ -190,5 +190,169 @@
     "cnae_label": "OTRAS ACTIVIDADES DE SERVICIOS SOCIALES SIN ALOJAMIENTO N.C.O.P.",
     "cnae_2025_label": "Otras actividades de servicios sociales sin alojamiento n.c.o.p.",
     "province": "Málaga"
+  },
+  "F90065418": null,
+  "Q2866001G": null,
+  "B92656271": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "EQUIPAMIENTOS DE OFICINA TRUJILLO SL",
+    "status": "ACTIVA",
+    "founded": "2005-06-15",
+    "cnae": "4759",
+    "cnae_label": "Comercio al por menor de muebles, aparatos de iluminación y otros artículos de uso doméstico en establecimientos especializados",
+    "cnae_2025_label": "Comercio al por menor de ferretería, materiales de construcción, pinturas y vidrio",
+    "province": "Málaga"
+  },
+  "B93587897": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "ALMACENES LA LONJA PAPELERIA Y LIBRERIA SL",
+    "status": "ACTIVA",
+    "founded": "2018-01-02",
+    "cnae": "4762",
+    "cnae_label": "COMERCIO AL POR MENOR DE PERIÓDICOS Y OTRAS PUBLICACIONES PERIÓDICAS Y ARTÍCULOS DE PAPELERÍA",
+    "cnae_2025_label": "Comercio al por menor de periódicos y otras publicaciones periódicas y artículos de papelería",
+    "province": "MALAGA"
+  },
+  "B29354487": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "STUDIO S SL",
+    "status": "ACTIVA",
+    "founded": "1967-12-09",
+    "cnae": "4101",
+    "cnae_label": "CONSTRUCCIÓN DE EDIFICIOS RESIDENCIALESINFORME COMERCIAL Y DE RIESGO DE \n                              STUDIO S SL",
+    "cnae_2025_label": null,
+    "province": "Málaga"
+  },
+  "A83052407": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "SOCIEDAD ESTATAL CORREOS Y TELEGRAFOS SA SME",
+    "status": "ACTIVA",
+    "founded": null,
+    "cnae": "5320",
+    "cnae_label": "OTRAS ACTIVIDADES POSTALES Y DE MENSAJERÍA",
+    "cnae_2025_label": "Otras actividades postales y de mensajería",
+    "province": "MADRID"
+  },
+  "B93419737": null,
+  "B92201169": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "VIVE SOGESPORT SL",
+    "status": "ACTIVA",
+    "founded": "2001-01-01",
+    "cnae": "4641",
+    "cnae_label": "Comercio al por mayor de textiles",
+    "cnae_2025_label": "Comercio al por mayor de textiles",
+    "province": "Málaga"
+  },
+  "B33490426": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "ASAC COMUNICACIONES SL",
+    "status": "ACTIVA",
+    "founded": "1996-07-01",
+    "cnae": "4651",
+    "cnae_label": "Comercio al por mayor de ordenadores, equipos periféricos y programas informáticos",
+    "cnae_2025_label": "Comercio al por mayor de equipos para las tecnologías de la información y las comunicaciones",
+    "province": "Asturias"
+  },
+  "G93502144": null,
+  "B92127422": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "SERVICIOS Y COMERCIO URCO SL",
+    "status": "ACTIVA",
+    "founded": "2000-01-26",
+    "cnae": "1812",
+    "cnae_label": "Otras actividades de impresión y artes gráficas",
+    "cnae_2025_label": "Acabado de textiles",
+    "province": "Málaga"
+  },
+  "A41461856": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "HIDRALIA GESTION INTEGRAL DE AGUAS DE ANDALUCIA SA",
+    "status": "ACTIVA",
+    "founded": null,
+    "cnae": "3600",
+    "cnae_label": "CAPTACIÓN, DEPURACIÓN Y DISTRIBUCIÓN DE AGUA",
+    "cnae_2025_label": "Captación, depuración y distribución de agua",
+    "province": "Sevilla"
+  },
+  "B08841173": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "LA OPINION DE MALAGA SL",
+    "status": "ACTIVA",
+    "founded": "1983-09-21",
+    "cnae": "5813",
+    "cnae_label": "Edición de periódicos",
+    "cnae_2025_label": "Edición de periódicos",
+    "province": "Málaga"
+  },
+  "B92740067": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "COORDINACIONES Y PROYECTOS DE SEGURIDAD LAMS SL",
+    "status": "ACTIVA",
+    "founded": "2006-04-04",
+    "cnae": "6399",
+    "cnae_label": "Otros servicios de información n.c.o.p.",
+    "cnae_2025_label": "Otros servicios de información",
+    "province": "Málaga"
+  },
+  "B93311389": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "AXAPLAY SL",
+    "status": "ACTIVA",
+    "founded": "2014-02-12",
+    "cnae": "3320",
+    "cnae_label": "INSTALACIÓN DE MÁQUINAS Y EQUIPOS INDUSTRIALES",
+    "cnae_2025_label": "Instalación de máquinas y equipos industriales",
+    "province": "MALAGA"
+  },
+  "B93722007": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "GRUPO PIMASA BEZMILIANA 2019 SL",
+    "status": "ACTIVA",
+    "founded": "2019-11-12",
+    "cnae": "4334",
+    "cnae_label": "PINTURA Y ACRISTALAMIENTO",
+    "cnae_2025_label": "Pintura y acristalamiento",
+    "province": "MÁLAGA"
+  },
+  "B93660066": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "FANTASY CONTENT SL",
+    "status": "ACTIVA",
+    "founded": "2018-12-26",
+    "cnae": "6210",
+    "cnae_label": "ACTIVIDADES DE PROGRAMACIÓN INFORMÁTICA",
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "B10687986": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "EVENTECH 2022 SL",
+    "status": "ACTIVA",
+    "founded": "2022-05-17",
+    "cnae": "5611",
+    "cnae_label": "RESTAURANTES",
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "B92491638": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "EDITORA MALAGUEÑA DE PUBLICACIONES SL",
+    "status": "ACTIVA",
+    "founded": "2003-11-13",
+    "cnae": "5813",
+    "cnae_label": "Edición de periódicos",
+    "cnae_2025_label": "Edición de periódicos",
+    "province": "Málaga"
+  },
+  "B29395977": {
+    "fetched_at": "2026-04-14",
+    "nombre_api": "AISDISUR SL",
+    "status": "ACTIVA",
+    "founded": "1989-08-02",
+    "cnae": "4121",
+    "cnae_label": "Construcción de edificios residenciales",
+    "cnae_2025_label": "Construcción de edificios residenciales",
+    "province": "Málaga"
   }
 }
