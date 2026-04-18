@@ -913,6 +913,29 @@ td { color: var(--text); }
 
 .expanded-content { padding: 1rem 1.25rem; }
 
+.contractor-mini-charts {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 0.875rem;
+}
+.mini-chart-wrap {
+    flex: 0 0 calc(25% - 0.75rem);
+    min-width: 140px;
+}
+.mini-chart-canvas-box {
+    position: relative;
+    height: 135px;
+}
+.mini-chart-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+}
+
 .mini-contracts-table {
     width: 100%;
     border-collapse: collapse;

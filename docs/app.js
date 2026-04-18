@@ -27,6 +27,9 @@ let sortOrder = 'desc';
 // Estado de ordenación de mini-tablas por contratista: { cif: { key, order } }
 const contractorSortState = {};
 
+// CIFs que ya tienen mini-gráficos renderizados
+const contractorChartsRendered = new Set();
+
 // Referencias a gráficos doughnut para actualizar colores al cambiar de tema
 let typeChartInstance = null;
 let entityChartInstance = null;
@@ -262,6 +265,20 @@ function renderContractors() {
             </div>
             <div class="contractor-expanded">
                 <div class="expanded-content">
+                    <div class="contractor-mini-charts" id="mc-wrap-${c.cif}">
+                        <div class="mini-chart-wrap">
+                            <div class="mini-chart-label">Gasto por año</div>
+                            <div class="mini-chart-canvas-box"><canvas id="mc-year-${c.cif}"></canvas></div>
+                        </div>
+                        <div class="mini-chart-wrap">
+                            <div class="mini-chart-label">Gasto por área</div>
+                            <div class="mini-chart-canvas-box"><canvas id="mc-area-${c.cif}"></canvas></div>
+                        </div>
+                        <div class="mini-chart-wrap">
+                            <div class="mini-chart-label">Gasto por tipo</div>
+                            <div class="mini-chart-canvas-box"><canvas id="mc-tipo-${c.cif}"></canvas></div>
+                        </div>
+                    </div>
                     <table class="mini-contracts-table">
                         <thead class="mini-contracts-thead">${miniTableHeaders(c.cif)}</thead>
                         <tbody class="mini-contracts-tbody">${miniTableRows(c.contratos, c.cif)}</tbody>
@@ -277,7 +294,169 @@ function renderContractors() {
 window.toggleContractor = (cif) => {
     const card = document.getElementById(`contractor-${cif}`);
     card.classList.toggle('expanded');
+    if (card.classList.contains('expanded') && !contractorChartsRendered.has(cif)) {
+        const contractor = filteredContractors.find(c => c.cif === cif);
+        if (contractor) renderContractorCharts(cif, contractor.contratos);
+    }
 };
+
+function renderContractorCharts(cif, contratos) {
+    contractorChartsRendered.add(cif);
+
+    const BLUE   = '#3b82f6';
+    const COLORS = ['#3b82f6','#10b981','#f59e0b','#ef4444','#8b5cf6','#06b6d4','#f97316'];
+    const TICK_COLOR = legendColor();  // respeta modo claro/oscuro
+    const baseOpts = {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false,
+        plugins: { legend: { display: false }, datalabels: { display: false } },
+    };
+
+    // Divide un nombre de área en líneas de ≤12 chars (por palabras)
+    function wrapAreaLabel(str, maxLen = 12) {
+        const words = str.split(' ');
+        const lines = [];
+        let cur = '';
+        for (const w of words) {
+            const candidate = cur ? cur + ' ' + w : w;
+            if (candidate.length > maxLen && cur) { lines.push(cur); cur = w; }
+            else cur = candidate;
+        }
+        if (cur) lines.push(cur);
+        return lines.length > 1 ? lines : str;
+    }
+
+    // ── Gráfico por año (línea) ──
+    const yearMap = {};
+    contratos.forEach(c => {
+        const y = c.fecha_adjudicacion ? parseInt(c.fecha_adjudicacion.slice(0, 4), 10) : null;
+        if (y && y > 2000) yearMap[y] = (yearMap[y] || 0) + (c.importe || 0);
+    });
+    const years = Object.keys(yearMap).map(Number).sort((a, b) => a - b);
+    if (years.length) {
+        const allYears = [];
+        for (let y = years[0]; y <= years[years.length - 1]; y++) allYears.push(y);
+        const ctxY = document.getElementById(`mc-year-${cif}`);
+        if (ctxY) new Chart(ctxY, {
+            type: 'line',
+            data: {
+                labels: allYears.map(String),
+                datasets: [{
+                    data: allYears.map(y => yearMap[y] || 0),
+                    borderColor: BLUE,
+                    backgroundColor: 'rgba(59,130,246,0.12)',
+                    fill: true,
+                    tension: 0.35,
+                    pointRadius: 3,
+                    pointBackgroundColor: BLUE,
+                    borderWidth: 2,
+                }]
+            },
+            options: { ...baseOpts,
+                plugins: { ...baseOpts.plugins, tooltip: { callbacks: { label: ctx => formatCurrency(ctx.raw) } } },
+                scales: {
+                    x: { grid: { display: false }, ticks: { font: { size: 10 }, color: TICK_COLOR } },
+                    y: { display: false, beginAtZero: true }
+                }
+            }
+        });
+    }
+
+    // ── Gráfico por área (barras + % encima) ──
+    const TIPO_COLOR_MAP = {
+        'Servicio':   '#2563eb',
+        'Suministro': '#7c3aed',
+        'Obras':      '#d97706',
+        'Otros':      '#64748b',
+    };
+    const areaMap = {};
+    contratos.forEach(c => {
+        const a = c.area || 'Sin área';
+        areaMap[a] = (areaMap[a] || 0) + (c.importe || 0);
+    });
+    const areaEntries = Object.entries(areaMap).sort((a, b) => b[1] - a[1]).slice(0, 7);
+    const ctxA = document.getElementById(`mc-area-${cif}`);
+    if (ctxA && areaEntries.length) {
+        const total = areaEntries.reduce((s, e) => s + e[1], 0);
+        new Chart(ctxA, {
+            type: 'bar',
+            plugins: [ChartDataLabels],
+            data: {
+                labels: areaEntries.map(e => wrapAreaLabel(e[0])),
+                datasets: [{
+                    data: areaEntries.map(e => e[1]),
+                    backgroundColor: 'rgba(37,99,235,0.15)',
+                    borderColor: '#2563eb',
+                    borderWidth: 1,
+                    borderRadius: 3,
+                    borderSkipped: false,
+                }]
+            },
+            options: { ...baseOpts,
+                layout: { padding: { top: 16 } },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { label: ctx => formatCurrency(ctx.raw) } },
+                    datalabels: {
+                        anchor: 'end', align: 'end', clamp: false,
+                        color: TICK_COLOR,
+                        font: { size: 9, weight: '600' },
+                        formatter: v => total ? Math.round(v / total * 100) + '%' : '',
+                    }
+                },
+                scales: {
+                    x: { grid: { display: false }, ticks: { font: { size: 9 }, color: TICK_COLOR, maxRotation: 0 } },
+                    y: { display: false, beginAtZero: true }
+                }
+            }
+        });
+    }
+
+    // ── Gráfico por tipo (doughnut) ──
+    const tipoMap = {};
+    contratos.forEach(c => {
+        const t = c.tipo_contrato_limpio || c.tipo_contrato || 'Otros';
+        tipoMap[t] = (tipoMap[t] || 0) + (c.importe || 0);
+    });
+    const tipoEntries = Object.entries(tipoMap).sort((a, b) => b[1] - a[1]);
+    const ctxT = document.getElementById(`mc-tipo-${cif}`);
+    if (ctxT && tipoEntries.length) {
+        new Chart(ctxT, {
+            type: 'doughnut',
+            plugins: [ChartDataLabels],
+            data: {
+                labels: tipoEntries.map(e => e[0]),
+                datasets: [{
+                    data: tipoEntries.map(e => e[1]),
+                    backgroundColor: tipoEntries.map(e => TIPO_COLOR_MAP[e[0]] || '#64748b'),
+                    borderWidth: 0,
+                    spacing: 2,
+                    hoverOffset: 6,
+                }]
+            },
+            options: { ...baseOpts,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { label: ctx => ctx.label + ': ' + formatCurrency(ctx.raw) } },
+                    datalabels: {
+                        color: '#fff',
+                        font: { size: 9, weight: 'bold' },
+                        textAlign: 'center',
+                        formatter: (v, ctx) => {
+                            const tot = ctx.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                            const pct = Math.round(v / tot * 100);
+                            if (pct < 8) return '';
+                            const lbl = ctx.chart.data.labels[ctx.dataIndex];
+                            const short = lbl.length > 9 ? lbl.slice(0, 8) + '.' : lbl;
+                            return [short, pct + '%'];
+                        },
+                    },
+                },
+            }
+        });
+    }
+}
 
 function renderQuality() {
     const { total_checked, by_type = {}, by_year = [] } = auditData;
