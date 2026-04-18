@@ -523,6 +523,12 @@ function renderDashboard() {
 }
 
 function renderCharts() {
+    const TIPO_COLOR_MAP = {
+        'Servicio':   '#2563eb',
+        'Suministro': '#7c3aed',
+        'Obras':      '#d97706',
+        'Otros':      '#64748b',
+    };
     const COLORS_MAIN  = ['#2563eb', '#7c3aed', '#d97706', '#059669', '#dc2626', '#0891b2'];
     const COLORS_ENTITY = ['#2563eb', '#7c3aed', '#d97706', '#059669', '#dc2626', '#0891b2', '#64748b'];
 
@@ -595,7 +601,7 @@ function renderCharts() {
             labels: typeLabels,
             datasets: [{
                 data: typeValues,
-                backgroundColor: COLORS_MAIN,
+                backgroundColor: typeLabels.map(l => TIPO_COLOR_MAP[l] || '#64748b'),
                 borderWidth: 0,
                 spacing: 3,
                 hoverOffset: 8,
