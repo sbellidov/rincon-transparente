@@ -28293,7 +28293,7 @@
   },
   {
     "cif": "A08171373",
-    "nombre": "MGS Seguros y Reaseguros, S.A.",
+    "nombre": "MGS SEGUROS Y REASEGUROS SA",
     "direccion": "Paseo María Agustín, 4, 50004 Zaragoza",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -28428,11 +28428,15 @@
         "area": "Deportes (APAL)",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Seguros de vida",
+    "sector_cnae": "6511",
+    "fecha_constitucion": null,
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B24997447",
-    "nombre": "Draft Media, S.L.",
+    "nombre": "DRAFT MEDIA SL",
     "direccion": "C/ Estados Unidos, 10, Urb. Balcón de Añoreta, 29738 Torre de Benagalbón (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -28487,11 +28491,15 @@
         "area": "Turismo",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de las agencias de publicidad",
+    "sector_cnae": "7311",
+    "fecha_constitucion": "2025",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93506863",
-    "nombre": "Sonido Volumen, S.L.",
+    "nombre": "SONIDO VOLUMEN SL",
     "direccion": "Ctra. Benagalbón, Los Cañas, 28, 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -28586,7 +28594,11 @@
         "area": null,
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": null,
+    "sector_cnae": null,
+    "fecha_constitucion": "2017",
+    "estado_registral": null
   },
   {
     "cif": "53****56K",
@@ -28625,7 +28637,7 @@
   },
   {
     "cif": "B93522589",
-    "nombre": "1yCeros, S.L.",
+    "nombre": "1YCEROS SL",
     "direccion": "Cº de las Hormigueras, 171, Edf. B, 2º, 28031 Madrid",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -28672,7 +28684,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Otros servicios relacionados con las tecnologías de la información y la informáticainforme comercial y de riesgo de \n                              1yceros sl",
+    "sector_cnae": "6290",
+    "fecha_constitucion": "2017",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "25****97E",
@@ -28727,7 +28743,7 @@
   },
   {
     "cif": "B98415110",
-    "nombre": "Interactive Sytem Developers",
+    "nombre": "INTERACTIVE SISTEM DEVELOPERS SL",
     "direccion": "Avda. Del Grau, 62. Esc. 5, 5º-A. Gandía (Valencia)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -28806,7 +28822,11 @@
         "area": "Turismo",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Actividades de programación informática",
+    "sector_cnae": "6201",
+    "fecha_constitucion": "2012",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93438737",
@@ -28833,7 +28853,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Almacenamiento de gas como parte de los servicios de suministro de la red",
+    "sector_cnae": "5210",
+    "fecha_constitucion": "2015",
+    "estado_registral": "CIERRE HOJA REGISTRAL"
   },
   {
     "cif": "F78834603",
@@ -28955,7 +28979,7 @@
   },
   {
     "cif": "B93579928",
-    "nombre": "KRC Tactical, S.L.",
+    "nombre": "KRC TACTICAL SL",
     "direccion": "C/ Burguillos, 32, 29190 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -28978,11 +29002,15 @@
         "area": "Seguridad Ciudadana",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Fabricación de otros productos textiles n.c.o.p.",
+    "sector_cnae": "1399",
+    "fecha_constitucion": "2017",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B92290287",
-    "nombre": "Ingensa, Ingenieria y Diseño SL",
+    "nombre": "INGESA INGENIERIA Y DISEÑO SL",
     "direccion": "C/ Alberto Lista, 6. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -29013,11 +29041,15 @@
         "area": "Urbanismo",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Promoción inmobiliaria",
+    "sector_cnae": "6812",
+    "fecha_constitucion": "2001",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93358299",
-    "nombre": "Soluciones Especiales y Telecomunicaciones (SETIS, S.L.)",
+    "nombre": "SOLUCIONES DE ELECTRICIDAD, TELECOMUNICACIONES, INTEGRACION Y SISTEMAS SL",
     "direccion": "Ctra. Azucarera-Intelhorce, 126 A, 29004 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -29056,11 +29088,15 @@
         "area": "Nuevas Tecnologías y Transparencia",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": null,
+    "sector_cnae": null,
+    "fecha_constitucion": null,
+    "estado_registral": null
   },
   {
     "cif": "B29427762",
-    "nombre": "Genaysa SL",
+    "nombre": "GENAYSA SL",
     "direccion": "Calle Josefa del Río Peña, 6, Local 2. 29018 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -29075,11 +29111,15 @@
         "area": "Obras y Servicios Generales",
         "tipo_contrato_limpio": "Obras"
       }
-    ]
+    ],
+    "sector": "Construcción de otros proyectos de ingeniería civil n.c.o.p.",
+    "sector_cnae": "4299",
+    "fecha_constitucion": null,
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B13729439",
-    "nombre": "Divelec Suministros, S.L.",
+    "nombre": "DIVELEC SUMINISTROS SL",
     "direccion": "C/ Bartolomé Esteban Murillo, 21, Polg. Ind. La Pañoleta, 29700 Vélez Málaga (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -29270,11 +29310,15 @@
         "area": "Educación",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Comercio al por mayor de equipos para las tecnologías de la información y las comunicaciones",
+    "sector_cnae": "4650",
+    "fecha_constitucion": "2023",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B92804640",
-    "nombre": "Bárbol, SL",
+    "nombre": "BARBOL JARDINERIA DISEÑO Y MANTENIMIENTO SL",
     "direccion": ". Cortijo Los Palmas, 12 29738 Torre de Benagalbón. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -29329,7 +29373,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de jardinería",
+    "sector_cnae": "8130",
+    "fecha_constitucion": null,
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "74****35S",
@@ -29368,7 +29416,7 @@
   },
   {
     "cif": "B96693288",
-    "nombre": "T.M.V. Kristal España, S.L.",
+    "nombre": "TMU KRISTAL ESPAÑA SL",
     "direccion": "Pza. de la Constitución, 18, entreplanta, 46960 Aldaia (Valencia)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -29423,11 +29471,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Fabricación de textiles para el hogar y artículos de decoración confeccionados",
+    "sector_cnae": "1392",
+    "fecha_constitucion": "1997",
+    "estado_registral": "DISUELTA"
   },
   {
     "cif": "B93529790",
-    "nombre": "JOPEVA MONATJES Y MANTENIMIENTOS SL",
+    "nombre": "JOPEVA MONTAJES Y MANTENIMIENTOS SL",
     "direccion": "",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -29458,7 +29510,11 @@
         "area": null,
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Otras instalaciones en obras de construcción",
+    "sector_cnae": "4324",
+    "fecha_constitucion": "2017",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B29534443",

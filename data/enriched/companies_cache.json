@@ -727,5 +727,151 @@
     "cnae_label": null,
     "cnae_2025_label": null,
     "province": "Málaga"
-  }
+  },
+  "A08171373": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "MGS SEGUROS Y REASEGUROS SA",
+    "status": "ACTIVA",
+    "founded": null,
+    "cnae": "6511",
+    "cnae_label": "Seguros de vida",
+    "cnae_2025_label": "Seguros de vida",
+    "province": "Zaragoza"
+  },
+  "B24997447": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "DRAFT MEDIA SL",
+    "status": "ACTIVA",
+    "founded": "2025-12-15",
+    "cnae": "7311",
+    "cnae_label": "ACTIVIDADES DE LAS AGENCIAS DE PUBLICIDAD",
+    "cnae_2025_label": "Actividades de las agencias de publicidad",
+    "province": "MÁLAGA"
+  },
+  "B93506863": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "SONIDO VOLUMEN SL",
+    "status": null,
+    "founded": "2017-01-01",
+    "cnae": null,
+    "cnae_label": null,
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "B93522589": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "1YCEROS SL",
+    "status": "ACTIVA",
+    "founded": "2017-01-04",
+    "cnae": "6290",
+    "cnae_label": "OTROS SERVICIOS RELACIONADOS CON LAS TECNOLOGÍAS DE LA INFORMACIÓN Y LA INFORMÁTICAINFORME COMERCIAL Y DE RIESGO DE \n                              1YCEROS SL",
+    "cnae_2025_label": null,
+    "province": "Madrid"
+  },
+  "B98415110": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "INTERACTIVE SISTEM DEVELOPERS SL",
+    "status": "ACTIVA",
+    "founded": "2012-02-01",
+    "cnae": "6201",
+    "cnae_label": "Actividades de programación informática",
+    "cnae_2025_label": "Actividades de programación informática",
+    "province": "Valencia"
+  },
+  "B93438737": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "LOGISTICS 13 SL",
+    "status": "CIERRE HOJA REGISTRAL",
+    "founded": "2015-11-10",
+    "cnae": "5210",
+    "cnae_label": "DEPÓSITO Y ALMACENAMIENTO",
+    "cnae_2025_label": "Almacenamiento de gas como parte de los servicios de suministro de la red",
+    "province": "Málaga"
+  },
+  "F78834603": null,
+  "B93579928": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "KRC TACTICAL SL",
+    "status": "ACTIVA",
+    "founded": "2017-11-07",
+    "cnae": "1399",
+    "cnae_label": "FABRICACIÓN DE OTROS PRODUCTOS TEXTILES N.C.O.P.",
+    "cnae_2025_label": "Fabricación de otros productos textiles n.c.o.p.",
+    "province": "MÁLAGA"
+  },
+  "B92290287": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "INGESA INGENIERIA Y DISEÑO SL",
+    "status": "ACTIVA",
+    "founded": "2001-12-13",
+    "cnae": "6812",
+    "cnae_label": "PROMOCIÓN INMOBILIARIA",
+    "cnae_2025_label": null,
+    "province": "Málaga"
+  },
+  "B93358299": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "SOLUCIONES DE ELECTRICIDAD, TELECOMUNICACIONES, INTEGRACION Y SISTEMAS SL",
+    "status": null,
+    "founded": null,
+    "cnae": null,
+    "cnae_label": null,
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "B29427762": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "GENAYSA SL",
+    "status": "ACTIVA",
+    "founded": null,
+    "cnae": "4299",
+    "cnae_label": "CONSTRUCCIÓN DE OTROS PROYECTOS DE INGENIERÍA CIVIL N.C.O.P.",
+    "cnae_2025_label": "Construcción de otros proyectos de ingeniería civil n.c.o.p.",
+    "province": "Málaga"
+  },
+  "B13729439": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "DIVELEC SUMINISTROS SL",
+    "status": "ACTIVA",
+    "founded": "2023-05-03",
+    "cnae": "4650",
+    "cnae_label": "COMERCIO AL POR MAYOR DE EQUIPOS PARA LAS TECNOLOGÍAS DE LA INFORMACIÓN Y LAS COMUNICACIONES",
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "B92804640": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "BARBOL JARDINERIA DISEÑO Y MANTENIMIENTO SL",
+    "status": "ACTIVA",
+    "founded": null,
+    "cnae": "8130",
+    "cnae_label": "ACTIVIDADES DE JARDINERÍA",
+    "cnae_2025_label": "Actividades de jardinería",
+    "province": "Málaga"
+  },
+  "B96693288": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "TMU KRISTAL ESPAÑA SL",
+    "status": "DISUELTA",
+    "founded": "1997-10-27",
+    "cnae": "1392",
+    "cnae_label": "FABRICACIÓN DE TEXTILES PARA EL HOGAR Y ARTÍCULOS DE DECORACIÓN CONFECCIONADOSINFORME COMERCIAL Y DE RIESGO DE \n                              TMU KRISTAL ESPAÑA SL",
+    "cnae_2025_label": "Fabricación de textiles para el hogar y artículos de decoración confeccionados",
+    "province": "Valencia"
+  },
+  "B93529790": {
+    "fetched_at": "2026-05-02",
+    "nombre_api": "JOPEVA MONTAJES Y MANTENIMIENTOS SL",
+    "status": "ACTIVA",
+    "founded": "2017-02-08",
+    "cnae": "4324",
+    "cnae_label": "OTRAS INSTALACIONES EN OBRAS DE CONSTRUCCIÓN",
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "B29534443": null,
+  "B29720430": null,
+  "B46001897": null,
+  "A28119220": null,
+  "B06414478": null
 }
