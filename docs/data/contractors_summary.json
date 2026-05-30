@@ -35516,7 +35516,7 @@
   },
   {
     "cif": "A28007748",
-    "nombre": "Allianz Compañía de Seguros y Reaseguros SA",
+    "nombre": "ALLIANZ COMPAÑIA DE SEGUROS Y REASEGUROS SA",
     "direccion": "Calle Ramírez de Arellano, 35, 28043 Madrid",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -35691,11 +35691,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Seguros de vida",
+    "sector_cnae": "6511",
+    "fecha_constitucion": "1947",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B98934243",
-    "nombre": "Play and Go Experience, S.L.",
+    "nombre": "PLAY AND GO EXPERIENCE SOCIEDAD LIMITADA",
     "direccion": "C/ Surestes, 1,1-2, 46014 Valencia",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -35726,7 +35730,11 @@
         "area": "Turismo",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": null,
+    "sector_cnae": null,
+    "fecha_constitucion": "2017",
+    "estado_registral": null
   },
   {
     "cif": "76****29X",
@@ -35832,7 +35840,7 @@
   },
   {
     "cif": "A80773534",
-    "nombre": "SGS International Certification Services Ibérica, SAU",
+    "nombre": "SGS INTERNATIONAL CERTIFICATION SERVICES IBERICA SA",
     "direccion": "C/ Diderot, 28, 3º, P.I. Guadalhorce, 29004 Málaga",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -35887,7 +35895,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de los agentes de patentes y de los servicios de marketing",
+    "sector_cnae": "7490",
+    "fecha_constitucion": "1993",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "74****86C",
@@ -35918,7 +35930,7 @@
   },
   {
     "cif": "B18393132",
-    "nombre": "Servicios Integrales de Contratación e Intermediación Dominus SL",
+    "nombre": "SERVICIOS INTEGRALES DE CONTRATACION E INTERMEDIACION DOMINUS SL",
     "direccion": "C/ Ángel, 16, Bajo E. Granada",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -35941,11 +35953,15 @@
         "area": "Presidencia",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Todas las demás actividades profesionales, científicas y técnicas n.c.o.p.",
+    "sector_cnae": "7499",
+    "fecha_constitucion": "1995",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93750503",
-    "nombre": "TXUSSA FILMS SL",
+    "nombre": "TXUSSAFILMS SL",
     "direccion": "",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -36008,11 +36024,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de producción cinematográfica y de vídeo",
+    "sector_cnae": "5915",
+    "fecha_constitucion": "2020",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B18087270",
-    "nombre": "JUMADI",
+    "nombre": "JUMADI SL",
     "direccion": "Avda. de la Serrezuela, 18, Parque Metropolitano, 18130 Escúzar (Granada)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -36147,11 +36167,15 @@
         "area": "Deportes (APAL)",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Comercio al por mayor de porcelana, cristalería y artículos de limpieza",
+    "sector_cnae": "4644",
+    "fecha_constitucion": "1988",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "A50878842",
-    "nombre": "Espúblico Servicios para la Administración, S.A.",
+    "nombre": "ESPUBLICO SERVICIOS PARA LA ADMINISTRACION SA",
     "direccion": "Polígono Plaza, C/ Bari, 39, Planta Baja, Oficina A, 50197 Zaragoza",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -36190,7 +36214,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de consultoría informática y gestión de instalaciones informáticas",
+    "sector_cnae": "6202",
+    "fecha_constitucion": null,
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "G92442748",
@@ -36280,7 +36308,7 @@
   },
   {
     "cif": "A18485516",
-    "nombre": "Andaluza de Tratamientos de Higiene SA",
+    "nombre": "ATHISA MEDIO AMBIENTE SA",
     "direccion": ". Pol. Ind. Asegra, Calle Málaga, 7, Peligros, Granada",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -36303,11 +36331,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Otras actividades de limpieza",
+    "sector_cnae": "8129",
+    "fecha_constitucion": "1998",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B72555212",
-    "nombre": "Textile y Merchandising VK, S.L.",
+    "nombre": "TEXTILE Y MERCHANDISING VK SL",
     "direccion": "C/ Bielorrusia, Pol. Ind. Gualdalhorce, 9-27, 29004 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -36378,7 +36410,11 @@
         "area": "Deportes (APAL)",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Confección de ropa de trabajo",
+    "sector_cnae": "1423",
+    "fecha_constitucion": "2022",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "77****48S",
@@ -36425,7 +36461,7 @@
   },
   {
     "cif": "B05432638",
-    "nombre": "Dorsalchip, SLU",
+    "nombre": "DORSAL CHIP SL",
     "direccion": "C/ Tejeros, 15, 3ºH, 29013 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -36568,11 +36604,15 @@
         "area": "Deportes (APAL)",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de los clubes deportivos",
+    "sector_cnae": "9312",
+    "fecha_constitucion": "2021",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B86446705",
-    "nombre": "Senseoymas Online Marketing SL",
+    "nombre": "SEMSEOYMAS ONLINE MARKETING SL",
     "direccion": "Paseo de la Castellana, 259C, planta 18. Madrid",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -36595,11 +36635,15 @@
         "area": "Nuevas Tecnologías y Transparencia",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de programación informática",
+    "sector_cnae": "6201",
+    "fecha_constitucion": "2012",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B29773066",
-    "nombre": "Autocares Núñez y Gómez, S.L.",
+    "nombre": "AUTOCARES NUÑEZ Y GOMEZ SL",
     "direccion": "C/ Ancla, 25, Casa 21, 29720 La Cala del Moral (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -36798,11 +36842,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Otro transporte de pasajeros por ferrocarril",
+    "sector_cnae": "4931",
+    "fecha_constitucion": "1994",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93521953",
-    "nombre": "Lagar Medioambiente SL",
+    "nombre": "LAGAR MEDIOAMBIENTE SL",
     "direccion": "C/ Esperanto, 19, Ofic. 11. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -36825,11 +36873,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Servicios de apoyo a la silvicultura",
+    "sector_cnae": "0240",
+    "fecha_constitucion": "2017",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B41978115",
-    "nombre": "Eva Hierbabuena, S.L.",
+    "nombre": "EVA HIERBABUENA SL",
     "direccion": "C/ Real Utrera, 33, bajo A, 41700 Dos Hermanas (Sevilla)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -36844,11 +36896,15 @@
         "area": "Cultura",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de artes escénicas",
+    "sector_cnae": "9001",
+    "fecha_constitucion": "1999",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "A27178789",
-    "nombre": "OHL-SERVICIOS INGESAN SA",
+    "nombre": "OHL SERVICIOS INGESAN SA",
     "direccion": "",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -36863,11 +36919,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Limpieza general de edificios",
+    "sector_cnae": "8121",
+    "fecha_constitucion": "1994",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B98751472",
-    "nombre": "Atende Servicios Integrados, SL",
+    "nombre": "CLEHOS SERVICIOS PARA HOTELES SL",
     "direccion": ". Calle Pirandello, 6 4º 5 29010 Málaga.",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -36882,7 +36942,11 @@
         "area": "Playas",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Limpieza general de edificios",
+    "sector_cnae": "8121",
+    "fecha_constitucion": null,
+    "estado_registral": null
   },
   {
     "cif": "74****66G",
@@ -36905,7 +36969,7 @@
   },
   {
     "cif": "A41414145",
-    "nombre": "Guadaltel, S.A.",
+    "nombre": "GUADALTEL SA",
     "direccion": "C/ Pastor y Landero, 19, 41001 Sevilla",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -36920,11 +36984,15 @@
         "area": "Nuevas Tecnologías y Transparencia",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de consultoría informática y gestión de instalaciones informáticas",
+    "sector_cnae": "6202",
+    "fecha_constitucion": "1990",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93565364",
-    "nombre": "Jardinería Yeray y Ulises SL",
+    "nombre": "JARDINERIA YERAY & ULISES SL",
     "direccion": "Calle Palomo, 2. Benaque (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -36939,7 +37007,11 @@
         "area": "Deportes (APAL)",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": null,
+    "sector_cnae": null,
+    "fecha_constitucion": "2017",
+    "estado_registral": null
   },
   {
     "cif": "B66629494",

@@ -1059,5 +1059,187 @@
   "B02686467": null,
   "A80015506": null,
   "A04227757": null,
-  "G01779255": null
+  "G01779255": null,
+  "A28007748": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "ALLIANZ COMPAÑIA DE SEGUROS Y REASEGUROS SA",
+    "status": "ACTIVA",
+    "founded": "1947-12-20",
+    "cnae": "6511",
+    "cnae_label": "SEGUROS DE VIDAINFORME COMERCIAL Y DE RIESGO DE \n                              ALLIANZ COMPAÑIA DE SEGUROS Y REASEGUROS SA",
+    "cnae_2025_label": "Seguros de vida",
+    "province": "Madrid"
+  },
+  "B98934243": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "PLAY AND GO EXPERIENCE SOCIEDAD LIMITADA",
+    "status": null,
+    "founded": "2017-09-01",
+    "cnae": null,
+    "cnae_label": null,
+    "cnae_2025_label": null,
+    "province": "Valencia"
+  },
+  "A80773534": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "SGS INTERNATIONAL CERTIFICATION SERVICES IBERICA SA",
+    "status": "ACTIVA",
+    "founded": "1993-10-13",
+    "cnae": "7490",
+    "cnae_label": "Otras actividades profesionales, científicas y técnicas n.c.o.p.",
+    "cnae_2025_label": "Actividades de los agentes de patentes y de los servicios de marketing",
+    "province": "Madrid"
+  },
+  "B18393132": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "SERVICIOS INTEGRALES DE CONTRATACION E INTERMEDIACION DOMINUS SL",
+    "status": "ACTIVA",
+    "founded": "1995-05-30",
+    "cnae": "7499",
+    "cnae_label": "TODAS LAS DEMÁS ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS N.C.O.P.",
+    "cnae_2025_label": null,
+    "province": "GRANADA"
+  },
+  "B93750503": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "TXUSSAFILMS SL",
+    "status": "ACTIVA",
+    "founded": "2020-05-29",
+    "cnae": "5915",
+    "cnae_label": "ACTIVIDADES DE PRODUCCIÓN CINEMATOGRÁFICA Y DE VÍDEO",
+    "cnae_2025_label": "Actividades de producción cinematográfica y de vídeo",
+    "province": "MÁLAGA"
+  },
+  "B18087270": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "JUMADI SL",
+    "status": "ACTIVA",
+    "founded": "1988-02-01",
+    "cnae": "4644",
+    "cnae_label": "Comercio al por mayor de porcelana, cristalería y artículos de limpieza",
+    "cnae_2025_label": "Comercio al por mayor de porcelana, cristalería y artículos de limpieza",
+    "province": "Granada"
+  },
+  "A50878842": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "ESPUBLICO SERVICIOS PARA LA ADMINISTRACION SA",
+    "status": "ACTIVA",
+    "founded": null,
+    "cnae": "6202",
+    "cnae_label": "Actividades de consultoría informática",
+    "cnae_2025_label": "Actividades de consultoría informática y gestión de instalaciones informáticas",
+    "province": "Zaragoza"
+  },
+  "G92442748": null,
+  "G92487651": null,
+  "A18485516": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "ATHISA MEDIO AMBIENTE SA",
+    "status": "ACTIVA",
+    "founded": "1998-01-01",
+    "cnae": "8129",
+    "cnae_label": "Otras actividades de limpieza",
+    "cnae_2025_label": "Otras actividades de limpieza",
+    "province": "Granada"
+  },
+  "B72555212": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "TEXTILE Y MERCHANDISING VK SL",
+    "status": "ACTIVA",
+    "founded": "2022-09-28",
+    "cnae": "1423",
+    "cnae_label": "CONFECCIÓN DE ROPA DE TRABAJO",
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "B05432638": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "DORSAL CHIP SL",
+    "status": "ACTIVA",
+    "founded": "2021-04-29",
+    "cnae": "9312",
+    "cnae_label": "ACTIVIDADES DE LOS CLUBES DEPORTIVOS",
+    "cnae_2025_label": "Actividades de los clubes deportivos",
+    "province": "MÁLAGA"
+  },
+  "B86446705": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "SEMSEOYMAS ONLINE MARKETING SL",
+    "status": "ACTIVA",
+    "founded": "2012-04-18",
+    "cnae": "6201",
+    "cnae_label": "Actividades de programación informática",
+    "cnae_2025_label": "Actividades de programación informática",
+    "province": "MADRID"
+  },
+  "B29773066": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "AUTOCARES NUÑEZ Y GOMEZ SL",
+    "status": "ACTIVA",
+    "founded": "1994-08-08",
+    "cnae": "4931",
+    "cnae_label": "Transporte terrestre urbano y suburbano de pasajeros",
+    "cnae_2025_label": "Otro transporte de pasajeros por ferrocarril",
+    "province": "Málaga"
+  },
+  "B93521953": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "LAGAR MEDIOAMBIENTE SL",
+    "status": "ACTIVA",
+    "founded": "2017-01-03",
+    "cnae": "0240",
+    "cnae_label": "SERVICIOS DE APOYO A LA SILVICULTURA",
+    "cnae_2025_label": "Servicios de apoyo a la silvicultura",
+    "province": "MÁLAGA"
+  },
+  "B41978115": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "EVA HIERBABUENA SL",
+    "status": "ACTIVA",
+    "founded": "1999-03-22",
+    "cnae": "9001",
+    "cnae_label": "Artes escénicas",
+    "cnae_2025_label": "Actividades de artes escénicas",
+    "province": "Sevilla"
+  },
+  "A27178789": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "OHL SERVICIOS INGESAN SA",
+    "status": "ACTIVA",
+    "founded": "1994-05-05",
+    "cnae": "8121",
+    "cnae_label": "Limpieza general de edificios",
+    "cnae_2025_label": "Limpieza general de edificios",
+    "province": "Madrid"
+  },
+  "B98751472": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "CLEHOS SERVICIOS PARA HOTELES SL",
+    "status": null,
+    "founded": null,
+    "cnae": "8121",
+    "cnae_label": "LIMPIEZA GENERAL DE EDIFICIOS",
+    "cnae_2025_label": "Limpieza general de edificios",
+    "province": "SEVILLA"
+  },
+  "A41414145": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "GUADALTEL SA",
+    "status": "ACTIVA",
+    "founded": "1990-06-13",
+    "cnae": "6202",
+    "cnae_label": "Actividades de consultoría informática",
+    "cnae_2025_label": "Actividades de consultoría informática y gestión de instalaciones informáticas",
+    "province": "Sevilla"
+  },
+  "B93565364": {
+    "fetched_at": "2026-05-30",
+    "nombre_api": "JARDINERIA YERAY & ULISES SL",
+    "status": null,
+    "founded": "2017-08-09",
+    "cnae": null,
+    "cnae_label": null,
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  }
 }
