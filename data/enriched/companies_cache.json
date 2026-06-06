@@ -1241,5 +1241,187 @@
     "cnae_label": null,
     "cnae_2025_label": null,
     "province": "MÁLAGA"
+  },
+  "B66629494": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "HERMEX IBERICA SL",
+    "status": "EXTINGUIDA",
+    "founded": "2015-10-19",
+    "cnae": "4649",
+    "cnae_label": "Comercio al por mayor de otros artículos de uso doméstico",
+    "cnae_2025_label": "Comercio al por mayor de otros artículos de uso doméstico",
+    "province": "BARCELONA"
+  },
+  "A81069197": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "KONICA MINOLTA BUSINESS SOLUTIONS SPAIN SA",
+    "status": "ACTIVA",
+    "founded": "1995-01-05",
+    "cnae": "4666",
+    "cnae_label": "Comercio al por mayor de otra maquinaria y equipo de oficina",
+    "cnae_2025_label": "Comercio al por mayor de equipos para las tecnologías de la información y las comunicaciones",
+    "province": "Madrid"
+  },
+  "A58178161": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "JUEGOS KOMPAN SA",
+    "status": "ACTIVA",
+    "founded": "1986-04-28",
+    "cnae": "4765",
+    "cnae_label": "Comercio al por menor de juegos y juguetes en establecimientos especializados",
+    "cnae_2025_label": "Comercio al por menor de juegos y juguetes",
+    "province": "Barcelona"
+  },
+  "B92729284": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "NO TE OLVIDES DE MI SL",
+    "status": "ACTIVA",
+    "founded": "2006-02-24",
+    "cnae": "9003",
+    "cnae_label": "Creación artística y literaria",
+    "cnae_2025_label": "Actividades de creación literaria y composición musical",
+    "province": "Granada"
+  },
+  "G93572741": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "ASOCIACION CULTURAL CALIOPE TEATRO ASOCIACIÓN",
+    "status": null,
+    "founded": null,
+    "cnae": "9031",
+    "cnae_label": "GESTIÓN DE INSTALACIONES PARA ACTIVIDADES ARTÍSTICAS Y ARTES ESCÉNICAS",
+    "cnae_2025_label": null,
+    "province": "Málaga"
+  },
+  "B72993082": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "SCAES ANDALUCIA SL",
+    "status": "ACTIVA",
+    "founded": "2023-01-10",
+    "cnae": "0170",
+    "cnae_label": "CAZA, CAPTURA DE ANIMALES Y SERVICIOS RELACIONADOS",
+    "cnae_2025_label": "Caza, captura de animales y servicios relacionados ",
+    "province": "Málaga"
+  },
+  "F90219569": null,
+  "V16420424": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "CONCIERTOS DEL MUNDO AIE",
+    "status": null,
+    "founded": "2024-04-02",
+    "cnae": "9020",
+    "cnae_label": "ACTIVIDADES DE ARTES ESCÉNICAS",
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "A78015880": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "API MOVILIDAD SA",
+    "status": "ACTIVA",
+    "founded": "1981-03-01",
+    "cnae": "4299",
+    "cnae_label": "Construcción de otros proyectos de ingeniería civil n.c.o.p.",
+    "cnae_2025_label": "Construcción de otros proyectos de ingeniería civil n.c.o.p.",
+    "province": "Madrid"
+  },
+  "V92054899": null,
+  "B93613438": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "PRODUCCIONES Y EVENTOS ELIXIR SL",
+    "status": "ACTIVA",
+    "founded": "2018-04-18",
+    "cnae": "7311",
+    "cnae_label": "ACTIVIDADES DE LAS AGENCIAS DE PUBLICIDADINFORME COMERCIAL Y DE RIESGO DE \n                              PRODUCCIONES Y EVENTOS ELIXIR SL",
+    "cnae_2025_label": "Actividades de las agencias de publicidad",
+    "province": "Málaga"
+  },
+  "B93108454": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "STUDIOLED SL",
+    "status": "ACTIVA",
+    "founded": "2011-02-02",
+    "cnae": "7112",
+    "cnae_label": "Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico",
+    "cnae_2025_label": "Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico",
+    "province": "MÁLAGA"
+  },
+  "A29229333": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "CAI CONSULTORES DE INGENIERIA SL",
+    "status": "ACTIVA",
+    "founded": "1987-10-19",
+    "cnae": "7111",
+    "cnae_label": "Servicios técnicos de arquitectura",
+    "cnae_2025_label": "Servicios técnicos de arquitectura",
+    "province": "Málaga"
+  },
+  "A58979337": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "INNOVACIONS TECNOLOGIQUES SA",
+    "status": "ACTIVA",
+    "founded": "1989-04-27",
+    "cnae": "2369",
+    "cnae_label": "Fabricación de otros productos de hormigón, yeso y cemento",
+    "cnae_2025_label": "Fabricación de otros productos de hormigón, yeso y cemento",
+    "province": "Barcelona"
+  },
+  "A80907397": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "VODAFONE ESPAÑA SA",
+    "status": "ACTIVA",
+    "founded": "1994-05-27",
+    "cnae": "6190",
+    "cnae_label": "Otras actividades de telecomunicaciones",
+    "cnae_2025_label": "Actividades de reventa de telecomunicaciones y servicios de intermediación para telecomunicaciones",
+    "province": "Madrid"
+  },
+  "B92303627": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "CATERING LUCIA SL",
+    "status": "ACTIVA",
+    "founded": "2002-02-08",
+    "cnae": "5621",
+    "cnae_label": "Provisión de comidas preparadas para eventos",
+    "cnae_2025_label": "Servicios ocasionales de catering ",
+    "province": "Málaga"
+  },
+  "A93035723": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "SERVILIMPSA AUTOMOCION SA",
+    "status": "ACTIVA",
+    "founded": "2009-11-26",
+    "cnae": "4511",
+    "cnae_label": "Venta de automóviles y vehículos de motor ligeros",
+    "cnae_2025_label": "Actividades de intermediarios del comercio al por mayor de otros productos específicos",
+    "province": "MALAGA"
+  },
+  "B93688596": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "CONSTRUCCIONES Y SERVICIOS GENERALES FEARRAL SL",
+    "status": "ACTIVA",
+    "founded": "2019-05-14",
+    "cnae": "4101",
+    "cnae_label": "CONSTRUCCIÓN DE EDIFICIOS RESIDENCIALES",
+    "cnae_2025_label": null,
+    "province": "MALAGA"
+  },
+  "B29124971": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "TAHERMO SL",
+    "status": "ACTIVA",
+    "founded": "1984-12-03",
+    "cnae": "4511",
+    "cnae_label": "Venta de automóviles y vehículos de motor ligeros",
+    "cnae_2025_label": "Actividades de intermediarios del comercio al por mayor de otros productos específicos",
+    "province": "MALAGA"
+  },
+  "B93670396": {
+    "fetched_at": "2026-06-06",
+    "nombre_api": "COSTA GARDEN 2019 SL",
+    "status": "ACTIVA",
+    "founded": "2019-02-18",
+    "cnae": "8130",
+    "cnae_label": "ACTIVIDADES DE JARDINERÍA",
+    "cnae_2025_label": "Actividades de jardinería",
+    "province": "MÁLAGA"
   }
 }

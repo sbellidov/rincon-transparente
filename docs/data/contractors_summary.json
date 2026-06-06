@@ -37015,7 +37015,7 @@
   },
   {
     "cif": "B66629494",
-    "nombre": "Hermex Ibérica SL",
+    "nombre": "HERMEX IBERICA SL",
     "direccion": "C/ Astronomía, 1, Torre 3 4, módulo 11. 41005 Sevilla",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -37030,7 +37030,11 @@
         "area": "Educación",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Comercio al por mayor de otros artículos de uso doméstico",
+    "sector_cnae": "4649",
+    "fecha_constitucion": "2015",
+    "estado_registral": "EXTINGUIDA"
   },
   {
     "cif": "75****52R",
@@ -37053,7 +37057,7 @@
   },
   {
     "cif": "A81069197",
-    "nombre": "Kónica Minolta Business Solutions Spain, S.A.",
+    "nombre": "KONICA MINOLTA BUSINESS SOLUTIONS SPAIN SA",
     "direccion": "C/ Pirandello, 16, Edf Teatinos Plaza, 2ª Planta, 29010 Málaga",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -37076,11 +37080,15 @@
         "area": "Deportes (APAL)",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Comercio al por mayor de equipos para las tecnologías de la información y las comunicaciones",
+    "sector_cnae": "4666",
+    "fecha_constitucion": "1995",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "A58178161",
-    "nombre": "Juegos Kompan SA",
+    "nombre": "JUEGOS KOMPAN SA",
     "direccion": "Camí del Mig, 81, 2ª Planta. 08302 Mataró (Barcelona)",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -37095,11 +37103,15 @@
         "area": "Urbanismo",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Comercio al por menor de juegos y juguetes",
+    "sector_cnae": "4765",
+    "fecha_constitucion": "1986",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B92729284",
-    "nombre": "No Te Olvides de Mi",
+    "nombre": "NO TE OLVIDES DE MI SL",
     "direccion": "Paseo del Aire, 2, Urb. Del Cubillas. Albolote (Granada)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -37114,11 +37126,15 @@
         "area": "Turismo",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de creación literaria y composición musical",
+    "sector_cnae": "9003",
+    "fecha_constitucion": "2006",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "G93572741",
-    "nombre": "CALÍOPE TEATRO",
+    "nombre": "ASOCIACION CULTURAL CALIOPE TEATRO ASOCIACIÓN",
     "direccion": "",
     "tipo_entidad": "Asociación",
     "tipo_id": "CIF",
@@ -37133,7 +37149,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Gestión de instalaciones para actividades artísticas y artes escénicas",
+    "sector_cnae": "9031",
+    "fecha_constitucion": null,
+    "estado_registral": null
   },
   {
     "cif": "53****28Z",
@@ -37236,7 +37256,7 @@
   },
   {
     "cif": "B72993082",
-    "nombre": "Scaes Andalucía SA",
+    "nombre": "SCAES ANDALUCIA SL",
     "direccion": "C/ Mrianela, 33. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -37251,7 +37271,11 @@
         "area": "Sanidad y Consumo",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Caza, captura de animales y servicios relacionados ",
+    "sector_cnae": "0170",
+    "fecha_constitucion": "2023",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "F90219569",
@@ -37274,7 +37298,7 @@
   },
   {
     "cif": "V16420424",
-    "nombre": "Conciertos del Mundo, I.A.E.",
+    "nombre": "CONCIERTOS DEL MUNDO AIE",
     "direccion": "Ctra. Cártama Coín, KM, 3,5, Pista Carril Puerto Rico, 29570 Málaga",
     "tipo_entidad": "Otras sociedades",
     "tipo_id": "CIF",
@@ -37289,7 +37313,11 @@
         "area": "Ferias y Fiestas",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de artes escénicas",
+    "sector_cnae": "9020",
+    "fecha_constitucion": "2024",
+    "estado_registral": null
   },
   {
     "cif": "A78015880",
@@ -37308,7 +37336,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Construcción de otros proyectos de ingeniería civil n.c.o.p.",
+    "sector_cnae": "4299",
+    "fecha_constitucion": "1981",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "V92054899",
@@ -37347,7 +37379,7 @@
   },
   {
     "cif": "B93613438",
-    "nombre": "Producciones y Eventos Elixir SL",
+    "nombre": "PRODUCCIONES Y EVENTOS ELIXIR SL",
     "direccion": "8- Avda Doctor Manuel Domínguez, 10. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -37370,11 +37402,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de las agencias de publicidad",
+    "sector_cnae": "7311",
+    "fecha_constitucion": "2018",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93108454",
-    "nombre": "STUDIOLED",
+    "nombre": "STUDIOLED SL",
     "direccion": "",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -37389,11 +37425,15 @@
         "area": null,
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico",
+    "sector_cnae": "7112",
+    "fecha_constitucion": "2011",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "A29229333",
-    "nombre": "CAI consultores de Ingenieria SA",
+    "nombre": "CAI CONSULTORES DE INGENIERIA SL",
     "direccion": "Avda. Del Carmen, Edif Puerta del Sol, Of. 5. Estepona (Málaga)",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -37408,7 +37448,11 @@
         "area": "Urbanismo",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Servicios técnicos de arquitectura",
+    "sector_cnae": "7111",
+    "fecha_constitucion": "1987",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "A58979337",
@@ -37427,11 +37471,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Fabricación de otros productos de hormigón, yeso y cemento",
+    "sector_cnae": "2369",
+    "fecha_constitucion": "1989",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "A80907397",
-    "nombre": "Vodafone España SAU",
+    "nombre": "VODAFONE ESPAÑA SA",
     "direccion": "Avda de América, 115. Madrid",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -37446,11 +37494,15 @@
         "area": "Nuevas Tecnologías y Transparencia",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de reventa de telecomunicaciones y servicios de intermediación para telecomunicaciones",
+    "sector_cnae": "6190",
+    "fecha_constitucion": "1994",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B92303627",
-    "nombre": "Catering Lucía",
+    "nombre": "CATERING LUCIA SL",
     "direccion": "Pº Cerrado de Calderón, 11, 29008 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -37481,11 +37533,15 @@
         "area": "Bienestar Social",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Servicios ocasionales de catering ",
+    "sector_cnae": "5621",
+    "fecha_constitucion": "2002",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "A93035723",
-    "nombre": "Servilimpsa Automoción, S.A.",
+    "nombre": "SERVILIMPSA AUTOMOCION SA",
     "direccion": "Avda. Orega y Gasset, 210, 29006 Málaga",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -37500,7 +37556,11 @@
         "area": "Seguridad Ciudadana",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Actividades de intermediarios del comercio al por mayor de otros productos específicos",
+    "sector_cnae": "4511",
+    "fecha_constitucion": "2009",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93688596",
@@ -37519,7 +37579,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Construcción de edificios residenciales",
+    "sector_cnae": "4101",
+    "fecha_constitucion": "2019",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "53****69W",
@@ -37542,7 +37606,7 @@
   },
   {
     "cif": "B29124971",
-    "nombre": "Tahermo, SLU",
+    "nombre": "TAHERMO SL",
     "direccion": "Avda Juan Carlos I, nº 9-11. 29700 Vélez-Málaga (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -37605,11 +37669,15 @@
         "area": null,
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Actividades de intermediarios del comercio al por mayor de otros productos específicos",
+    "sector_cnae": "4511",
+    "fecha_constitucion": "1984",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93670396",
-    "nombre": "Costa Garden 2019, S.L.",
+    "nombre": "COSTA GARDEN 2019 SL",
     "direccion": "Ctra. Benagalbón, Cortijo Las Torrecillas, 11, 29730 Rincón de la Victoria",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -37624,7 +37692,11 @@
         "area": "Sostenibilidad Medioambiental",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de jardinería",
+    "sector_cnae": "8130",
+    "fecha_constitucion": "2019",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B92157429",
