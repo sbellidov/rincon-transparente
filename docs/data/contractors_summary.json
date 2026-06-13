@@ -37700,7 +37700,7 @@
   },
   {
     "cif": "B92157429",
-    "nombre": "Kedeke Sports SL",
+    "nombre": "KEDEKE SPORTS SL",
     "direccion": "Pol. Ind. Guadalhorce, calle Alejandro Casona, 40-44. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -37771,11 +37771,15 @@
         "area": "Deportes (APAL)",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Comercio al por mayor de prendas de vestir y calzado",
+    "sector_cnae": "4642",
+    "fecha_constitucion": "2000",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B18454769",
-    "nombre": "ESTUDIOS TÉCNICOS VICENOR SL",
+    "nombre": "ESTUDIOS TECNICOS VICENOR SL",
     "direccion": "",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -37790,11 +37794,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico",
+    "sector_cnae": "7112",
+    "fecha_constitucion": "1997",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "A29364627",
-    "nombre": "Añoreta Golf S.A.",
+    "nombre": "AÑORETA GOLF SA",
     "direccion": "– Avda. Del Golf S/N CP 29730 Rincón e la Victoria (Málaga)",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -37833,7 +37841,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de los clubes deportivos",
+    "sector_cnae": "9312",
+    "fecha_constitucion": "1989",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B88400171",
@@ -37852,11 +37864,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Otras actividades de consultoría de gestión empresarial",
+    "sector_cnae": "7020",
+    "fecha_constitucion": "2019",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93713816",
-    "nombre": "Pacheco Soluciones, S.L.",
+    "nombre": "PACHECO SOLUCIONES SL",
     "direccion": "Avda. de Finlandia, 29, 29640 Fuengirola (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -37943,11 +37959,15 @@
         "area": "Turismo",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Servicios de extinción de incendios",
+    "sector_cnae": "9329",
+    "fecha_constitucion": "2019",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B92091941",
-    "nombre": "Confecciones Iruka Textil",
+    "nombre": "CONFECCIONES IRUKA TEXTIL SL",
     "direccion": "C/ Jimera de Líbar, 29. 29006 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38066,11 +38086,15 @@
         "area": "Deportes (APAL)",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Confección de prendas de vestir exteriores",
+    "sector_cnae": "1421",
+    "fecha_constitucion": null,
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B92982883",
-    "nombre": "Laboratorio de Urbanismo y Paisaje SL",
+    "nombre": "LABORATORIO DE URBANISMO Y PAISAJE SL",
     "direccion": "C/ Comedias, 9, Ofc. 6-2. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38085,11 +38109,15 @@
         "area": "Urbanismo",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de los agentes del comercio al por mayor no especializado",
+    "sector_cnae": "4619",
+    "fecha_constitucion": "2009",
+    "estado_registral": null
   },
   {
     "cif": "F20947909",
-    "nombre": "ULMA AGRÍCOLA S. COOP. SUMINISTRO",
+    "nombre": "ULMA AGRICOLA SCOOP",
     "direccion": "",
     "tipo_entidad": "Cooperativa",
     "tipo_id": "CIF",
@@ -38104,11 +38132,15 @@
         "area": null,
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Fabricación de maquinaria agraria y forestal",
+    "sector_cnae": "2830",
+    "fecha_constitucion": null,
+    "estado_registral": null
   },
   {
     "cif": "B83664482",
-    "nombre": "INGENIA SOLUCIONES PARA LA INGENIERIA SLU",
+    "nombre": "INGENIA SOLUCIONES PARA LA INGENIERIA SL",
     "direccion": "",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38123,11 +38155,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico",
+    "sector_cnae": "7112",
+    "fecha_constitucion": "2003",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B70722012",
-    "nombre": "Innovaplad 2024, S.L.",
+    "nombre": "INNOVAPLAD 2024 SL",
     "direccion": "C/ El Maimón, 6, 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38150,7 +38186,11 @@
         "area": "Obras y Servicios Generales",
         "tipo_contrato_limpio": "Obras"
       }
-    ]
+    ],
+    "sector": "Revestimiento de suelos y paredes",
+    "sector_cnae": "4333",
+    "fecha_constitucion": "2024",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "G93433795",
@@ -38197,7 +38237,7 @@
   },
   {
     "cif": "B16986655",
-    "nombre": "Los Felices Existen SL",
+    "nombre": "LOS FELICES EXISTEN SL",
     "direccion": "C/ Antonio Suárez, 10, B116. Alcalá de Henares (Madrid)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38212,11 +38252,15 @@
         "area": "Ferias y Fiestas",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Otra educación n.c.o.p.",
+    "sector_cnae": "8559",
+    "fecha_constitucion": "2021",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B19809953",
-    "nombre": "El Hemisferio & Bosska, S.L.",
+    "nombre": "EL HEMISFERIO & BOSSKA SL",
     "direccion": "Avda. de la Obsidiana, 14, 29631 Arroyo de la Miel (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38231,11 +38275,15 @@
         "area": "Sostenibilidad Medioambiental",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Otros servicios relacionados con las tecnologías de la información y la informática",
+    "sector_cnae": "6290",
+    "fecha_constitucion": "2024",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B10384899",
-    "nombre": "Impecable Stands, S.L.",
+    "nombre": "IMPECABLE STANDS SL",
     "direccion": "Avda. de Extremadura, 2, 1º-C, 06800 Mérida (Badajoz)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38250,11 +38298,15 @@
         "area": "Urbanismo",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Acabado de textiles",
+    "sector_cnae": "1812",
+    "fecha_constitucion": "2008",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "J93384543",
-    "nombre": "Techoreca Gastroformación, S.C.",
+    "nombre": "TECHORECA GASTROFORMACION SCIV",
     "direccion": "Avda. Poeta Edelmira Guerrero, 17, 29140 Málaga",
     "tipo_entidad": "Sociedad Civil",
     "tipo_id": "CIF",
@@ -38277,7 +38329,11 @@
         "area": "Comercio",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Otra educación n.c.o.p.",
+    "sector_cnae": "8559",
+    "fecha_constitucion": null,
+    "estado_registral": null
   },
   {
     "cif": "25****90G",
@@ -38308,7 +38364,7 @@
   },
   {
     "cif": "B84779594",
-    "nombre": "Proapen Ingeniería y Consultoría SL",
+    "nombre": "INVERSORA MIRALLOS SL",
     "direccion": "Paseo de la Castellana, 40. Madrid",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38323,11 +38379,15 @@
         "area": "Obras y Servicios Generales",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Promoción inmobiliaria",
+    "sector_cnae": "6812",
+    "fecha_constitucion": null,
+    "estado_registral": "INACTIVA"
   },
   {
     "cif": "B92461185",
-    "nombre": "ASESORÍA Y CONSULTORÍA DE LA COMERCIALIZACIÓN Y MARKETING SL",
+    "nombre": "ASESORIA Y CONSULTORIA DE COMERCIALIZACION Y MARKETING SL",
     "direccion": "",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38358,11 +38418,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Otras actividades de consultoría de gestión empresarial",
+    "sector_cnae": "7022",
+    "fecha_constitucion": "2003",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B14404065",
-    "nombre": "Vistalegre Solutions SL",
+    "nombre": "VISTALEGRE SOLUTIONS SL",
     "direccion": ". Calle del Transporte, 1. 14191, Córdoba",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38401,11 +38465,15 @@
         "area": null,
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Fabricación de artículos de papelería",
+    "sector_cnae": "1723",
+    "fecha_constitucion": "1995",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B85648616",
-    "nombre": "Gestevent SL",
+    "nombre": "GESTEVENT SL",
     "direccion": "C/Héroe de Sostoa, 73. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38420,7 +38488,11 @@
         "area": "Ferias y Fiestas",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Actividades de sociedades holding",
+    "sector_cnae": "6420",
+    "fecha_constitucion": "2009",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "44****65B",

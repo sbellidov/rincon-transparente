@@ -1423,5 +1423,187 @@
     "cnae_label": "ACTIVIDADES DE JARDINERÍA",
     "cnae_2025_label": "Actividades de jardinería",
     "province": "MÁLAGA"
-  }
+  },
+  "B92157429": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "KEDEKE SPORTS SL",
+    "status": "ACTIVA",
+    "founded": "2000-05-26",
+    "cnae": "4642",
+    "cnae_label": "COMERCIO AL POR MAYOR DE PRENDAS DE VESTIR Y CALZADO",
+    "cnae_2025_label": "Comercio al por mayor de prendas de vestir y calzado",
+    "province": "MALAGA"
+  },
+  "B18454769": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "ESTUDIOS TECNICOS VICENOR SL",
+    "status": "ACTIVA",
+    "founded": "1997-08-27",
+    "cnae": "7112",
+    "cnae_label": "SERVICIOS TÉCNICOS DE INGENIERÍA Y OTRAS ACTIVIDADES RELACIONADAS CON EL ASESORAMIENTO TÉCNICO",
+    "cnae_2025_label": "Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico",
+    "province": "Granada"
+  },
+  "A29364627": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "AÑORETA GOLF SA",
+    "status": "ACTIVA",
+    "founded": "1989-01-16",
+    "cnae": "9312",
+    "cnae_label": "Actividades de los clubes deportivos",
+    "cnae_2025_label": "Actividades de los clubes deportivos",
+    "province": "Málaga"
+  },
+  "B88400171": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "TOURISM DATA DRIVEN SOLUTIONS SL",
+    "status": "ACTIVA",
+    "founded": "2019-05-24",
+    "cnae": "7020",
+    "cnae_label": "OTRAS ACTIVIDADES DE CONSULTORÍA DE GESTIÓN EMPRESARIAL",
+    "cnae_2025_label": null,
+    "province": "MADRID"
+  },
+  "B93713816": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "PACHECO SOLUCIONES SL",
+    "status": "ACTIVA",
+    "founded": "2019-10-03",
+    "cnae": "9329",
+    "cnae_label": "ACTIVIDADES RECREATIVAS Y DE ENTRETENIMIENTO N.C.O.P.INFORME COMERCIAL Y DE RIESGO DE \n                              PACHECO SOLUCIONES SL",
+    "cnae_2025_label": "Servicios de extinción de incendios",
+    "province": "Málaga"
+  },
+  "B92091941": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "CONFECCIONES IRUKA TEXTIL SL",
+    "status": "ACTIVA",
+    "founded": null,
+    "cnae": "1421",
+    "cnae_label": "CONFECCIÓN DE PRENDAS DE VESTIR EXTERIORES",
+    "cnae_2025_label": null,
+    "province": "Málaga"
+  },
+  "B92982883": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "LABORATORIO DE URBANISMO Y PAISAJE SL",
+    "status": null,
+    "founded": "2009-01-28",
+    "cnae": "4619",
+    "cnae_label": "Intermediarios del comercio de productos diversos",
+    "cnae_2025_label": "Actividades de los agentes del comercio al por mayor no especializado",
+    "province": "MÁLAGA"
+  },
+  "F20947909": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "ULMA AGRICOLA SCOOP",
+    "status": null,
+    "founded": null,
+    "cnae": "2830",
+    "cnae_label": "FABRICACIÓN DE MAQUINARIA AGRARIA Y FORESTAL",
+    "cnae_2025_label": "Fabricación de maquinaria agraria y forestal",
+    "province": "Guipúzcoa"
+  },
+  "B83664482": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "INGENIA SOLUCIONES PARA LA INGENIERIA SL",
+    "status": "ACTIVA",
+    "founded": "2003-05-30",
+    "cnae": "7112",
+    "cnae_label": "Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico",
+    "cnae_2025_label": "Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico",
+    "province": "MADRID"
+  },
+  "B70722012": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "INNOVAPLAD 2024 SL",
+    "status": "ACTIVA",
+    "founded": "2024-02-14",
+    "cnae": "4333",
+    "cnae_label": "REVESTIMIENTO DE SUELOS Y PAREDES",
+    "cnae_2025_label": "Revestimiento de suelos y paredes",
+    "province": "MÁLAGA"
+  },
+  "G93433795": null,
+  "B16986655": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "LOS FELICES EXISTEN SL",
+    "status": "ACTIVA",
+    "founded": "2021-10-06",
+    "cnae": "8559",
+    "cnae_label": "OTRA EDUCACIÓN N.C.O.P.",
+    "cnae_2025_label": "Otra educación n.c.o.p.",
+    "province": "MADRID"
+  },
+  "B19809953": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "EL HEMISFERIO & BOSSKA SL",
+    "status": "ACTIVA",
+    "founded": "2024-06-03",
+    "cnae": "6290",
+    "cnae_label": "OTROS SERVICIOS RELACIONADOS CON LAS TECNOLOGÍAS DE LA INFORMACIÓN Y LA INFORMÁTICA",
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "B10384899": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "IMPECABLE STANDS SL",
+    "status": "ACTIVA",
+    "founded": "2008-07-25",
+    "cnae": "1812",
+    "cnae_label": "Otras actividades de impresión y artes gráficas",
+    "cnae_2025_label": "Acabado de textiles",
+    "province": "BADAJOZ"
+  },
+  "J93384543": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "TECHORECA GASTROFORMACION SCIV",
+    "status": null,
+    "founded": null,
+    "cnae": "8559",
+    "cnae_label": "OTRA EDUCACIÓN N.C.O.P.",
+    "cnae_2025_label": "Otra educación n.c.o.p.",
+    "province": "Málaga"
+  },
+  "B84779594": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "INVERSORA MIRALLOS SL",
+    "status": "INACTIVA",
+    "founded": null,
+    "cnae": "6812",
+    "cnae_label": "PROMOCIÓN INMOBILIARIA",
+    "cnae_2025_label": null,
+    "province": "MADRID"
+  },
+  "B92461185": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "ASESORIA Y CONSULTORIA DE COMERCIALIZACION Y MARKETING SL",
+    "status": "ACTIVA",
+    "founded": "2003-08-01",
+    "cnae": "7022",
+    "cnae_label": "Otras actividades de consultoría de gestión empresarial",
+    "cnae_2025_label": "Otras actividades de consultoría de gestión empresarial",
+    "province": "Málaga"
+  },
+  "B14404065": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "VISTALEGRE SOLUTIONS SL",
+    "status": "ACTIVA",
+    "founded": "1995-01-09",
+    "cnae": "1723",
+    "cnae_label": "Fabricación de artículos de papelería",
+    "cnae_2025_label": "Fabricación de artículos de papelería",
+    "province": "Córdoba"
+  },
+  "B85648616": {
+    "fetched_at": "2026-06-13",
+    "nombre_api": "GESTEVENT SL",
+    "status": "ACTIVA",
+    "founded": "2009-02-11",
+    "cnae": "6420",
+    "cnae_label": "Actividades de las sociedades holding",
+    "cnae_2025_label": "Actividades de sociedades holding",
+    "province": "Málaga"
+  },
+  "P93120863": null
 }
