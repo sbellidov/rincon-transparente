@@ -1605,5 +1605,178 @@
     "cnae_2025_label": "Actividades de sociedades holding",
     "province": "Málaga"
   },
-  "P93120863": null
+  "P93120863": null,
+  "B92636042": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "SERVICIOS INTEGRALES DE INFORMACION Y COMUNICACIONES CNS SLL",
+    "status": null,
+    "founded": null,
+    "cnae": "9510",
+    "cnae_label": "REPARACIÓN Y MANTENIMIENTO DE ORDENADORES Y EQUIPOS DE COMUNICACIÓN",
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "B93168482": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "GOGO CARDS MARKETING SPAIN SL",
+    "status": "ACTIVA",
+    "founded": "2012-01-11",
+    "cnae": "5811",
+    "cnae_label": "Edición de libros",
+    "cnae_2025_label": "Edición de libros",
+    "province": "Málaga"
+  },
+  "B93173821": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "GREEN GLOBE SYPA SL",
+    "status": "ACTIVA",
+    "founded": "2012-02-06",
+    "cnae": "7112",
+    "cnae_label": "Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico",
+    "cnae_2025_label": "Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico",
+    "province": "MÁLAGA"
+  },
+  "B06513477": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "GESTIONARTE IMPROVING TALENT SL",
+    "status": "ACTIVA",
+    "founded": "2007-07-12",
+    "cnae": "7810",
+    "cnae_label": "ACTIVIDADES DE LAS AGENCIAS DE COLOCACIÓNINFORME COMERCIAL Y DE RIESGO DE \n                              GESTIONARTE IMPROVING TALENT SL",
+    "cnae_2025_label": "Actividades de las agencias de colocación",
+    "province": "Málaga"
+  },
+  "B91711614": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "16 ESCALONES PRODUCCIONES SL",
+    "status": "ACTIVA",
+    "founded": "2007-11-30",
+    "cnae": "2640",
+    "cnae_label": "Fabricación de productos electrónicos de consumo",
+    "cnae_2025_label": "Fabricación de productos electrónicos de consumo",
+    "province": "Sevilla"
+  },
+  "J21648241": null,
+  "B93061521": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "AUTODESGUACE C. A. T. LA MINA SL",
+    "status": "ACTIVA",
+    "founded": "2010-04-07",
+    "cnae": "4677",
+    "cnae_label": "Comercio al por mayor de chatarra y productos de desecho",
+    "cnae_2025_label": "Comercio al por mayor de chatarra y productos de desecho",
+    "province": "Málaga"
+  },
+  "A91001438": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "UNIVERSAL LEASE IBERIA SA",
+    "status": "ACTIVA",
+    "founded": null,
+    "cnae": "7711",
+    "cnae_label": "Alquiler de automóviles y vehículos de motor ligeros",
+    "cnae_2025_label": "Alquiler de automóviles y vehículos de motor ligeros",
+    "province": "Madrid"
+  },
+  "B04652970": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "GAUDIUM RIO NACIMIENTO SL",
+    "status": "ACTIVA",
+    "founded": "2008-07-04",
+    "cnae": "8731",
+    "cnae_label": "Asistencia en establecimientos residenciales para personas mayores",
+    "cnae_2025_label": "Asistencia en establecimientos residenciales para personas mayores ",
+    "province": "Almería"
+  },
+  "B92145390": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "COSTAGRES SL",
+    "status": "ACTIVA",
+    "founded": "2000-04-05",
+    "cnae": "4673",
+    "cnae_label": "Comercio al por mayor de madera, materiales de construcción y aparatos sanitarios",
+    "cnae_2025_label": "Comercio al por mayor de madera, materiales de construcción y aparatos sanitarios",
+    "province": "Málaga"
+  },
+  "B86651601": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "MOVIPARK ESTACIONAMIENTOS Y SERVICIOS DE MOVILIDAD SL",
+    "status": "ACTIVA",
+    "founded": "2013-02-01",
+    "cnae": "2712",
+    "cnae_label": "Fabricación de aparatos de distribución y control eléctrico",
+    "cnae_2025_label": "Fabricación de motores, generadores y transformadores eléctricos",
+    "province": "Madrid"
+  },
+  "A08332975": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "AQUAMBIENTE SERVICIOS PARA EL SECTOR DEL AGUA SA",
+    "status": "ACTIVA",
+    "founded": null,
+    "cnae": "3700",
+    "cnae_label": "RECOGIDA Y TRATAMIENTO DE AGUAS RESIDUALESINFORME COMERCIAL Y DE RIESGO DE \n                              AQUAMBIENTE SERVICIOS PARA EL SECTOR DEL AGUA SA",
+    "cnae_2025_label": "Recogida y tratamiento de aguas residuales",
+    "province": "Barcelona"
+  },
+  "E54868583": null,
+  "B93548303": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "RIVASBIKE 2017 SL",
+    "status": null,
+    "founded": "2017-05-10",
+    "cnae": "4763",
+    "cnae_label": "COMERCIO AL POR MENOR DE ARTÍCULOS DEPORTIVOSINFORME COMERCIAL Y DE RIESGO DE \n                              RIVASBIKE 2017 SL",
+    "cnae_2025_label": "Comercio al por menor de artículos culturales y recreativos n.c.o.p.",
+    "province": null
+  },
+  "A28989788": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "VINFRA SA",
+    "status": "ACTIVA",
+    "founded": "1984-12-17",
+    "cnae": "1813",
+    "cnae_label": "Servicios de preimpresión y preparación de soportes",
+    "cnae_2025_label": "Servicios de preimpresión y preparación de soportes",
+    "province": "Madrid"
+  },
+  "G44907806": null,
+  "A18089201": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "COMERCIAL PEÑA SERVICIOS SA",
+    "status": "ACTIVA",
+    "founded": "1988-04-01",
+    "cnae": "7732",
+    "cnae_label": "Alquiler de maquinaria y equipo para la construcción e ingeniería civil",
+    "cnae_2025_label": "Alquiler de maquinaria y equipo para la construcción e ingeniería civil",
+    "province": "Granada"
+  },
+  "B93678035": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "LA CARRETA FOODS SL",
+    "status": "ACTIVA",
+    "founded": "2019-03-25",
+    "cnae": "5611",
+    "cnae_label": "RESTAURANTES",
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "B91101089": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "GRUPO F&J POLIPAR SL",
+    "status": "ACTIVA",
+    "founded": "2005-01-01",
+    "cnae": "4613",
+    "cnae_label": "Intermediarios del comercio de la madera y materiales de construcción",
+    "cnae_2025_label": "Actividades de intermediarios del comercio al por mayor de la madera y materiales de construcción",
+    "province": "Sevilla"
+  },
+  "B93130607": {
+    "fetched_at": "2026-06-20",
+    "nombre_api": "BOMDESA SUMINISTROS Y BAÑOS SL",
+    "status": "ACTIVA",
+    "founded": "2011-05-17",
+    "cnae": "4674",
+    "cnae_label": "Comercio al por mayor de ferretería, fontanería y calefacción",
+    "cnae_2025_label": "Comercio al por mayor de equipos y suministros de ferretería, fontanería y calefacción",
+    "province": "Málaga"
+  }
 }

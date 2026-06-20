@@ -38617,7 +38617,7 @@
   },
   {
     "cif": "B92636042",
-    "nombre": "CNS-SERVICIO-TIC",
+    "nombre": "SERVICIOS INTEGRALES DE INFORMACION Y COMUNICACIONES CNS SLL",
     "direccion": "",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38632,7 +38632,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Reparación y mantenimiento de ordenadores y equipos de comunicación",
+    "sector_cnae": "9510",
+    "fecha_constitucion": null,
+    "estado_registral": null
   },
   {
     "cif": "75****46P",
@@ -38679,7 +38683,7 @@
   },
   {
     "cif": "B93168482",
-    "nombre": "Gogo Cards Marketing Spain, S.L.",
+    "nombre": "GOGO CARDS MARKETING SPAIN SL",
     "direccion": "Pº Cerrado de Calderón, 13, local 32, 29018 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38726,11 +38730,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Edición de libros",
+    "sector_cnae": "5811",
+    "fecha_constitucion": "2012",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93173821",
-    "nombre": "Green Globe Sypa SL",
+    "nombre": "GREEN GLOBE SYPA SL",
     "direccion": "C/ Hernan Hesse, 5, planta 1, Oficina 3. 29004 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38753,11 +38761,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Servicios técnicos de ingeniería y otras actividades relacionadas con el asesoramiento técnico",
+    "sector_cnae": "7112",
+    "fecha_constitucion": "2012",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B06513477",
-    "nombre": "BCM Gestionarte",
+    "nombre": "GESTIONARTE IMPROVING TALENT SL",
     "direccion": "C/ Huéscar,5, Edif Galaxia 2, Planta 7. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38788,11 +38800,15 @@
         "area": "Bienestar Social",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Actividades de las agencias de colocación",
+    "sector_cnae": "7810",
+    "fecha_constitucion": "2007",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B91711614",
-    "nombre": "16 Escalones Producciones SL",
+    "nombre": "16 ESCALONES PRODUCCIONES SL",
     "direccion": "c/ La Palma, 4, pol. Ind. La Palmera. 41703 Dos Hermanas (Sevilla)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38815,7 +38831,11 @@
         "area": "Cultura",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Fabricación de productos electrónicos de consumo",
+    "sector_cnae": "2640",
+    "fecha_constitucion": "2007",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "J21648241",
@@ -38838,7 +38858,7 @@
   },
   {
     "cif": "B93061521",
-    "nombre": "Autodesguace Cat La Mina, S.L.",
+    "nombre": "AUTODESGUACE C. A. T. LA MINA SL",
     "direccion": "C/ Hermanos Bronte, 73, Polig. Industrial Guadalhorce",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38861,11 +38881,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Comercio al por mayor de chatarra y productos de desecho",
+    "sector_cnae": "4677",
+    "fecha_constitucion": "2010",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "A91001438",
-    "nombre": "Alphabet España Fleet Management, S.A.",
+    "nombre": "UNIVERSAL LEASE IBERIA SA",
     "direccion": "Avda. de Burgor, 118, 28050 Madrid",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -38880,11 +38904,15 @@
         "area": "Seguridad Ciudadana",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Alquiler de automóviles y vehículos de motor ligeros",
+    "sector_cnae": "7711",
+    "fecha_constitucion": null,
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B04652970",
-    "nombre": "Gaudium Río Nacimiento, S.L.",
+    "nombre": "GAUDIUM RIO NACIMIENTO SL",
     "direccion": "C/ Historiador García Montero, 16, Dup. Planta 2, Puerta 10,",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -38899,11 +38927,15 @@
         "area": "Bienestar Social",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Asistencia en establecimientos residenciales para personas mayores ",
+    "sector_cnae": "8731",
+    "fecha_constitucion": "2008",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B92145390",
-    "nombre": "Costagres SL",
+    "nombre": "COSTAGRES SL",
     "direccion": "Avda. de Málaga, 13-B. La Cala del Moral (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -39014,11 +39046,15 @@
         "area": "Deportes (APAL)",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Comercio al por mayor de madera, materiales de construcción y aparatos sanitarios",
+    "sector_cnae": "4673",
+    "fecha_constitucion": "2000",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B86651601",
-    "nombre": "Movipark Estacionamientos y Servicios de Movilidad, SRL",
+    "nombre": "MOVIPARK ESTACIONAMIENTOS Y SERVICIOS DE MOVILIDAD SL",
     "direccion": "Avda. M40, portal 9, 1º 9 Polígono Ventorro del Cano, 28925 Alcorcón (Madrid)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -39033,11 +39069,15 @@
         "area": "Presidencia",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Fabricación de motores, generadores y transformadores eléctricos",
+    "sector_cnae": "2712",
+    "fecha_constitucion": "2013",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "A08332975",
-    "nombre": "Aquambiente Servicios para el Sector del Agua, SAU",
+    "nombre": "AQUAMBIENTE SERVICIOS PARA EL SECTOR DEL AGUA SA",
     "direccion": "C/ Leonor, 29, 28037 Madrid",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -39116,7 +39156,11 @@
         "area": "Obras y Servicios Generales",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Recogida y tratamiento de aguas residuales",
+    "sector_cnae": "3700",
+    "fecha_constitucion": null,
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "E54868583",
@@ -39187,7 +39231,7 @@
   },
   {
     "cif": "B93548303",
-    "nombre": "Rivasbike 2017, S.l.",
+    "nombre": "RIVASBIKE 2017 SL",
     "direccion": "Avda. del Mediterráneo, 183, 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -39250,7 +39294,11 @@
         "area": null,
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Comercio al por menor de artículos culturales y recreativos n.c.o.p.",
+    "sector_cnae": "4763",
+    "fecha_constitucion": "2017",
+    "estado_registral": null
   },
   {
     "cif": "26****59T",
@@ -39273,7 +39321,7 @@
   },
   {
     "cif": "A28989788",
-    "nombre": "Vinfra, S.A.",
+    "nombre": "VINFRA SA",
     "direccion": "Avda de la Innovación, 11, Edf. Minister, Local 10-11, 41020 Sevilla",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -39288,7 +39336,11 @@
         "area": "Régimen Interior",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Servicios de preimpresión y preparación de soportes",
+    "sector_cnae": "1813",
+    "fecha_constitucion": "1984",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "G44907806",
@@ -39311,7 +39363,7 @@
   },
   {
     "cif": "A18089201",
-    "nombre": "Comercial Peña Servicios, S.A.",
+    "nombre": "COMERCIAL PEÑA SERVICIOS SA",
     "direccion": "C/ Juncos, s/n, 18006 Granada",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -39326,11 +39378,15 @@
         "area": "Cementerios y Servicios Fúnebres",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Alquiler de maquinaria y equipo para la construcción e ingeniería civil",
+    "sector_cnae": "7732",
+    "fecha_constitucion": "1988",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93678035",
-    "nombre": "La Carreta Foods, S.L.",
+    "nombre": "LA CARRETA FOODS SL",
     "direccion": "Avda. de la Torre, 113 Bis, 29738 Torre de Benagalbón (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -39361,11 +39417,15 @@
         "area": "Bienestar Social",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Restaurantes",
+    "sector_cnae": "5611",
+    "fecha_constitucion": "2019",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B91101089",
-    "nombre": "Polipar",
+    "nombre": "GRUPO F&J POLIPAR SL",
     "direccion": "Autovía Sevilla-Málaga, Salida 46, Pol.Ind. El Calvario, Nave 1 y 2, 41610 Paradas (Sevilla)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -39380,11 +39440,15 @@
         "area": "Turismo",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Actividades de intermediarios del comercio al por mayor de la madera y materiales de construcción",
+    "sector_cnae": "4613",
+    "fecha_constitucion": "2005",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93130607",
-    "nombre": "Bomdesa Suministros y Baños SL",
+    "nombre": "BOMDESA SUMINISTROS Y BAÑOS SL",
     "direccion": "C/ Espacio, 5, pol. Ind. San Luis. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -39511,7 +39575,11 @@
         "area": null,
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Comercio al por mayor de equipos y suministros de ferretería, fontanería y calefacción",
+    "sector_cnae": "4674",
+    "fecha_constitucion": "2011",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "44****52S",
