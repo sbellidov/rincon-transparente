@@ -39610,7 +39610,7 @@
   },
   {
     "cif": "A11627395",
-    "nombre": "Publicaciones del Sur, S.A.",
+    "nombre": "PUBLICACIONES DEL SUR SA",
     "direccion": "C/ De la Investigación, parcela D/11, 11047 Jerez de la Frontera (Cádiz)",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -39673,7 +39673,11 @@
         "area": "Turismo",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Edición de periódicos",
+    "sector_cnae": "5813",
+    "fecha_constitucion": "1988",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "V14383855",
@@ -39720,7 +39724,7 @@
   },
   {
     "cif": "B93629665",
-    "nombre": "Al Tráfico y Movilidad Segura SL",
+    "nombre": "AL TRAFICO Y MOVILIDAD SEGURA SL",
     "direccion": "C/ Jorge Juan, 68, 5º, Of 4. Madrid",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -39743,11 +39747,15 @@
         "area": "Seguridad Ciudadana",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Servicios de seguridad n.c.o.p.",
+    "sector_cnae": "8009",
+    "fecha_constitucion": "2018",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B90421421",
-    "nombre": "Icon Marketing y Comunicación SL",
+    "nombre": "ICON MARKETING Y COMUNICACION SOCIEDAD LIMITADA",
     "direccion": ". Paseo de las Delicias, 1. 41001, Sevilla",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -39762,11 +39770,15 @@
         "area": "Comunicación",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": null,
+    "sector_cnae": null,
+    "fecha_constitucion": "2019",
+    "estado_registral": null
   },
   {
     "cif": "A82031329",
-    "nombre": "Audiovisual Española 2000, S.A.",
+    "nombre": "AUDIOVISUAL ESPAÑOLA 2000 SA",
     "direccion": "C/ Juan Ignacio Luca de Tena, nº 17, 28027 Madrid",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -39821,11 +39833,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Edición de periódicos",
+    "sector_cnae": "5813",
+    "fecha_constitucion": "1998",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B27808666",
-    "nombre": "Roi Digital Business SL",
+    "nombre": "ROI DIGITAL BUSINESS SL",
     "direccion": "C/ Policarpo Sanz, 3, 5º Planta. 36026 Vigo (Pontevedra)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -39840,7 +39856,11 @@
         "area": "Nuevas Tecnologías y Transparencia",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Relaciones públicas y comunicacióninforme comercial y de riesgo de \n                              roi digital business sl",
+    "sector_cnae": "7330",
+    "fecha_constitucion": "2014",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B92881757",
@@ -39871,7 +39891,7 @@
   },
   {
     "cif": "B64291107",
-    "nombre": "Simbiu Intelligence, S.L",
+    "nombre": "SIMBIU INTELLIGENCE SL",
     "direccion": "C/ Juan de Urbieta, 13, Oficina 2, 28007 Madrid",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -39894,11 +39914,15 @@
         "area": "Presidencia",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Otros servicios de información",
+    "sector_cnae": "6399",
+    "fecha_constitucion": "2006",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B59987529",
-    "nombre": "Benito Urba, S.L.U.",
+    "nombre": "BENITO URBAN SL",
     "direccion": "C/ Lleida, 10 (Módulo 3), 08500 Vic (Barcelona)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -39945,11 +39969,15 @@
         "area": "Obras y Servicios Generales",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Comercio al por mayor de madera, materiales de construcción y aparatos sanitariosinforme comercial y de riesgo de \n                              benito urban sl",
+    "sector_cnae": "4683",
+    "fecha_constitucion": null,
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B70582226",
-    "nombre": "Obelisco Digital, S.L.",
+    "nombre": "OBELISCO DIGITAL, S.L.(R.M. A CORUÑA)",
     "direccion": "C/ Galera, 44, entreplanta, 15003 A Coruña",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -40004,11 +40032,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": null,
+    "sector_cnae": null,
+    "fecha_constitucion": "2019",
+    "estado_registral": null
   },
   {
     "cif": "B06940217",
-    "nombre": "Whatson Solutions SL",
+    "nombre": "WHATSON SOLUTIONS SL",
     "direccion": "C/ Juan Martínez Montañez, 3, 1B. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -40039,11 +40071,15 @@
         "area": "Turismo",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de las agencias de publicidad",
+    "sector_cnae": "7311",
+    "fecha_constitucion": "2021",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B05406590",
-    "nombre": "Eventos Profesionales y Hostelería H3, S.L.",
+    "nombre": "EVENTOS PROFESIONALES Y HOSTELERIA H3 SL",
     "direccion": "Avda. Europa, 43, 29560 Pizarra (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -40058,11 +40094,15 @@
         "area": "Juventud",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Restaurantes",
+    "sector_cnae": "5611",
+    "fecha_constitucion": "2021",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93315059",
-    "nombre": "ABM Formación y Deporte",
+    "nombre": "ABM FORMACION Y DEPORTE SL",
     "direccion": "C/ Del Mar, 23, 2B, 29740 Torre del Mar (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -40085,7 +40125,11 @@
         "area": "Bienestar Social",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Educación",
+    "sector_cnae": "85",
+    "fecha_constitucion": "2014",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "48****91R",
@@ -40140,7 +40184,7 @@
   },
   {
     "cif": "B13697206",
-    "nombre": "Baujes Gestión, S.L.",
+    "nombre": "BAUJES GESTION SL",
     "direccion": "Avda. del Mediterráneo, 230, 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -40179,7 +40223,11 @@
         "area": "Presidencia",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Restaurantes",
+    "sector_cnae": "5611",
+    "fecha_constitucion": "2023",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "15****60W",
@@ -40323,7 +40371,7 @@
   },
   {
     "cif": "B92689884",
-    "nombre": "Descubre Guías del Sur en Espacios Naturales SL",
+    "nombre": "DESCUBRE GUIAS DEL SUR EN ESPACIOS NATURALES SL",
     "direccion": "Diseminado la Majadilla del Huerto, 91. 29649 Mijas (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -40338,11 +40386,15 @@
         "area": "Obras y Servicios Generales",
         "tipo_contrato_limpio": "Obras"
       }
-    ]
+    ],
+    "sector": "Servicios de extinción de incendios",
+    "sector_cnae": "9329",
+    "fecha_constitucion": "2005",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B92718725",
-    "nombre": "Espectáculos Albadalejos SL",
+    "nombre": "ESPECTACULOS ALBALADEJO SL",
     "direccion": "C/ Principe Faisal de Arabia Saudi, 19. Torremolinos (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -40373,7 +40425,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de artes escénicas",
+    "sector_cnae": "9001",
+    "fecha_constitucion": "2006",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "G93550465",
@@ -40471,7 +40527,7 @@
   },
   {
     "cif": "B29882628",
-    "nombre": "Talleres Ramisiur SL",
+    "nombre": "TALLERES RAMISUR SL",
     "direccion": "C/ Julio Romero de Torres, 28. Velez-Málaga (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -40542,7 +40598,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Reparación y mantenimiento de vehículos de motor",
+    "sector_cnae": "9531",
+    "fecha_constitucion": "1998",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "52****69S",
@@ -40605,7 +40665,7 @@
   },
   {
     "cif": "B67515817",
-    "nombre": "Artistamente",
+    "nombre": "ARTISTAMENTE S.L",
     "direccion": "C/ Bolivia, 239, 08020 Barcelona",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -40676,7 +40736,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": null,
+    "sector_cnae": null,
+    "fecha_constitucion": "2019",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "33****15K",

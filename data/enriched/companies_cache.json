@@ -1778,5 +1778,169 @@
     "cnae_label": "Comercio al por mayor de ferretería, fontanería y calefacción",
     "cnae_2025_label": "Comercio al por mayor de equipos y suministros de ferretería, fontanería y calefacción",
     "province": "Málaga"
+  },
+  "A11627395": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "PUBLICACIONES DEL SUR SA",
+    "status": "ACTIVA",
+    "founded": "1988-01-18",
+    "cnae": "5813",
+    "cnae_label": "Edición de periódicos",
+    "cnae_2025_label": "Edición de periódicos",
+    "province": "Cádiz"
+  },
+  "V14383855": null,
+  "B93629665": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "AL TRAFICO Y MOVILIDAD SEGURA SL",
+    "status": "ACTIVA",
+    "founded": "2018-07-06",
+    "cnae": "8009",
+    "cnae_label": "SERVICIOS DE SEGURIDAD N.C.O.P.",
+    "cnae_2025_label": null,
+    "province": "MALAGA"
+  },
+  "B90421421": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "ICON MARKETING Y COMUNICACION SOCIEDAD LIMITADA",
+    "status": null,
+    "founded": "2019-02-08",
+    "cnae": null,
+    "cnae_label": null,
+    "cnae_2025_label": null,
+    "province": "Sevilla"
+  },
+  "A82031329": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "AUDIOVISUAL ESPAÑOLA 2000 SA",
+    "status": "ACTIVA",
+    "founded": "1998-05-13",
+    "cnae": "5813",
+    "cnae_label": "Edición de periódicos",
+    "cnae_2025_label": "Edición de periódicos",
+    "province": "Madrid"
+  },
+  "B27808666": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "ROI DIGITAL BUSINESS SL",
+    "status": "ACTIVA",
+    "founded": "2014-10-14",
+    "cnae": "7330",
+    "cnae_label": "RELACIONES PÚBLICAS Y COMUNICACIÓNINFORME COMERCIAL Y DE RIESGO DE \n                              ROI DIGITAL BUSINESS SL",
+    "cnae_2025_label": null,
+    "province": "Pontevedra"
+  },
+  "B92881757": null,
+  "B64291107": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "SIMBIU INTELLIGENCE SL",
+    "status": "ACTIVA",
+    "founded": "2006-07-21",
+    "cnae": "6399",
+    "cnae_label": "Otros servicios de información n.c.o.p.",
+    "cnae_2025_label": "Otros servicios de información",
+    "province": "Barcelona"
+  },
+  "B59987529": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "BENITO URBAN SL",
+    "status": "ACTIVA",
+    "founded": null,
+    "cnae": "4683",
+    "cnae_label": "COMERCIO AL POR MAYOR DE MADERA, MATERIALES DE CONSTRUCCIÓN Y APARATOS SANITARIOSINFORME COMERCIAL Y DE RIESGO DE \n                              BENITO URBAN SL",
+    "cnae_2025_label": null,
+    "province": "Barcelona"
+  },
+  "B70582226": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "OBELISCO DIGITAL, S.L.(R.M. A CORUÑA)",
+    "status": null,
+    "founded": "2019-02-27",
+    "cnae": null,
+    "cnae_label": null,
+    "cnae_2025_label": null,
+    "province": "A Coruña"
+  },
+  "B06940217": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "WHATSON SOLUTIONS SL",
+    "status": "ACTIVA",
+    "founded": "2021-06-22",
+    "cnae": "7311",
+    "cnae_label": "ACTIVIDADES DE LAS AGENCIAS DE PUBLICIDAD",
+    "cnae_2025_label": "Actividades de las agencias de publicidad",
+    "province": "MÁLAGA"
+  },
+  "B05406590": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "EVENTOS PROFESIONALES Y HOSTELERIA H3 SL",
+    "status": "ACTIVA",
+    "founded": "2021-04-23",
+    "cnae": "5611",
+    "cnae_label": "RESTAURANTES",
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "B93315059": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "ABM FORMACION Y DEPORTE SL",
+    "status": "ACTIVA",
+    "founded": "2014-02-27",
+    "cnae": "85",
+    "cnae_label": "Educación",
+    "cnae_2025_label": "Educación",
+    "province": "Málaga"
+  },
+  "B13697206": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "BAUJES GESTION SL",
+    "status": "ACTIVA",
+    "founded": "2023-04-25",
+    "cnae": "5611",
+    "cnae_label": "RESTAURANTES",
+    "cnae_2025_label": null,
+    "province": "MÁLAGA"
+  },
+  "G02705598": null,
+  "B92689884": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "DESCUBRE GUIAS DEL SUR EN ESPACIOS NATURALES SL",
+    "status": "ACTIVA",
+    "founded": "2005-10-05",
+    "cnae": "9329",
+    "cnae_label": "Otras actividades recreativas y de entretenimiento",
+    "cnae_2025_label": "Servicios de extinción de incendios",
+    "province": "Málaga"
+  },
+  "B92718725": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "ESPECTACULOS ALBALADEJO SL",
+    "status": "ACTIVA",
+    "founded": "2006-02-08",
+    "cnae": "9001",
+    "cnae_label": "Artes escénicas",
+    "cnae_2025_label": "Actividades de artes escénicas",
+    "province": "Málaga"
+  },
+  "G93550465": null,
+  "B29882628": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "TALLERES RAMISUR SL",
+    "status": "ACTIVA",
+    "founded": "1998-01-27",
+    "cnae": "9531",
+    "cnae_label": "REPARACIÓN Y MANTENIMIENTO DE VEHÍCULOS DE MOTOR",
+    "cnae_2025_label": null,
+    "province": "MALAGA"
+  },
+  "B67515817": {
+    "fetched_at": "2026-06-27",
+    "nombre_api": "ARTISTAMENTE S.L",
+    "status": "ACTIVA",
+    "founded": "2019-10-10",
+    "cnae": null,
+    "cnae_label": null,
+    "cnae_2025_label": null,
+    "province": "Barcelona"
   }
 }
