@@ -1942,5 +1942,151 @@
     "cnae_label": null,
     "cnae_2025_label": null,
     "province": "Barcelona"
-  }
+  },
+  "V93721587": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "MAINAKE MUSIC AIE",
+    "status": null,
+    "founded": "2019-11-05",
+    "cnae": "9020",
+    "cnae_label": "ACTIVIDADES DE ARTES ESCÉNICAS",
+    "cnae_2025_label": null,
+    "province": "Málaga"
+  },
+  "B93253813": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "EQUIPAMIENTOS PROFESIONALES SL",
+    "status": "ACTIVA",
+    "founded": "2013-04-25",
+    "cnae": "4647",
+    "cnae_label": "Comercio al por mayor de muebles, alfombras y aparatos de iluminación",
+    "cnae_2025_label": "Comercio al por mayor de muebles para el hogar, oficinas y establecimientos comerciales, alfombras y aparatos de iluminación",
+    "province": "Málaga"
+  },
+  "G93142701": null,
+  "B93734952": null,
+  "G05405840": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "ASOCIACION CMR RINCON DE LA VICTORIA ASOCIACIÓN",
+    "status": null,
+    "founded": null,
+    "cnae": "8559",
+    "cnae_label": "OTRA EDUCACIÓN N.C.O.P.",
+    "cnae_2025_label": "Otra educación n.c.o.p.",
+    "province": "Málaga"
+  },
+  "A28570190": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "ALAVA INGENIEROS SA",
+    "status": "ACTIVA",
+    "founded": "1979-04-17",
+    "cnae": "4666",
+    "cnae_label": "Comercio al por mayor de otra maquinaria y equipo de oficina",
+    "cnae_2025_label": "Comercio al por mayor de equipos para las tecnologías de la información y las comunicaciones",
+    "province": "Madrid"
+  },
+  "B93547917": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "REAL TURF MALAGA 2017 SL",
+    "status": "ACTIVA",
+    "founded": "2017-05-08",
+    "cnae": "8130",
+    "cnae_label": "ACTIVIDADES DE JARDINERÍA",
+    "cnae_2025_label": "Actividades de jardinería",
+    "province": "MÁLAGA"
+  },
+  "B09810482": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "ABCORP SL",
+    "status": "ACTIVA",
+    "founded": "2022-02-23",
+    "cnae": "7311",
+    "cnae_label": "ACTIVIDADES DE LAS AGENCIAS DE PUBLICIDAD",
+    "cnae_2025_label": "Actividades de las agencias de publicidad",
+    "province": "MADRID"
+  },
+  "B93522563": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "GOLEMAN SECURITY SL",
+    "status": "ACTIVA",
+    "founded": "2017-01-04",
+    "cnae": "8001",
+    "cnae_label": "SERVICIOS DE INVESTIGACIÓN Y SEGURIDAD PRIVADOS",
+    "cnae_2025_label": null,
+    "province": "Málaga"
+  },
+  "B93751303": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "EQUISDE PRODUCCIONES SL",
+    "status": "ACTIVA",
+    "founded": "2020-06-03",
+    "cnae": "9329",
+    "cnae_label": "ACTIVIDADES RECREATIVAS Y DE ENTRETENIMIENTO N.C.O.P.",
+    "cnae_2025_label": "Servicios de extinción de incendios",
+    "province": "MÁLAGA"
+  },
+  "B75400820": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "MONO CHROME GRAPHICS SL",
+    "status": "ACTIVA",
+    "founded": "2024-10-29",
+    "cnae": "5811",
+    "cnae_label": "EDICIÓN DE LIBROS",
+    "cnae_2025_label": "Edición de libros",
+    "province": "MÁLAGA"
+  },
+  "B98657711": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "EVERYCODE SOCIEDAD LIMITADA",
+    "status": null,
+    "founded": null,
+    "cnae": null,
+    "cnae_label": null,
+    "cnae_2025_label": null,
+    "province": "Valencia"
+  },
+  "B86479078": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "ALMAS INDUSTRIES BSAFE SL",
+    "status": "ACTIVA",
+    "founded": "2012-06-06",
+    "cnae": "4652",
+    "cnae_label": "Comercio al por mayor de equipos electrónicos y de telecomunicaciones y sus componentes",
+    "cnae_2025_label": "Comercio al por mayor de equipos para las tecnologías de la información y las comunicaciones",
+    "province": "Madrid"
+  },
+  "B29878584": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "ALGO SUENA SL",
+    "status": "ACTIVA",
+    "founded": "1997-12-22",
+    "cnae": "7721",
+    "cnae_label": "Alquiler de artículos de ocio y deportivos",
+    "cnae_2025_label": "Alquiler de artículos de ocio y deportivos",
+    "province": "Málaga"
+  },
+  "B04666285": null,
+  "B74385220": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "ENTIDAD SUPERVISORA INDEPENDIENTE DE PROYECTOS ENERGETICOS SL",
+    "status": "ACTIVA",
+    "founded": "2015-03-05",
+    "cnae": "7499",
+    "cnae_label": "TODAS LAS DEMÁS ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS N.C.O.P.",
+    "cnae_2025_label": null,
+    "province": "ASTURIAS"
+  },
+  "G93177277": null,
+  "B29824000": {
+    "fetched_at": "2026-07-04",
+    "nombre_api": "SATYDAL SL",
+    "status": "ACTIVA",
+    "founded": "1997-03-13",
+    "cnae": "6110",
+    "cnae_label": "ACTIVIDADES DE TELECOMUNICACIONES POR CABLE, INALÁMBRICAS Y POR SATÉLITE",
+    "cnae_2025_label": "Actividades de telecomunicaciones por cable, inalámbricas y por satélite",
+    "province": "Málaga"
+  },
+  "A41606534": null,
+  "B80004732": null
 }

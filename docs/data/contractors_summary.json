@@ -40787,7 +40787,7 @@
   },
   {
     "cif": "V93721587",
-    "nombre": "Conciertos del Mundo",
+    "nombre": "MAINAKE MUSIC AIE",
     "direccion": "C/ Alejandro Casona, 42. Churriana (Málaga)",
     "tipo_entidad": "Otras sociedades",
     "tipo_id": "CIF",
@@ -40802,7 +40802,11 @@
         "area": "Cultura",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de artes escénicas",
+    "sector_cnae": "9020",
+    "fecha_constitucion": "2019",
+    "estado_registral": null
   },
   {
     "cif": "44****35A",
@@ -40849,7 +40853,7 @@
   },
   {
     "cif": "B93253813",
-    "nombre": "eqpro Equipamientos Profesionales, S.L.",
+    "nombre": "EQUIPAMIENTOS PROFESIONALES SL",
     "direccion": "C/ Actualidad, 6, 29013 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -40904,7 +40908,11 @@
         "area": null,
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Comercio al por mayor de muebles para el hogar, oficinas y establecimientos comerciales, alfombras y aparatos de iluminación",
+    "sector_cnae": "4647",
+    "fecha_constitucion": "2013",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "G93142701",
@@ -40970,7 +40978,7 @@
   },
   {
     "cif": "G05405840",
-    "nombre": "Aranzadi La Ley, S.A.",
+    "nombre": "ASOCIACION CMR RINCON DE LA VICTORIA ASOCIACIÓN",
     "direccion": "C/ Ronda, 44, local 1D. Rincón de la Victoria (Málaga)",
     "tipo_entidad": "Asociación",
     "tipo_id": "CIF",
@@ -41065,11 +41073,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Otra educación n.c.o.p.",
+    "sector_cnae": "8559",
+    "fecha_constitucion": null,
+    "estado_registral": null
   },
   {
     "cif": "A28570190",
-    "nombre": "Álava Ingenieros, S.A.",
+    "nombre": "ALAVA INGENIEROS SA",
     "direccion": "C/ Albasanz, 16, 28037 Madrid",
     "tipo_entidad": "SA",
     "tipo_id": "CIF",
@@ -41084,11 +41096,15 @@
         "area": "Cueva del Tesoro",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Comercio al por mayor de equipos para las tecnologías de la información y las comunicaciones",
+    "sector_cnae": "4666",
+    "fecha_constitucion": "1979",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93547917",
-    "nombre": "Real Turf Málaga 2017",
+    "nombre": "REAL TURF MALAGA 2017 SL",
     "direccion": "C/ Marea Baja, 33. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -41103,11 +41119,15 @@
         "area": "Deportes (APAL)",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Actividades de jardinería",
+    "sector_cnae": "8130",
+    "fecha_constitucion": "2017",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B09810482",
-    "nombre": "Abcorp, S.L.",
+    "nombre": "ABCORP SL",
     "direccion": "Paseo de la Castellana, 194, 28046 Madrid",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -41146,7 +41166,11 @@
         "area": "Presidencia",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de las agencias de publicidad",
+    "sector_cnae": "7311",
+    "fecha_constitucion": "2022",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "53****18A",
@@ -41209,7 +41233,7 @@
   },
   {
     "cif": "B93522563",
-    "nombre": "Goleman Security, S.L.",
+    "nombre": "GOLEMAN SECURITY SL",
     "direccion": "C/ Alcalde Díaz Zafra, 43, local 4, Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -41272,7 +41296,11 @@
         "area": "Ferias y Fiestas",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Servicios de investigación y seguridad privados",
+    "sector_cnae": "8001",
+    "fecha_constitucion": "2017",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B93751303",
@@ -41291,7 +41319,11 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Servicios de extinción de incendios",
+    "sector_cnae": "9329",
+    "fecha_constitucion": "2020",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "26****37J",
@@ -41362,7 +41394,7 @@
   },
   {
     "cif": "B75400820",
-    "nombre": "Monochrome Graphic SL",
+    "nombre": "MONO CHROME GRAPHICS SL",
     "direccion": "C/ Valencia, Pol. Ind. Santa Teresa. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -41377,11 +41409,15 @@
         "area": "Sostenibilidad Medioambiental",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Edición de libros",
+    "sector_cnae": "5811",
+    "fecha_constitucion": "2024",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B98657711",
-    "nombre": "Everycode, S.L.",
+    "nombre": "EVERYCODE SOCIEDAD LIMITADA",
     "direccion": "C/ Doctor Vicente Zaragoza, 1, Oficina 2, 46020 Valencia",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -41412,11 +41448,15 @@
         "area": "Turismo",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": null,
+    "sector_cnae": null,
+    "fecha_constitucion": null,
+    "estado_registral": null
   },
   {
     "cif": "B86479078",
-    "nombre": "Almas Industries Bsafe, S.L.U.",
+    "nombre": "ALMAS INDUSTRIES BSAFE SL",
     "direccion": "Avda. de Fuencarral, 24, Edf. Europa I, Portal 3, 3º, 28108 Alcobendas (Madrid)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -41495,11 +41535,15 @@
         "area": null,
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Comercio al por mayor de equipos para las tecnologías de la información y las comunicaciones",
+    "sector_cnae": "4652",
+    "fecha_constitucion": "2012",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B29878584",
-    "nombre": "Algo Suena, S.L.",
+    "nombre": "ALGO SUENA SL",
     "direccion": "Avda. Innovación, Parque Tecnoalimentario Costa del Sol Axaquía, 8, El Trapiche (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -41514,7 +41558,11 @@
         "area": "Cultura",
         "tipo_contrato_limpio": "Suministro"
       }
-    ]
+    ],
+    "sector": "Alquiler de artículos de ocio y deportivos",
+    "sector_cnae": "7721",
+    "fecha_constitucion": "1997",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "B04666285",
@@ -41537,7 +41585,7 @@
   },
   {
     "cif": "B74385220",
-    "nombre": "Entidad Supervisora Independiente de Proyectos Energéticos, S.L.U (ESIPE)",
+    "nombre": "ENTIDAD SUPERVISORA INDEPENDIENTE DE PROYECTOS ENERGETICOS SL",
     "direccion": "C/Fernández de Oviedo, 16, 1ºI, 33012 Oviedo",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -41560,7 +41608,11 @@
         "area": "Obras y Servicios Generales",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Todas las demás actividades profesionales, científicas y técnicas n.c.o.p.",
+    "sector_cnae": "7499",
+    "fecha_constitucion": "2015",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "G93177277",
@@ -41626,7 +41678,7 @@
   },
   {
     "cif": "B29824000",
-    "nombre": "Satydal SL",
+    "nombre": "SATYDAL SL",
     "direccion": "Ctra. Azucarera-Intelhorce 126-A. Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF",
@@ -41641,7 +41693,11 @@
         "area": "Nuevas Tecnologías y Transparencia",
         "tipo_contrato_limpio": "Servicio"
       }
-    ]
+    ],
+    "sector": "Actividades de telecomunicaciones por cable, inalámbricas y por satélite",
+    "sector_cnae": "6110",
+    "fecha_constitucion": "1997",
+    "estado_registral": "ACTIVA"
   },
   {
     "cif": "A41606534",
