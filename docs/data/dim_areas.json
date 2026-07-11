@@ -81,58 +81,62 @@
   },
   {
     "id": 21,
-    "nombre": "Promoción a la Tercera Edad"
+    "nombre": "Promoción  a la Tercera Edad"
   },
   {
     "id": 22,
-    "nombre": "Promoción de la Tercera Edad"
+    "nombre": "Promoción a la Tercera Edad"
   },
   {
     "id": 23,
-    "nombre": "Protección Civil"
+    "nombre": "Promoción de la Tercera Edad"
   },
   {
     "id": 24,
-    "nombre": "Protocolo"
+    "nombre": "Protección Civil"
   },
   {
     "id": 25,
-    "nombre": "Recursos Humano"
+    "nombre": "Protocolo"
   },
   {
     "id": 26,
-    "nombre": "Recursos Humanos"
+    "nombre": "Recursos Humano"
   },
   {
     "id": 27,
-    "nombre": "Régimen Interior"
+    "nombre": "Recursos Humanos"
   },
   {
     "id": 28,
-    "nombre": "Sanidad y Consumo"
+    "nombre": "Régimen Interior"
   },
   {
     "id": 29,
-    "nombre": "Seguridad Ciudadana"
+    "nombre": "Sanidad y Consumo"
   },
   {
     "id": 30,
-    "nombre": "Sostenibilidad Medioambiental"
+    "nombre": "Seguridad Ciudadana"
   },
   {
     "id": 31,
-    "nombre": "Turismo"
+    "nombre": "Sostenibilidad Medioambiental"
   },
   {
     "id": 32,
-    "nombre": "Urbanismo"
+    "nombre": "Turismo"
   },
   {
     "id": 33,
-    "nombre": "Villa Romana Antíopa"
+    "nombre": "Urbanismo"
   },
   {
     "id": 34,
+    "nombre": "Villa Romana Antíopa"
+  },
+  {
+    "id": 35,
     "nombre": "Vía Pública"
   }
 ]

@@ -58,14 +58,14 @@
   {
     "cif": "B93168482",
     "nombre": "Gogo Cards Marketing Spain, S.L.",
-    "direccion": "Pº Cerrado de Calderón, 13, local 32, 29018 Málaga",
+    "direccion": "Pº Cerrado de Calderón, 13, Local 32, 29018 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
   {
     "cif": "B92202852",
     "nombre": "Suministros de Hostelería El Gato, S.L.",
-    "direccion": "Avda. del Mediterráneo, 203i, 29730 Rincón de la Victoria (Málaga)",
+    "direccion": "Avda. del Mediterráneo, 203i, 29730 Rincón de la Victoria",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -114,7 +114,7 @@
   {
     "cif": "25****06S",
     "nombre": "Antonio Cano González",
-    "direccion": "Avda. de la Can***************",
+    "direccion": "C/ Chile, 31, 2***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -127,15 +127,15 @@
   },
   {
     "cif": "B92740067",
-    "nombre": "LAMS Coordinaciones y Proyectos de Seguridad, S.L.",
+    "nombre": "Lams Coordinaciones y Proyectos de Seguridad, S.L.",
     "direccion": "C/ Ronda Alta Benyamina, 14, 29620 Torremolinos (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
   {
     "cif": "B29085198",
-    "nombre": "Cano Materiales de Construcción, S.L.",
-    "direccion": "Ctra. Benagalbón, Km. 1,5, 29730 Rincón de la Victoria (Málaga)",
+    "nombre": "Cano Materiales de Construcción, SL.",
+    "direccion": "– Ctra. De Benagalbón km 1,5 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -169,8 +169,8 @@
   },
   {
     "cif": "B92661602",
-    "nombre": "GACMA SL",
-    "direccion": "C/ Fidias, 48-50. Málaga",
+    "nombre": "Gacma, SL.",
+    "direccion": "– Calle Fidias n.º 48-50 Parque Empresarial Santa Bárbara 29003 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -191,7 +191,7 @@
   {
     "cif": "B92573385",
     "nombre": "Comunicación y Servicios 101, S.L.",
-    "direccion": "C/ Alejandro Casona, 42, 29004 Málaga",
+    "direccion": "C/ Alejandro Casona, 42, 29005 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -204,7 +204,7 @@
   },
   {
     "cif": "B92491638",
-    "nombre": "Editorial Malagueña de Publicaciones, S.L.",
+    "nombre": "Editora Malagueña de Publicaciones, S.L.",
     "direccion": "C/ Puerta del Mar, 18, 6ºC, 29005 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
@@ -274,8 +274,8 @@
   },
   {
     "cif": "A28281368",
-    "nombre": "Radio Popular, S.A.",
-    "direccion": "C/ Linaje, 2, 29001 Málaga",
+    "nombre": "Radio Popular, SA.",
+    "direccion": "– Calle Linaje n.º 2 1º 29001 Málaga",
     "tipo_entidad": "SA",
     "tipo_id": "CIF"
   },
@@ -477,15 +477,15 @@
   },
   {
     "cif": "B93279859",
-    "nombre": "Noaplast Distribuciones, S.L.U.",
-    "direccion": "C/ Lavadero, 2, 29738 Benagalbón (Málaga)",
+    "nombre": "Noaplast Distribuciones, SLU.",
+    "direccion": "– C/ Lavadero n.º 2 29738 Benagalbón (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
   {
     "cif": "B92127422",
-    "nombre": "Urco Servicios y Comercio",
-    "direccion": "C/ Fagot, 7. Málaga",
+    "nombre": "Urco Servicios y Comercio, S.L.",
+    "direccion": "– Calle El Fagot n.º 7 29013 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -519,8 +519,8 @@
   },
   {
     "cif": "F90065418",
-    "nombre": "Smart Ibérica de Impulso Empresarial SCA",
-    "direccion": "C/ Luis de Morales, 32, Of. 29, Planta 2, EDIF Forum. Sevilla",
+    "nombre": "Smart Ibérica de Impulso Empresarial S.C.A.",
+    "direccion": "C/ Luis de Morales, 32, Oficina 29, Planta 2, Edf. Forum, 41018 Sevilla",
     "tipo_entidad": "Cooperativa",
     "tipo_id": "CIF"
   },
@@ -618,7 +618,7 @@
   {
     "cif": "B93539419",
     "nombre": "Global Neltha, S.L.",
-    "direccion": "Avda. Manuel Altolaguirre, 35, 2º-E, 29720 La Cala del Moral (Málaga)",
+    "direccion": "Avda. Manuel Altolaguirre, 35, 2ºE, 29720 La Cala del Moral (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -722,8 +722,8 @@
   },
   {
     "cif": "B42942789",
-    "nombre": "Pol Print Rincón, S.L.",
-    "direccion": "C/ Oleaje, s/n, 29730 Rincón de la Victoria (Málaga)",
+    "nombre": "Pol Print Rincón, SL.",
+    "direccion": "– Calle Córdoba n.º 8 Local 1 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -737,7 +737,7 @@
   {
     "cif": "25****52D",
     "nombre": "Luisa Bustamante Rodríguez",
-    "direccion": "C/ Jaén, edif. ***************",
+    "direccion": "– Calle Jaén Ed***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -814,7 +814,7 @@
   {
     "cif": "B92795061",
     "nombre": "Excavaciones y Materiales de Construcción Joma, SL.",
-    "direccion": "C/ Botica, 15, 29738 Benagalbón",
+    "direccion": "C/ Botica, 15, 29738 Benagalbón (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -862,15 +862,15 @@
   },
   {
     "cif": "B29124971",
-    "nombre": "Tahermo, SLU",
-    "direccion": "Avda Juan Carlos I, nº 9-11. 29700 Vélez-Málaga (Málaga)",
+    "nombre": "Tahermo, S.L.U.",
+    "direccion": "Avda. Juan Carlos I, nº 12, 29700 Vélez Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
   {
     "cif": "B29252996",
     "nombre": "Copesol, S.L.",
-    "direccion": "C/ Carlo Goldini, 13, Málaga",
+    "direccion": "C/ Goldini, 13, 29004 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -1016,8 +1016,8 @@
   },
   {
     "cif": "B85826899",
-    "nombre": "Probisa Vias y Obras SLU",
-    "direccion": "C/ Castilla León, s/n , Parque Empresarial Antequera. Antequera (Málaga)",
+    "nombre": "Probisa Vías y Obras, S.L.U.",
+    "direccion": "Parque Empresarial Antequera, C/ Castilla-León, s/n, 29200 Antequera (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -1044,7 +1044,7 @@
   },
   {
     "cif": "B05432638",
-    "nombre": "Dorsalchip, SLU",
+    "nombre": "Dorsalchip, S.L.U.",
     "direccion": "C/ Tejeros, 15, 3ºH, 29013 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
@@ -1275,8 +1275,8 @@
   },
   {
     "cif": "B92526995",
-    "nombre": "Instalaciones Díaz y Serrano, S.L.L.",
-    "direccion": "C/ Clavel, 14, 29730 Rincón de la Victoria (Málaga)",
+    "nombre": "Instalaciónes Díaz y Serrano, S.L.L.",
+    "direccion": "C/ Clavel, 14, Pol. Cotomar, 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -1401,7 +1401,7 @@
   },
   {
     "cif": "A50878842",
-    "nombre": "Espúblico Servicios para la Administración, S.A.",
+    "nombre": "Espublico Servicios para la Administración, S.A.",
     "direccion": "Polígono Plaza, C/ Bari, 39, Planta Baja, Oficina A, 50197 Zaragoza",
     "tipo_entidad": "SA",
     "tipo_id": "CIF"
@@ -1471,8 +1471,8 @@
   },
   {
     "cif": "B93672715",
-    "nombre": "JJMB TRABUCO",
-    "direccion": "C/ Ronda, 11, 29730 Rincón de la Victoria (Málaga)",
+    "nombre": "JJMB Trabuco 2014, SL.",
+    "direccion": "– Calle Ronda n.º 11 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -1556,7 +1556,7 @@
   {
     "cif": "A58417346",
     "nombre": "Aranzadi La Ley, S.A.U.",
-    "direccion": "C/ Collado Mediano, 9, 28231 Las Rozas de Madrid (Madrid)",
+    "direccion": "C/ Collado Mediano, 9, Las Rozas (Madrid)",
     "tipo_entidad": "SA",
     "tipo_id": "CIF"
   },
@@ -1618,8 +1618,8 @@
   },
   {
     "cif": "B93439131",
-    "nombre": "Celebraciones Málaga SL",
-    "direccion": "uRB. Cueva del Tesoro, 16. La Cala del Moral (Málaga)",
+    "nombre": "Celebraciones Málaga, S.L.",
+    "direccion": "Urb. Cueva del Tesoro, 16, 29720 La Cala del Moral (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -1723,8 +1723,8 @@
   },
   {
     "cif": "A29238599",
-    "nombre": "ACF Pinturs Andalucía, S.A.",
-    "direccion": "C/ Santa Teresa, 5, 29651 Mijas Costa (Málaga)",
+    "nombre": "A.C.F. Pinturas Andalucía, S.A.",
+    "direccion": "Cº Viejo de Vélez, 1, Edf. Bellavista, Local 3, 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SA",
     "tipo_id": "CIF"
   },
@@ -1745,7 +1745,7 @@
   {
     "cif": "B93181824",
     "nombre": "Producciones La Cochera, S.L.",
-    "direccion": "Avda. Los Guindos, 19, 29004 Málaga",
+    "direccion": "Avda. de los Guindos, 19, 29004 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -1772,8 +1772,8 @@
   },
   {
     "cif": "B29534443",
-    "nombre": "Uniforme Costa del Sol",
-    "direccion": "C/ Flauta Mágica, 46, Pol. Ind Alameda. Málaga",
+    "nombre": "Uniformes Costa del Sol",
+    "direccion": "C/ Flauta Mágica, 46, Pol. Ind. Alameda, 29006 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -1849,8 +1849,8 @@
   },
   {
     "cif": "B92361567",
-    "nombre": "Celyn Travel",
-    "direccion": "C/ Maestro Pablo Luna, 3, Local 8. Málaga",
+    "nombre": "Celyn Travel, S.L.",
+    "direccion": "C/ Maestro Pablo Luna, 3, Local 8, 29010 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -1891,7 +1891,7 @@
   },
   {
     "cif": "B92222371",
-    "nombre": "Laboratoria Alycamp, S.L.",
+    "nombre": "Laboratorio Alycamp, S.L.",
     "direccion": "C/ Azucarera, Edf. Las Torres, Bajo 7, 29740 Torre del Mar (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
@@ -1919,8 +1919,8 @@
   },
   {
     "cif": "00****59R",
-    "nombre": "Mª Angeles Correa Infantes",
-    "direccion": "C/ Atarazanas, ***************",
+    "nombre": "M.ª de los Ángeles correa Infantes",
+    "direccion": "– Calle Ataraza***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -2024,8 +2024,8 @@
   },
   {
     "cif": "B73222630",
-    "nombre": "Sintra, S.L.",
-    "direccion": "Avda. de Lorca, 14, 30850 Totana (Murcia)",
+    "nombre": "Sintra Aplicaciones y Servicios de Pintura, SL.",
+    "direccion": "– Avda. De Lorca n.º 14 Bajo 30850 Totana (Murcia)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -2164,7 +2164,7 @@
   },
   {
     "cif": "A23068943",
-    "nombre": "Pirotecnia Sánchez",
+    "nombre": "Pirotecnia Sánchez, S.A.",
     "direccion": "C/ Jamilena, s/n, 23600 Martos (Jaén)",
     "tipo_entidad": "SA",
     "tipo_id": "CIF"
@@ -2227,8 +2227,8 @@
   },
   {
     "cif": "B93620797",
-    "nombre": "Sonotestaudio, S.L.",
-    "direccion": "C/ Chile, 31, 29738 Torre de Benagalbón (Málaga)",
+    "nombre": "Turismo García, S.L.U.",
+    "direccion": "C/ Los Cabrera, 9, 29738 Torre de Benagalbón (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -2508,14 +2508,14 @@
   {
     "cif": "B86479078",
     "nombre": "Almas Industries Bsafe, S.L.U.",
-    "direccion": "Avda. de Fuencarral, 24, Edf. Europa I, Portal 3, 3º, 28108 Alcobendas (Madrid)",
+    "direccion": "Ctra. Fuencarral, 24, Edf. Europa I, Portal 3, Planta 3, Oficina 5, 28018 Alcobendas (Madrid)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
   {
     "cif": "A28119220",
-    "nombre": "Occident GC., S.A. de Seguros y Reaseguros Sociedad Unipersonal",
-    "direccion": "C/ Méndez Álvaro, 31, 28045 (Madrid)",
+    "nombre": "Occident GCO, SAU de Seguros y Reaseguros",
+    "direccion": "– Calle Méndez Álvaro n.º 31",
     "tipo_entidad": "SA",
     "tipo_id": "CIF"
   },
@@ -2690,7 +2690,7 @@
   {
     "cif": "V92054899",
     "nombre": "Club Triatlón Rincón de la Victoria",
-    "direccion": "C/ Primavera, 22. Urb. Cotomar. 29730 Rincón de la Victoria (Málaga)",
+    "direccion": "C/ Primavera, 20, Urb. Cotomar, 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "Otras sociedades",
     "tipo_id": "CIF"
   },
@@ -2717,15 +2717,15 @@
   },
   {
     "cif": "G41195363",
-    "nombre": "Fed. Andaluza de Natación",
-    "direccion": "C/ José Damaso “Pepete”, 9, Portal 1, Módulo B. Córdoba",
+    "nombre": "Federación Andaluza de Natación",
+    "direccion": "C/ José Dámaso \"Pepote\", 9, Portal 1, Módulo B, 14005 Córdoba",
     "tipo_entidad": "Asociación",
     "tipo_id": "CIF"
   },
   {
     "cif": "G93288298",
-    "nombre": "Asociación Nena Paina",
-    "direccion": "Avda. Santiago Ramón y Cajal, 0048, 29014 Málaga",
+    "nombre": "Asociación Nena Paine",
+    "direccion": "Avda. Santiago Ramón y Cajal, 48, 29014 Málaga",
     "tipo_entidad": "Asociación",
     "tipo_id": "CIF"
   },
@@ -2781,7 +2781,7 @@
   {
     "cif": "B93506863",
     "nombre": "Sonido Volumen, S.L.",
-    "direccion": "Ctra. Benagalbón, Los Cañas, 28, 29730 Rincón de la Victoria (Málaga)",
+    "direccion": "– Ctra. Benagalbón Cortijo Los Cañas n.º 28 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -2878,8 +2878,8 @@
   },
   {
     "cif": "G05405840",
-    "nombre": "Aranzadi La Ley, S.A.",
-    "direccion": "C/ Ronda, 44, local 1D. Rincón de la Victoria (Málaga)",
+    "nombre": "Asociación CMR Rincón de la Victoria",
+    "direccion": "C/ Ronda, 44, 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "Asociación",
     "tipo_id": "CIF"
   },
@@ -2934,8 +2934,8 @@
   },
   {
     "cif": "A28007748",
-    "nombre": "Allianz Compañía de Seguros y Reaseguros SA",
-    "direccion": "Calle Ramírez de Arellano, 35, 28043 Madrid",
+    "nombre": "Allianz, Compañía de Seguros y Reaseguros, S.A.",
+    "direccion": "C/ Ramírez de Arellano, 35, 28043 Madrid",
     "tipo_entidad": "SA",
     "tipo_id": "CIF"
   },
@@ -2963,7 +2963,7 @@
   {
     "cif": "B92656271",
     "nombre": "Equipamientos de Oficina Trujillo, S.L.",
-    "direccion": "C/ Diego Ponce, 11, Carión 1, 29200 Antequera (Málaga)",
+    "direccion": "C/ Diego Ponce, 11,",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -3236,7 +3236,7 @@
   {
     "cif": "77****77P",
     "nombre": "Francisco Miguel Ruiz Rodríguez",
-    "direccion": "Cortijo Cañada ***************",
+    "direccion": "C/ Julio Romero***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -3291,8 +3291,8 @@
   },
   {
     "cif": "G93433795",
-    "nombre": "C.D. Hockey La Candelaria",
-    "direccion": "Avda. Padre Benito, s/n, 29738 Benagalbón (Málaga)",
+    "nombre": "CD Hockey La Candelaria",
+    "direccion": "Avda. Padre Benito, S/N, 29738 Benagalbón (Málaga)",
     "tipo_entidad": "Asociación",
     "tipo_id": "CIF"
   },
@@ -3326,8 +3326,8 @@
   },
   {
     "cif": "G93142701",
-    "nombre": "Club Atletismo Rincón de la Victoria",
-    "direccion": "C/ Cortijo Blanco, 37, 29730 Rincón de la Victoria (Málaga)",
+    "nombre": "Club de Atletismo de Rincón de la Victoria",
+    "direccion": "– C/ Cortijo Blanco, 37, 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "Asociación",
     "tipo_id": "CIF"
   },
@@ -3438,8 +3438,8 @@
   },
   {
     "cif": "B91333252",
-    "nombre": "Ferias y Eventos SL",
-    "direccion": "C/ Comunidad de Madrid, 5. Écija (Sevilla)",
+    "nombre": "Ferias y Eventos, S.L.",
+    "direccion": "Pol. Ind. La Campiña, C/ Comunidad de Madrid, 5, 41400 Écija (Sevilla)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -3858,8 +3858,8 @@
   },
   {
     "cif": "A04227757",
-    "nombre": "Almerimatik Sistemas Informáticos SA",
-    "direccion": "C/ Maestro Padilla, 2. 04005 Almería",
+    "nombre": "Almerimatik Sistemas Informáticos, SAU",
+    "direccion": "C/ Maestro Padilla, 2, 04005 Almería",
     "tipo_entidad": "SA",
     "tipo_id": "CIF"
   },
@@ -4026,8 +4026,8 @@
   },
   {
     "cif": "77****71N",
-    "nombre": "Jose Miguel Romero Pérez",
-    "direccion": "Avda. De Sayalo***************",
+    "nombre": "José Miguel Romero Pérez",
+    "direccion": "Avda. Sayalonga***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -4075,8 +4075,8 @@
   },
   {
     "cif": "B92209097",
-    "nombre": "Manuel Beltrán Casting SL",
-    "direccion": "C/ Beatas, 3, 2-A. Málaga",
+    "nombre": "Manuel Beltrán Casting, S.L.",
+    "direccion": "C/ Beatas, 3, 2A, Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -4173,29 +4173,29 @@
   },
   {
     "cif": "A28122125",
-    "nombre": "Canon España, SAU",
-    "direccion": ". Calle Palma del Río, 19 3ª Planta. 29004 Málaga",
+    "nombre": "Canon España, SAU.",
+    "direccion": "– Avda. De Europa n.º 6 28108 Alcobendas (Madrid)",
     "tipo_entidad": "SA",
     "tipo_id": "CIF"
   },
   {
     "cif": "G14085674",
     "nombre": "Federación Andaluza de Baloncesto",
-    "direccion": "Avda. de la Guerrita, 56, 14005 Córdoba",
+    "direccion": "Avda. de Guerrita, 31, 14005 Córdoba",
     "tipo_entidad": "Asociación",
     "tipo_id": "CIF"
   },
   {
     "cif": "B13329669",
-    "nombre": "Estrella del Viento SL",
-    "direccion": "Camino Viejo de Vélez, 95, B2, Ático C. 29738 Torre de Benagalbón (Málaga)",
+    "nombre": "Estrella del Viento, SL.",
+    "direccion": "– Cmno.Viejo de Vélez n.º 95 B.2 Ático C 29738 Torre de Benagalbón (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
   {
     "cif": "A08171373",
-    "nombre": "MGS Seguros y Reaseguros, S.A.",
-    "direccion": "Paseo María Agustín, 4, 50004 Zaragoza",
+    "nombre": "MGS, S.A, de Seguros y Reaseguros",
+    "direccion": "Avda. Andalucía, 15, 29002 Málaga",
     "tipo_entidad": "SA",
     "tipo_id": "CIF"
   },
@@ -4250,8 +4250,8 @@
   },
   {
     "cif": "B10699080",
-    "nombre": "Axar WC, S.L.U.",
-    "direccion": "C/ Isaac Albéniz, 4, 1ºF, 29770 Torrox (Málaga)",
+    "nombre": "Axar Wc, S.L.U.",
+    "direccion": "Avda. Isaac Albéniz, Edf. San Roque, 4, 1F, 29770 Torrox (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -4362,8 +4362,8 @@
   },
   {
     "cif": "B09918939",
-    "nombre": "Alquileres Grupo Infantes SL",
-    "direccion": "C/ Cerro Lanza, 44. Puerto de la Torre (Málaga)",
+    "nombre": "Alquleres Grupo Infantes, S.L.U",
+    "direccion": "C/ Cerro lanza, 44, Puerto de la Torre, 29190 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -4544,14 +4544,14 @@
   },
   {
     "cif": "B44808962",
-    "nombre": "Firehawk Sportswear, S.L.",
-    "direccion": "Avda. Saturno, 6, Nave 11, 03007 Alicante",
+    "nombre": "Firehawksportswear, S.L.",
+    "direccion": "Avda. Saturno, 6, nave 11, 03007 Alicante",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
   {
     "cif": "44****26D",
-    "nombre": "Salvador Escaño Palomino (Frutería Benaxarquía)",
+    "nombre": "Salvador Escaño Palomino",
     "direccion": "Cº Viejo de Vél***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
@@ -4621,8 +4621,8 @@
   },
   {
     "cif": "53****33Z",
-    "nombre": "José Antonio Rodríquez Ruiz",
-    "direccion": "Avda. Vivar Tél***************",
+    "nombre": "José Antonio Rodríguez Ruiz",
+    "direccion": "Avda. Vival Tél***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -4663,8 +4663,8 @@
   },
   {
     "cif": "B13729439",
-    "nombre": "Divelec Suministros, S.L.",
-    "direccion": "C/ Bartolomé Esteban Murillo, 21, Polg. Ind. La Pañoleta, 29700 Vélez Málaga (Málaga)",
+    "nombre": "Divelec Suministros, SL.",
+    "direccion": "– Calle Bartolomé Esteban Murillo n.º 21 Polig. Ind. La Pañoleta",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -4803,8 +4803,8 @@
   },
   {
     "cif": "B93431096",
-    "nombre": "Agua Crea y Comunica SL",
-    "direccion": "C/ Flauta Mágica, 11C. Málaga",
+    "nombre": "Agua Crea y Comunica, S.L.",
+    "direccion": "C/ Flauta Mágica, 2, Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -4846,7 +4846,7 @@
   {
     "cif": "B93707743",
     "nombre": "Castez Design, S.L.",
-    "direccion": "C/ Galicia, 2, L2, 29730 Rincón de la Victoria",
+    "direccion": "C/ Galicia, 2, L2, 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -4894,8 +4894,8 @@
   },
   {
     "cif": "B93085249",
-    "nombre": "Ocasur 2010 SL",
-    "direccion": "Avda Málaga Oloroso, 28, Local. 29014 Málaga",
+    "nombre": "Ocasur 2010, S.L.",
+    "direccion": "Avda. Málaga Oloroso, 28, Local, 29014 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -4937,7 +4937,7 @@
   {
     "cif": "44****19G",
     "nombre": "Juan Carlos Gutiérrez Galindo",
-    "direccion": "C/ Peñas Blanca***************",
+    "direccion": "Cjto. Peñas Bla***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -4972,7 +4972,7 @@
   {
     "cif": "74****73H",
     "nombre": "Sara Iglesias Muñoz",
-    "direccion": "Diseminado 1803***************",
+    "direccion": "– Diseminado 18***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -5049,7 +5049,7 @@
   {
     "cif": "B93660066",
     "nombre": "Fantasy Content, S.L.",
-    "direccion": "C/ Estados Unidos, 10, Balcón de Añoreta, 29738 (Málaga)",
+    "direccion": "C/ Estados Unidos, 10B, Urb. Añoreta Golf, 29738 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -5062,8 +5062,8 @@
   },
   {
     "cif": "A48148647",
-    "nombre": "PHS Serkoten",
-    "direccion": "C/ Sigfrido, 35. Málaga",
+    "nombre": "PHS Serkonten, S.A.U.",
+    "direccion": "C/ Ribera de la Elorrieta, 7, 48015 Bilbao",
     "tipo_entidad": "SA",
     "tipo_id": "CIF"
   },
@@ -5287,7 +5287,7 @@
   {
     "cif": "B92050681",
     "nombre": "GAP Producciones-Cine-Video-Televisión y Publicidad, S.L.",
-    "direccion": "Pº de Miramar, 10, Bajo, 29016 Málaga",
+    "direccion": "Paseo Miramar, 10, 29001 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -5441,7 +5441,7 @@
   {
     "cif": "B56476054",
     "nombre": "Pinturas Manuel Arévalo, S.L.",
-    "direccion": "Cjto. Calaplaya, Bq. 9, 4ºC, 29720 La Cala del Moral (Málaga)",
+    "direccion": "C/ Calaplaya, BQ. 9, 4ºC, 29720 La Cala del Moral (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -5776,8 +5776,8 @@
   },
   {
     "cif": "B92614684",
-    "nombre": "Producciones Raíces SL",
-    "direccion": "C/ Conde de Toreno, 2, 1ºC. Málaga",
+    "nombre": "Producciones RaÍces, S.L.",
+    "direccion": "C/ Conde de Toreno, 2, 1C, 29009 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -5909,8 +5909,8 @@
   },
   {
     "cif": "44****24T",
-    "nombre": "M.ª del Carmen Carrillo Ruiz",
-    "direccion": "C/ La Corta, Ed***************",
+    "nombre": "M.ª Carmen Carrillo Ruíz",
+    "direccion": "– Calle La Cort***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -5938,7 +5938,7 @@
   {
     "cif": "B72555212",
     "nombre": "Textile y Merchandising VK, S.L.",
-    "direccion": "C/ Bielorrusia, Pol. Ind. Gualdalhorce, 9-27, 29004 Málaga",
+    "direccion": "Pol. Ind. Guadalhorce, C/ Bielorrusia, 9, 29004 Málaga",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -6001,14 +6001,14 @@
   {
     "cif": "44****24V",
     "nombre": "Alejandro Cadenas Quiles",
-    "direccion": "Ctra de Benagal***************",
+    "direccion": "Ctra. Benagalbó***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
   {
     "cif": "33****28B",
     "nombre": "M.ª Auxiliadora García Delgado",
-    "direccion": "Avda del Medite***************",
+    "direccion": "– Avda. Del Med***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -6238,8 +6238,8 @@
   },
   {
     "cif": "B56532013",
-    "nombre": "Bárbol Garden Grass SL",
-    "direccion": "Cortijo Cañada de la Fuente, 4, 29730 Rincón de la Victoria (Málaga)",
+    "nombre": "Bárbol Garden Grass, S.L.",
+    "direccion": "Cortijo Cañada de la Fuente, 4, Puerta 5, 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -6266,8 +6266,8 @@
   },
   {
     "cif": "B70864335",
-    "nombre": "Tradusigno SL",
-    "direccion": "Cortijo Cañada de la Fuente, 15, Planta 1. 29730 Rincón de la Victoria (Málaga)",
+    "nombre": "Tradusigno, S.L.",
+    "direccion": "C/ África, 18, Edf. Doña Lola, Bq. 4, Pta. 8, 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -6406,8 +6406,8 @@
   },
   {
     "cif": "25****78K",
-    "nombre": "Enrique Fontana Gallego",
-    "direccion": "Avda. del Medit***************",
+    "nombre": "Enrique fontana Gallego",
+    "direccion": "– Avda. Del Med***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -6475,13 +6475,6 @@
     "tipo_id": "NIF"
   },
   {
-    "cif": "B95236156",
-    "nombre": "Celyn Travel, S.L.",
-    "direccion": "7-C/ Maestro Pablo Luna, 3, local 8, 29010 Málaga",
-    "tipo_entidad": "SL",
-    "tipo_id": "CIF"
-  },
-  {
     "cif": "31****79M",
     "nombre": "Miguel Ángel Sáez Hernández",
     "direccion": "C/ El Faro, 28,***************",
@@ -6519,7 +6512,7 @@
   {
     "cif": "25****68C",
     "nombre": "Rocío Álvarez Gil",
-    "direccion": "C/ Herrera Oria***************",
+    "direccion": "Avda. Herrera O***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -6596,7 +6589,7 @@
   {
     "cif": "77****23Y",
     "nombre": "Carlos Delgado Ruiz",
-    "direccion": "77226623y- Barr***************",
+    "direccion": "Bda. Los Fernán***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -6658,8 +6651,8 @@
   },
   {
     "cif": "R2900700B",
-    "nombre": "Hermandad de Ntra. Sra. del Rocío de Rincón de la Victoria",
-    "direccion": "C/ Limonero, 10, 29730 Rincón de la Victoria (Málaga)",
+    "nombre": "Hermandad Ntra. Sra. del Rocío Rincón de la Victoria",
+    "direccion": "– Calle Limonero n.º 10 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "Entidad religiosa",
     "tipo_id": "CIF"
   },
@@ -6694,7 +6687,7 @@
   {
     "cif": "74****42W",
     "nombre": "Ana Paz Luna",
-    "direccion": "Cortijo Los Pér***************",
+    "direccion": "– Cortijo Los P***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -6770,8 +6763,8 @@
   },
   {
     "cif": "B93488757",
-    "nombre": "Distribuciones Ventorrillo 2016 SL",
-    "direccion": "Ctra. De Benagalbón, 16. Rincón de la Victoria (Málaga)",
+    "nombre": "Distribuciones Ventorrillo 2016, S.L.",
+    "direccion": "Ctra, de Benagalbón, 16, 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -6799,7 +6792,7 @@
   {
     "cif": "G92734045",
     "nombre": "Club de Atletismo Málaga Bahía",
-    "direccion": "C/ Juan Montoya, 1, Planta 2, Pta A. 29720 La Cala de Moral (Málaga)",
+    "direccion": "C/ Juan Montoya, 1, 2ºA, 29720 La Cala del Moral (Málaga)",
     "tipo_entidad": "Asociación",
     "tipo_id": "CIF"
   },
@@ -6896,8 +6889,8 @@
   },
   {
     "cif": "B72803687",
-    "nombre": "Kosmos Seguridad Sur SL",
-    "direccion": "C/ Pablo Iglesias, 1. Torremolinos (Málaga)",
+    "nombre": "Kosmos Seguridad Sur, S.L,",
+    "direccion": "– Calle Pablo Iglesias n.º 1 Local 1 29620 Torremolinos (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -7141,8 +7134,8 @@
   },
   {
     "cif": "B85849925",
-    "nombre": "Wcloc España SL",
-    "direccion": "C/ Oro, 17, Pol. Ind. Aimayr. San Martín de la Vega (Madrid)",
+    "nombre": "Wcloc España, S.L.",
+    "direccion": "C/ Oro, 17, Pol. Ind. Aimayr, 28330 San Martín de la Vega (Madrid)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -7218,15 +7211,15 @@
   },
   {
     "cif": "B93693265",
-    "nombre": "Casa Guirado 2019 SL",
-    "direccion": "Avda del Mediterráneo, 157. Rincón de la Victoria (Málaga)",
+    "nombre": "Casa Guirado 2019, SL.",
+    "direccion": "– Avda. De la Torre n.º 33 29738 Torre de Benagalbó (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
   {
     "cif": "G93671733",
-    "nombre": "Club Deportivo Triaworld Mountain",
-    "direccion": "C/ Arroyo de Totalán, 4, Bloque 11, 1º-D. La Cala del Moral (Málaga)",
+    "nombre": "Club Deportivo Triaworld Mountain, representado por D. Jesús Suárez Díaz",
+    "direccion": "C/ Arroyo Totalán, 4, Bq. 11, 1ºD, 29720 La Cala del Moral (Málaga)",
     "tipo_entidad": "Asociación",
     "tipo_id": "CIF"
   },
@@ -7295,8 +7288,8 @@
   },
   {
     "cif": "B72250186",
-    "nombre": "Azerto Inoxidables SL",
-    "direccion": "Pol. Ind. El Torno-C/ Artesanos, 7. Chiclana de la Frontera (Cádiz)",
+    "nombre": "Azerto Inoxidables, S.L.",
+    "direccion": "C/ Avda. del Comercio, 5B, 11130 Chiclana de la Frontera (Cádiz)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -7484,8 +7477,8 @@
   },
   {
     "cif": "44****41V",
-    "nombre": "José Antonio Padilla Báez",
-    "direccion": "C/ Jaén, 4. Rin***************",
+    "nombre": "José Ángel Delgado Ramos",
+    "direccion": "C/ Jaen, 4, 297***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -7582,8 +7575,8 @@
   },
   {
     "cif": "B18392241",
-    "nombre": "Dielmo (Distribuciones Eléctricas)",
-    "direccion": "C/ Tegucigalpa, s/n. Motril (Granada)",
+    "nombre": "DIELMO Distribuciones Eléctricas G. Motrileñas, S.L.",
+    "direccion": "P.I. El Vadillo, C/ Tegucigalpa, s/n, 18600 Motril (Granada)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -7659,8 +7652,8 @@
   },
   {
     "cif": "44****69B",
-    "nombre": "María Tamara Jeréz Díaz",
-    "direccion": "Pza. Juan Gómez***************",
+    "nombre": "María Tamara Jerez Díaz",
+    "direccion": "C/ Dolores Ibár***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -7730,7 +7723,7 @@
   {
     "cif": "76****18P",
     "nombre": "Ana Jáuregui López",
-    "direccion": "Avda. leo Delib***************",
+    "direccion": "Avda. Leo Delib***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -7842,7 +7835,7 @@
   {
     "cif": "74****98S",
     "nombre": "Oliver Van Rompaey Garrido",
-    "direccion": "Avda. Principal***************",
+    "direccion": "– Avda. Princip***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   },
@@ -7995,7 +7988,7 @@
   },
   {
     "cif": "B75378232",
-    "nombre": "Cruzando la Meta Events, S.L.",
+    "nombre": "Cruzando La Meta Events, S.L.",
     "direccion": "C/ Sierra de las Villas, 24, 04240 Viator (Almería)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
@@ -8065,8 +8058,8 @@
   },
   {
     "cif": "B67515783",
-    "nombre": "Events Branch SL",
-    "direccion": "C/ Bolivia, 239, 1ª. Barcelona",
+    "nombre": "Events Branch, S.L.",
+    "direccion": "C/ Bolivia, 239, 1ª Planta, 08020 Barcelona",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -8086,8 +8079,8 @@
   },
   {
     "cif": "B93315059",
-    "nombre": "ABM Formación y Deporte",
-    "direccion": "C/ Del Mar, 23, 2B, 29740 Torre del Mar (Málaga)",
+    "nombre": "ABM Formación y Deportes, S.L.",
+    "direccion": "C/ Monte Real, 8, 29740 Torre del Mar (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -8163,8 +8156,8 @@
   },
   {
     "cif": "B93670396",
-    "nombre": "Costa Garden 2019, S.L.",
-    "direccion": "Ctra. Benagalbón, Cortijo Las Torrecillas, 11, 29730 Rincón de la Victoria",
+    "nombre": "Costa Garden 2019, SL.",
+    "direccion": "– Ctra. De Benagalbón Cortijo Las Torrecillas n.º 11 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -8212,8 +8205,8 @@
   },
   {
     "cif": "B92102748",
-    "nombre": "Suministros Informáticos Arlop, S.L.",
-    "direccion": "Pza. de San Francisco, 6, 29730 Rincón de la Victoria (Málaga)",
+    "nombre": "Suministros Informáticos Arlop, SL.",
+    "direccion": "– Plaza San Francisco n.º 6 29730 Rincón de la Victoria (Málaga)",
     "tipo_entidad": "SL",
     "tipo_id": "CIF"
   },
@@ -8235,6 +8228,272 @@
     "cif": "46****50K",
     "nombre": "Sara Mª Ruiz Esteo",
     "direccion": "C/ Fuengirola, ***************",
+    "tipo_entidad": "Autónomo",
+    "tipo_id": "NIF"
+  },
+  {
+    "cif": "44****742",
+    "nombre": "María Nieves Martín Alcaide",
+    "direccion": "Ctra. de Benaga***************",
+    "tipo_entidad": "Autónomo",
+    "tipo_id": "NIF"
+  },
+  {
+    "cif": "G92624212",
+    "nombre": "Asociación Teatral \"El Lugá\" de Almáchar",
+    "direccion": "C/ Almería, 14, 29718 Almáchar (Málaga)",
+    "tipo_entidad": "Asociación",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B22654685",
+    "nombre": "Darioterra, S.L.U.",
+    "direccion": "Avda. de la Torre, 33, 29730 Rincón de la Victoria (Málaga)",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B24837254",
+    "nombre": "Biotonomy, S.L.",
+    "direccion": "C/ Callejones del Perchel, 8, 29002 Málaga",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B24985491",
+    "nombre": "Solearte Music, S.L.",
+    "direccion": "C/ La Mezquita, 27, 29130 Málaga",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B26683094",
+    "nombre": "IGN Infra, S.L.",
+    "direccion": "C/ Senador Fernández Palegrina, 8",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B70989003",
+    "nombre": "Generando Emociones, S.L.U.",
+    "direccion": "Apartado de Correos, 76",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "G70837406",
+    "nombre": "Fundación World Spanish Guitar Foundation",
+    "direccion": "Paseo de Reding, 43, 1º Izda., 29016 Málaga",
+    "tipo_entidad": "Asociación",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B24930893",
+    "nombre": "La Ilusión de 2, S.L.",
+    "direccion": "Bda. Los Rubios, 45, 29738 Torre de Benagalbón (Málaga)",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B55029177",
+    "nombre": "Mustramit, S.L.",
+    "direccion": "C/ Verge de Nuria, 38, 17457 Riudellots de la Selva (Girona)",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B92020510",
+    "nombre": "Obras y Reformas Braco, S.L.",
+    "direccion": "Camino de la Térmica, 45, 29004 Málaga",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B26697730",
+    "nombre": "Comercializadora de Publicidad del Sur, S.L.",
+    "direccion": "Avda. de los Vegas, 5, 29006 Málaga",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B26681239",
+    "nombre": "M77, Comunicaciones, S.L.U.",
+    "direccion": "Avda. Andalucía, 36, 6ºB, 29007 Málaga",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B92715721",
+    "nombre": "Japón Montajes de Arte, S.L.",
+    "direccion": "Urb. Sol Andalusí, Medina Azahara,1E, 29130 Alhaurín de la Torre (Málaga)",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "45****20Y",
+    "nombre": "Nieves González Guerra",
+    "direccion": "– Avda. De Mála***************",
+    "tipo_entidad": "Autónomo",
+    "tipo_id": "NIF"
+  },
+  {
+    "cif": "26****47Q",
+    "nombre": "Carolina Moreno Parras",
+    "direccion": "– Avda. Del Med***************",
+    "tipo_entidad": "Autónomo",
+    "tipo_id": "NIF"
+  },
+  {
+    "cif": "B93158012",
+    "nombre": "Servimar Axarquía, SL.",
+    "direccion": "– Varadero Puerto Caleta de Vélez 29751 Caleta de Vélez Málaga (Málaga)",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B10521896",
+    "nombre": "Hermanas Valverde 2022, SL.",
+    "direccion": "– Plaza del Señorío n.º 1 Edf. Antonio Machado 1ºD Izq 29730 Rincón de la Victoria",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "76****56J",
+    "nombre": "María José Herrera Jurado",
+    "direccion": "– Calle Córdoba***************",
+    "tipo_entidad": "Autónomo",
+    "tipo_id": "NIF"
+  },
+  {
+    "cif": "B21724554",
+    "nombre": "Como mola la gramola, SL.",
+    "direccion": "– Avda. Del Mediterráneo n.º 176 29730 Rincón de la Victoria (Málaga)",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B18988329",
+    "nombre": "Granada Comunicaciones 2012, SLU.",
+    "direccion": "– Calle Chile n.º 14 18191 Pinos Genil (Granada)",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B93435410",
+    "nombre": "Masudent, SL.",
+    "direccion": "– Plaza de la Constitución Edf. Siroco Local 11-12 29730 Rincón de la Victoria (Málaga)",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "X3****21Z",
+    "nombre": "M.ª Eugenia Giménez",
+    "direccion": "– Avda. Del Med***************",
+    "tipo_entidad": "Autónomo",
+    "tipo_id": "NIF"
+  },
+  {
+    "cif": "25****45P",
+    "nombre": "Antonio Gracia Martínez",
+    "direccion": "– Avda. Del Med***************",
+    "tipo_entidad": "Autónomo",
+    "tipo_id": "NIF"
+  },
+  {
+    "cif": "25****69Y",
+    "nombre": "Natalia López Montes",
+    "direccion": "– Calle Granada***************",
+    "tipo_entidad": "Autónomo",
+    "tipo_id": "NIF"
+  },
+  {
+    "cif": "B26741611",
+    "nombre": "Piotr Jarosz Londa, SLU.",
+    "direccion": "– Calle Punta Umbría n.º 1 Portal 11 A1 29738 Torre de Benagalbón (Málaga)",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B93577773",
+    "nombre": "La Gran Nonna, SL.",
+    "direccion": "– Calle Ateneas n.º 31 Polig. Ind. San Luís 29006 Málaga",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B70917174",
+    "nombre": "MP Eye Wear Retail Europe, SL.",
+    "direccion": "– Calle Ronda n.º 10 29730 Rincón de la Victoria (Málaga)",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B16796294",
+    "nombre": "Igualdad y Formación, SLU.",
+    "direccion": "– Calle Montalbán n.º 3 2º Dcha 28014 Madrid",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "B93412864",
+    "nombre": "Dental Rincón, SLP.",
+    "direccion": "– Calle Granada Edf. Plaza I Local 5 29730 Rincón de la Victoria (Málaga)",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "75****40C",
+    "nombre": "Pablo Rodríguez Pérez",
+    "direccion": "– Calle La Cort***************",
+    "tipo_entidad": "Autónomo",
+    "tipo_id": "NIF"
+  },
+  {
+    "cif": "44****80L",
+    "nombre": "Víctor Manuel Garrido Medina",
+    "direccion": "– Calle Julio R***************",
+    "tipo_entidad": "Autónomo",
+    "tipo_id": "NIF"
+  },
+  {
+    "cif": "B67800979",
+    "nombre": "Fafrisa XXII, SL.",
+    "direccion": "– Calle Cisneros n.º 12 29005 Málaga",
+    "tipo_entidad": "SL",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "53****10T",
+    "nombre": "Nicolás Ramírez Jimena",
+    "direccion": "Pza. Atalaya, B***************",
+    "tipo_entidad": "Autónomo",
+    "tipo_id": "NIF"
+  },
+  {
+    "cif": "Y1****90V",
+    "nombre": "Daniela Miazzo",
+    "direccion": "C/ Calzada de l***************",
+    "tipo_entidad": "Autónomo",
+    "tipo_id": "NIF"
+  },
+  {
+    "cif": "44****82Q",
+    "nombre": "Rubén Roldán Bustos",
+    "direccion": "– Calle Acebuch***************",
+    "tipo_entidad": "Autónomo",
+    "tipo_id": "NIF"
+  },
+  {
+    "cif": "G29360468",
+    "nombre": "Club Deportivo Jorge Guillén",
+    "direccion": "– Calle Edelmira Castillo n.º 5 29720 La Cala del Moral (Málaga)",
+    "tipo_entidad": "Asociación",
+    "tipo_id": "CIF"
+  },
+  {
+    "cif": "47****42Q",
+    "nombre": "Mercedes Beltre Méndez",
+    "direccion": "– Calle Francia***************",
     "tipo_entidad": "Autónomo",
     "tipo_id": "NIF"
   }
