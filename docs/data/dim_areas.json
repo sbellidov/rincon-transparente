@@ -25,118 +25,122 @@
   },
   {
     "id": 7,
-    "nombre": "Deportes (APAL)"
+    "nombre": "Cultura, Ferias y Fiestas"
   },
   {
     "id": 8,
-    "nombre": "Economía y Hacienda"
+    "nombre": "Deportes (APAL)"
   },
   {
     "id": 9,
-    "nombre": "Educación"
+    "nombre": "Economía y Hacienda"
   },
   {
     "id": 10,
-    "nombre": "Ferias y Fiestas"
+    "nombre": "Educación"
   },
   {
     "id": 11,
-    "nombre": "Formación y Empleo"
+    "nombre": "Ferias y Fiestas"
   },
   {
     "id": 12,
-    "nombre": "Infraestructuras"
+    "nombre": "Formación y Empleo"
   },
   {
     "id": 13,
-    "nombre": "Juventud"
+    "nombre": "Infraestructuras"
   },
   {
     "id": 14,
-    "nombre": "Movilidad y Transportes"
+    "nombre": "Juventud"
   },
   {
     "id": 15,
-    "nombre": "Movilidad y transporte"
+    "nombre": "Movilidad y Transportes"
   },
   {
     "id": 16,
-    "nombre": "Nuevas Tecnologías y Transparencia"
+    "nombre": "Movilidad y transporte"
   },
   {
     "id": 17,
-    "nombre": "Obras y Servicios Generales"
+    "nombre": "Nuevas Tecnologías y Transparencia"
   },
   {
     "id": 18,
-    "nombre": "Parques y Jardines"
+    "nombre": "Obras y Servicios Generales"
   },
   {
     "id": 19,
-    "nombre": "Playas"
+    "nombre": "Parques y Jardines"
   },
   {
     "id": 20,
-    "nombre": "Presidencia"
+    "nombre": "Playas"
   },
   {
     "id": 21,
-    "nombre": "Promoción  a la Tercera Edad"
+    "nombre": "Presidencia"
   },
   {
     "id": 22,
-    "nombre": "Promoción a la Tercera Edad"
+    "nombre": "Promoción  a la Tercera Edad"
   },
   {
     "id": 23,
-    "nombre": "Promoción de la Tercera Edad"
+    "nombre": "Promoción a la Tercera Edad"
   },
   {
     "id": 24,
-    "nombre": "Protección Civil"
+    "nombre": "Promoción de la Tercera Edad"
   },
   {
     "id": 25,
-    "nombre": "Protocolo"
+    "nombre": "Protección Civil"
   },
   {
     "id": 26,
-    "nombre": "Recursos Humano"
+    "nombre": "Protocolo"
   },
   {
     "id": 27,
-    "nombre": "Recursos Humanos"
+    "nombre": "Recursos Humano"
   },
   {
     "id": 28,
-    "nombre": "Régimen Interior"
+    "nombre": "Recursos Humanos"
   },
   {
     "id": 29,
-    "nombre": "Sanidad y Consumo"
+    "nombre": "Régimen Interior"
   },
   {
     "id": 30,
-    "nombre": "Seguridad Ciudadana"
+    "nombre": "Sanidad y Consumo"
   },
   {
     "id": 31,
-    "nombre": "Sostenibilidad Medioambiental"
+    "nombre": "Seguridad Ciudadana"
   },
   {
     "id": 32,
-    "nombre": "Turismo"
+    "nombre": "Sostenibilidad Medioambiental"
   },
   {
     "id": 33,
-    "nombre": "Urbanismo"
+    "nombre": "Turismo"
   },
   {
     "id": 34,
-    "nombre": "Villa Romana Antíopa"
+    "nombre": "Urbanismo"
   },
   {
     "id": 35,
+    "nombre": "Villa Romana Antíopa"
+  },
+  {
+    "id": 36,
     "nombre": "Vía Pública"
   }
 ]

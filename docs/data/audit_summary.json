@@ -1,11 +1,11 @@
 {
-  "total_checked": 6786,
-  "total_anomalies": 4110,
+  "total_checked": 7047,
+  "total_anomalies": 4233,
   "by_type": {
-    "Expediente Duplicado": 2172,
+    "Expediente Duplicado": 2287,
     "Fecha Inválida/Faltante": 1539,
-    "Importe >15K€": 257,
-    "NIF Faltante": 88,
+    "Importe >15K€": 267,
+    "NIF Faltante": 86,
     "NIF Mal Formulado": 45,
     "Importe Cero/Negativo": 9
   },
@@ -64,15 +64,15 @@
     },
     {
       "year": 2026,
-      "total": 696,
-      "importe_total": 2059587.21,
-      "sin_nif": 31,
+      "total": 957,
+      "importe_total": 2889062.01,
+      "sin_nif": 29,
       "nif_mal_formulado": 4,
       "sin_fecha": 6,
       "importe_cero": 0,
       "importe_alto_obra": 0,
-      "importe_alto_otros": 17,
-      "exp_duplicado": 256,
+      "importe_alto_otros": 27,
+      "exp_duplicado": 371,
       "sin_adjudicatario": 0
     }
   ]
